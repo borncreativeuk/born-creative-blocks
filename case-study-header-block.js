@@ -30,7 +30,7 @@ const BlockEdit = (props) => {
 		<Fragment>
 			<InspectorControls>
 				<PanelBody
-					title={__('Select block background image', 'awp')}
+					title={__('Select block background image', 'BornCreative')}
 					initialOpen={ true }
 				>
 					<div className="editor-post-featured-image">
@@ -44,7 +44,7 @@ const BlockEdit = (props) => {
 										className={attributes.mediaId == 0 ? 'editor-post-featured-image__toggle' : 'editor-post-featured-image__preview'}
 										onClick={open}
 									>
-										{attributes.mediaId == 0 && __('Choose an image', 'awp')}
+										{attributes.mediaId == 0 && __('Choose an image', 'BornCreative')}
 										{props.media != undefined && 
 						            			<ResponsiveWrapper
 									    		naturalWidth={ props.media.media_details.width }
@@ -60,19 +60,19 @@ const BlockEdit = (props) => {
 						{attributes.mediaId != 0 && 
 							<MediaUploadCheck>
 								<MediaUpload
-									title={__('Replace image', 'awp')}
+									title={__('Replace image', 'BornCreative')}
 									value={attributes.mediaId}
 									onSelect={onSelectMedia}
 									allowedTypes={['image']}
 									render={({open}) => (
-										<Button onClick={open} isDefault isLarge>{__('Replace image', 'awp')}</Button>
+										<Button onClick={open} isDefault isLarge>{__('Replace image', 'BornCreative')}</Button>
 									)}
 								/>
 							</MediaUploadCheck>
 						}
 						{attributes.mediaId != 0 && 
 							<MediaUploadCheck>
-								<Button onClick={removeMedia} isLink isDestructive>{__('Remove image', 'awp')}</Button>
+								<Button onClick={removeMedia} isLink isDestructive>{__('Remove image', 'BornCreative')}</Button>
 							</MediaUploadCheck>
 						}
 					</div>
@@ -86,7 +86,7 @@ const BlockEdit = (props) => {
 };
  
  
-registerBlockType('BornCreative/imageselectinspector', {
+registerBlockType('borncreative/imageselectinspector', {
 	title: 'Cast Study Header',
 	icon: 'smiley',
 	category: 'layout',
