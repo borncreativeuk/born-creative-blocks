@@ -115,7 +115,7 @@ registerBlockType('borncreative/header-block', {
 
         return (
             <div className={className}>
-                <div className="media" style="background: url({attributes.imgUrl}) center center/cover"></div>
+                <div className="media" style="background: url( {attributes.imgUrl} ) center center/cover"></div>
                 <div className="copy">
                 <div class="col-full">
                     <RichText.Content 
