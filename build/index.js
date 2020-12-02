@@ -106,9 +106,28 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('aut
   title: 'Hero Header Image',
   icon: 'welcome-write-blog',
   category: 'design',
-  edit: function edit() {
+  attributes: {
+    textString: {
+      type: 'array',
+      source: 'children',
+      selector: 'h2'
+    }
+  },
+  edit: function edit(props) {
+    var setAttributes = props.setAttributes,
+        attributes = props.attributes;
+
+    function onTextChange(changes) {
+      setAttributes({
+        textString: changes
+      });
+    }
+
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
-      value: "The stuff inside the input"
+      tagName: "h2",
+      value: attributes.textString,
+      onChange: onTextChange,
+      placeholder: "Enter your text here!"
     });
   },
   save: function save() {

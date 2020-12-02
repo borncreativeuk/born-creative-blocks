@@ -8,10 +8,28 @@ registerBlockType('autograph/hero', {
     title: 'Hero Header Image',
     icon: 'welcome-write-blog',
     category: 'design',
-    edit() {
+    attributes: {
+        textString: {
+            type: 'array',
+            source: 'children',
+            selector: 'h2',
+        }
+    },
+     edit(props) {
+        const { setAttributes, attributes } = props;
+
+        function onTextChange(changes) {
+            setAttributes({
+                textString: changes
+            });
+        }
+
         return (
-             <RichText
-                value='The stuff inside the input'
+            <RichText
+                tagName="h2"
+                value={attributes.textString}
+                onChange={onTextChange}
+                placeholder="Enter your text here!"
                 />
         );
     },
