@@ -1,11 +1,26 @@
 import { registerBlockType } from '@wordpress/blocks';
 
+const {
+    RichText
+} = wp.editor;
+
 registerBlockType('autograph/hero', {
     title: 'Hero Header Image',
-    icon: 'smiley',
+    icon: 'welcome-write-blog',
     category: 'design',
-    edit: () => <div> Hello, world 1! </div>,
-    save: () => <div> Hello, world 1! </div>,
+    edit() {
+        return (
+             <RichText
+                value='The stuff inside the input'
+                />
+        );
+    },
+
+    save() {
+        return (
+            <div>Only the front end will show this</div>
+        );
+    }
 });
 
 registerBlockType('autograph/block', {

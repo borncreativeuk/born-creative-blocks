@@ -22,11 +22,6 @@ wp_register_script(
 );
 
 
-/* this function name I believe is arbitrary, but I 
-* generally see  people follow 
-* {namespace}_{blockname}_editor_assets as a 
-* naming convention
-*/
 function autograph_block_editor_assets() {
     wp_enqueue_script(
         'autograph-block',
