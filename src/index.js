@@ -223,7 +223,7 @@ registerBlockType('borncreative/intro-text-block', {
             <div className={className}>
                 <div className="copy col-full">
                 <div class="row">
-                    <div class="column">
+                    <div class="column1">
                     <RichText 
                         className="copy-bd"
                         tagName="p"
@@ -232,7 +232,7 @@ registerBlockType('borncreative/intro-text-block', {
                         onChange={changeBodyContent}
                         />
                     </div>
-                    <div class="column">
+                    <div class="column2">
                     <RichText 
                         className="headinga"
                         tagName="h4"
@@ -290,14 +290,14 @@ registerBlockType('borncreative/intro-text-block', {
             <div className={className}>
                 <div className="copy col-full">
                     <div class="row">
-                    <div class="column">
+                    <div class="column1">
                     <RichText.Content 
                         className="copy-bd" 
                         tagName="p" 
                         value={attributes.bodyContent} 
                         />
                     </div>
-                    <div class="column">
+                    <div class="column2">
                     <RichText.Content 
                         class="headinga"
                         tagName="h4"

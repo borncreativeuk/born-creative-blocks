@@ -28,8 +28,15 @@
 
 .wp-block-borncreative-intro-text-block .row {
   display: flex; }
-  .wp-block-borncreative-intro-text-block .row .column {
-    flex: 50%; }
+  .wp-block-borncreative-intro-text-block .row .column1 {
+    flex: 58%;
+    padding: 0 1rem; }
+  .wp-block-borncreative-intro-text-block .row .column2 {
+    flex: 42%;
+    padding: 0 1rem; }
+
+.wp-block-borncreative-intro-text-block .copy-bd {
+  font-size: 1.5rem; }
 
 .wp-block-borncreative-intro-text-block .headinga,
 .wp-block-borncreative-intro-text-block .headingb,

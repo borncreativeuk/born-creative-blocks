@@ -38,9 +38,17 @@
     }
     .row {
         display: flex;
-        .column {
-            flex: 50%
+        .column1 {
+            flex: 58%;
+            padding: 0 1rem;
         }
+        .column2 {
+            flex: 42%;
+            padding: 0 1rem;
+        }
+    }
+    .copy-bd {
+        font-size: 1.5rem;
     }
     .headinga,
     .headingb,
