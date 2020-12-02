@@ -1,0 +1,23 @@
+{
+    "name": "autograph-blocks",
+    "version": "0.0.1",
+    "description": "autograph blocks",
+    "main": "build/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "wp-scripts build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/borncreativeuk/autograph-blocks.git"
+    },
+    "author": "",
+    "license": "closed",
+    "bugs": {
+        "url": "https://github.com/borncreativeuk/autograph-blocks/issues"
+    },
+    "homepage": "https://github.com/borncreativeuk/autograph-blocks#readme",
+    "devDependencies": {
+        "@wordpress/scripts": "12.5.0"
+    }
+}

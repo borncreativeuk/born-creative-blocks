@@ -1,17 +1,22 @@
 <?php
 /**
- * Plugin Name: Autograph Blocks Plugin
- * Author: Born Creative
+ * Plugin Name: Autograph-Blocks
+ * Description: Blocks!
  * Version: 0.0.1
+ * Author: BornCreative
+ *
+ * @package autograph-blocks
  */
-  
-function load_blocks() {
-  wp_enqueue_script(
-    'case-study-header-block',
-    plugin_dir_url(__FILE__) . 'case-study-header-block.js',
-    array('wp-blocks','wp-editor'),
-    true
-  );
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
-   
-add_action('enqueue_block_editor_assets', 'load_blocks');
+$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
+ 
+wp_register_script(
+    'myguten-block',
+    plugins_url( 'build/index.js', __FILE__ ),
+    $asset_file['dependencies'],
+    $asset_file['version']
+);
