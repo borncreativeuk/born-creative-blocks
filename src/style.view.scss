@@ -1,36 +1,23 @@
 // for styles loaded in editor and in the view
 // This class name is automatically generated for the blocks we make
 .wp-block-borncreative-header-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: .5em;
-    font-family: 'Avenir', 'Helvetica', sans-serif;
-    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .3);
-    // on tablet or higher, go to a row layout!
-    @media screen and (min-width: 376px) {
-        flex-direction: row;
-    }
+    position: relative;
+    display: block;
     .media {
-        flex-shrink: 0;
         width: 100%;
-        margin: 0 0 1em 0;
-        @media screen and (min-width: 376px) {
-            width: 35%;
-            margin: 0 1em 0 0;
-        }
+        margin: 0;
         & img {
             display: block;
             width: 100%;
         }
     }
-    .copy .copy-hd {
-        font-size: 36px;
-        font-weight: 300;
-        margin: 0 0 22px 0;
-        // this is only required in 2019 theme... because they have these decorative lines
-        &:before {
-            display: none;
+    .copy {
+        position: absolute;
+        bottom: 1rem;
+        .copy-hd {
+            &:before {
+                display: none;
+            }
         }
     }
 }
