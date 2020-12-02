@@ -38,7 +38,7 @@ add_action( 'enqueue_block_editor_assets', 'borncreative_block_editor_assets' );
 
 // Enqueue block editor styles
 wp_register_style(
-    'borncreative-block/stylesheets',
+    'borncreative-block-stylesheets',
     plugins_url( 'build/index.css', __FILE__ ),
     [ 'wp-edit-blocks' ],
     filemtime( plugin_dir_path( __FILE__ ) . 'build/index.css' ) 
@@ -47,7 +47,7 @@ wp_register_style(
 
 function borncreative_block_assets() {
     wp_enqueue_script(
-        'borncreative-block/stylesheets',
+        'borncreative-block-stylesheets',
         plugins_url( 'build/index.css', __FILE__ ),
         [ 'wp-edit-blocks' ],
         filemtime( plugin_dir_path( __FILE__ ) . 'build/index.css' ) 
