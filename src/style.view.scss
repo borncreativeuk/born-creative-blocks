@@ -1,25 +1,23 @@
 // for styles loaded in editor and in the view
 // This class name is automatically generated for the blocks we make
-.wp-admin {
-    .wp-block-borncreative-header-block {
-        position: relative;
-        display: block;
-        .media {
+.wp-block-borncreative-header-block {
+    position: relative;
+    display: block;
+    .media {
+        width: 100%;
+        margin: 0;
+        & img {
+            display: block;
             width: 100%;
-            margin: 0;
-            & img {
-                display: block;
-                width: 100%;
-            }
         }
-        .copy {
-            position: absolute;
-            bottom: 1rem;
-            color: white;
-            .copy-hd {
-                &:before {
-                    display: none;
-                }
+    }
+    .copy {
+        position: absolute;
+        bottom: 1rem;
+        color: white;
+        .copy-hd {
+            &:before {
+                display: none;
             }
         }
     }

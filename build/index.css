@@ -1,28 +1,28 @@
-.wp-admin .wp-block-borncreative-header-block {
+.wp-block-borncreative-header-block {
   position: relative;
   display: block; }
-  .wp-admin .wp-block-borncreative-header-block .media {
+  .wp-block-borncreative-header-block .media {
     width: 100%;
     margin: 0; }
-    .wp-admin .wp-block-borncreative-header-block .media img {
+    .wp-block-borncreative-header-block .media img {
       display: block;
       width: 100%; }
-  .wp-admin .wp-block-borncreative-header-block .copy {
+  .wp-block-borncreative-header-block .copy {
     position: absolute;
     bottom: 1rem;
     color: white; }
-    .wp-admin .wp-block-borncreative-header-block .copy .copy-hd:before {
+    .wp-block-borncreative-header-block .copy .copy-hd:before {
       display: none; }
 
 /*
 * For styles only loaded in the editor
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.
 */
-.wp-block-borncreative-header-block .media:hover,
-.wp-block-borncreative-header-block .media:focus {
+.wp-admin .wp-block-borncreative-header-block .media:hover,
+.wp-admin .wp-block-borncreative-header-block .media:focus {
   cursor: pointer; }
-  .wp-block-borncreative-header-block .media:hover:after,
-  .wp-block-borncreative-header-block .media:focus:after {
+  .wp-admin .wp-block-borncreative-header-block .media:hover:after,
+  .wp-admin .wp-block-borncreative-header-block .media:focus:after {
     position: absolute;
     content: '';
     left: 0;
@@ -32,9 +32,9 @@
     border: 4px solid lightgreen;
     pointer-events: none; }
 
-.wp-block-borncreative-header-block .media {
+.wp-admin .wp-block-borncreative-header-block .media {
   position: relative; }
-  .wp-block-borncreative-header-block .media button {
+  .wp-admin .wp-block-borncreative-header-block .media button {
     border: none;
     padding: 0;
     display: block; }
