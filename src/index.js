@@ -14,7 +14,7 @@ const {
 } = wp.editor;
 
 registerBlockType('borncreative/header-block', {
-    title: 'Media Block',
+    title: 'Header Block',
     icon: 'smiley',
     category: 'common',
 
@@ -134,3 +134,201 @@ registerBlockType('borncreative/header-block', {
 });
 
  
+
+
+
+
+
+
+
+
+registerBlockType('borncreative/intro-text-block', {
+    title: 'Intro Text Block',
+    icon: 'smiley',
+    category: 'common',
+
+    attributes: {
+        bodyContent: {
+            source: 'html',
+            selector: '.copy-bd'
+        },
+        headinga: {
+            source: 'html',
+            selector: '.headinga',
+        },
+        headingb: {
+            source: 'html',
+            selector: '.headingb',
+        },
+        headingc: {
+            source: 'html',
+            selector: '.headingc',
+        },
+        linea: {
+            source: 'html',
+            selector: '.linea'
+        },
+        lineb: {
+            source: 'html',
+            selector: '.lineb'
+        },
+        linec: {
+            source: 'html',
+            selector: '.linec'
+        },
+    },
+
+    edit(props) {
+        const { className, setAttributes } = props;
+        const { attributes } = props;
+
+        // we create a function that will take the changes from RichText
+        // and update the attributes
+        function changeBodyContent(changes) {
+            setAttributes({
+                bodyContent: changes
+            })
+        }
+
+        function changeHeadinga(headinga) {
+            setAttributes({ headinga });
+        }
+        function changeHeadingb(headingb) {
+            setAttributes({ headingb });
+        }
+        function changeHeadingc(headingc) {
+            setAttributes({ headingc });
+        }
+        function changeLinea(linea) {
+            setAttributes({ linea });
+        }
+        function changeLineb(lineb) {
+            setAttributes({ lineb });
+        }
+        function changeLinec(linec) {
+            setAttributes({ linec });
+        }
+
+        return [
+            <InspectorControls>
+                {/* Later, when we have customizable options we will add stuff here! */}
+                <div
+                    style={{
+                        padding: '1em 0',
+                    }}
+                >
+                    Options
+                </div>
+            </InspectorControls>,
+            <div className={className}>
+                <div className="copy">
+                    <RichText 
+                        className="copy-bd"
+                        tagName="p"
+                        placeholder="Enter your text here"
+                        value={attributes.bodyContent}
+                        onChange={changeBodyContent}
+                        />
+
+
+                    <RichText 
+                        className="headinga"
+                        tagName="h4"
+                        placeholder="Client"
+                        value={attributes.headinga}
+                        onChange={changeHeadinga}
+                        />
+                    <RichText 
+                        className="linea"
+                        tagName="p"
+                        placeholder="Client Name"
+                        value={attributes.linea}
+                        onChange={changeLinea}
+                        />
+                    <RichText 
+                        className="headingb"
+                        tagName="h4"
+                        placeholder="Project Type"
+                        value={attributes.headingb}
+                        onChange={changeHeadingb}
+                        />
+                    <RichText 
+                        className="lineb"
+                        tagName="p"
+                        placeholder="Client Name"
+                        value={attributes.lineb}
+                        onChange={changeLineb}
+                        />
+                    <RichText 
+                        className="headingc"
+                        tagName="h4"
+                        placeholder="Services"
+                        value={attributes.headingc}
+                        onChange={changeHeadingc}
+                        />
+                    <RichText 
+                        className="linec"
+                        tagName="p"
+                        placeholder="Client Name"
+                        value={attributes.linec}
+                        onChange={changeLinec}
+                        />
+
+                </div>
+            </div>,
+        ];
+    },
+
+    save(props) {
+        const className = getBlockDefaultClassName('borncreative/intro-text-block');
+        const { attributes } = props;
+
+        return (
+            <div className={className}>
+                <div className="copy">
+                    <RichText.Content 
+                        className="copy-bd" 
+                        tagName="p" 
+                        value={attributes.bodyContent} 
+                        />
+                    <RichText.Content 
+                        class="headinga"
+                        tagName="h4"
+                        value={attributes.headinga}
+                        />
+                    <RichText.Content 
+                        class="linea"
+                        tagName="p"
+                        value={attributes.linea}
+                        />
+
+                    <RichText.Content 
+                        class="headingb"
+                        tagName="h4"
+                        value={attributes.headingb}
+                        />
+                    <RichText.Content 
+                        class="lineb"
+                        tagName="p"
+                        value={attributes.lineb}
+                        />
+
+                    <RichText.Content 
+                        class="headingc"
+                        tagName="h4"
+                        value={attributes.headingc}
+                        />
+                    <RichText.Content 
+                        class="linec"
+                        tagName="p"
+                        value={attributes.linec}
+                        />
+
+
+                    
+                    
+                </div>
+            </div>
+        );
+    },
+});

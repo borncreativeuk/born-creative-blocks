@@ -10,6 +10,7 @@
   .wp-block-borncreative-header-block .copy {
     position: absolute;
     bottom: 1rem;
+    left: 1rem;
     color: white; }
     .wp-block-borncreative-header-block .copy .copy-hd {
       margin: 0;

@@ -113,7 +113,7 @@ var _wp$editor = wp.editor,
     RichText = _wp$editor.RichText,
     MediaUpload = _wp$editor.MediaUpload;
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/header-block', {
-  title: 'Media Block',
+  title: 'Header Block',
   icon: 'smiley',
   category: 'common',
   attributes: {
@@ -210,6 +210,178 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "copy-bd",
       tagName: "h3",
       value: attributes.bodyContent
+    })));
+  }
+});
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/intro-text-block', {
+  title: 'Intro Text Block',
+  icon: 'smiley',
+  category: 'common',
+  attributes: {
+    bodyContent: {
+      source: 'html',
+      selector: '.copy-bd'
+    },
+    headinga: {
+      source: 'html',
+      selector: '.headinga'
+    },
+    headingb: {
+      source: 'html',
+      selector: '.headingb'
+    },
+    headingc: {
+      source: 'html',
+      selector: '.headingc'
+    },
+    linea: {
+      source: 'html',
+      selector: '.linea'
+    },
+    lineb: {
+      source: 'html',
+      selector: '.lineb'
+    },
+    linec: {
+      source: 'html',
+      selector: '.linec'
+    }
+  },
+  edit: function edit(props) {
+    var className = props.className,
+        setAttributes = props.setAttributes;
+    var attributes = props.attributes; // we create a function that will take the changes from RichText
+    // and update the attributes
+
+    function changeBodyContent(changes) {
+      setAttributes({
+        bodyContent: changes
+      });
+    }
+
+    function changeHeadinga(headinga) {
+      setAttributes({
+        headinga: headinga
+      });
+    }
+
+    function changeHeadingb(headingb) {
+      setAttributes({
+        headingb: headingb
+      });
+    }
+
+    function changeHeadingc(headingc) {
+      setAttributes({
+        headingc: headingc
+      });
+    }
+
+    function changeLinea(linea) {
+      setAttributes({
+        linea: linea
+      });
+    }
+
+    function changeLineb(lineb) {
+      setAttributes({
+        lineb: lineb
+      });
+    }
+
+    function changeLinec(linec) {
+      setAttributes({
+        linec: linec
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      style: {
+        padding: '1em 0'
+      }
+    }, "Options")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "copy"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "copy-bd",
+      tagName: "p",
+      placeholder: "Enter your text here",
+      value: attributes.bodyContent,
+      onChange: changeBodyContent
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "headinga",
+      tagName: "h4",
+      placeholder: "Client",
+      value: attributes.headinga,
+      onChange: changeHeadinga
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "linea",
+      tagName: "p",
+      placeholder: "Client Name",
+      value: attributes.linea,
+      onChange: changeLinea
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "headingb",
+      tagName: "h4",
+      placeholder: "Project Type",
+      value: attributes.headingb,
+      onChange: changeHeadingb
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "lineb",
+      tagName: "p",
+      placeholder: "Client Name",
+      value: attributes.lineb,
+      onChange: changeLineb
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "headingc",
+      tagName: "h4",
+      placeholder: "Services",
+      value: attributes.headingc,
+      onChange: changeHeadingc
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "linec",
+      tagName: "p",
+      placeholder: "Client Name",
+      value: attributes.linec,
+      onChange: changeLinec
+    })))];
+  },
+  save: function save(props) {
+    var className = getBlockDefaultClassName('borncreative/intro-text-block');
+    var attributes = props.attributes;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "copy"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      className: "copy-bd",
+      tagName: "p",
+      value: attributes.bodyContent
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "headinga",
+      tagName: "h4",
+      value: attributes.headinga
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "linea",
+      tagName: "p",
+      value: attributes.linea
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "headingb",
+      tagName: "h4",
+      value: attributes.headingb
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "lineb",
+      tagName: "p",
+      value: attributes.lineb
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "headingc",
+      tagName: "h4",
+      value: attributes.headingc
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "linec",
+      tagName: "p",
+      value: attributes.linec
     })));
   }
 });
