@@ -1,7 +1,7 @@
 {
-    "name": "autograph-blocks",
+    "name": "borncreative-blocks",
     "version": "0.0.1",
-    "description": "autograph blocks",
+    "description": "borncreative blocks",
     "main": "build/index.js",
     "scripts": {
         "build": "wp-scripts build",

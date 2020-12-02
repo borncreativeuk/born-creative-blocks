@@ -1,2 +1,2 @@
-# autograph-blocks
-blocks for autograph signs
+# borncreative-blocks
+blocks for born creative sites
