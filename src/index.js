@@ -85,6 +85,7 @@ registerBlockType('borncreative/header-block', {
                     />
                 </div>
                 <div className="copy">
+                <div class="col-full">
                     <RichText 
                             className="copy-hd"
                             tagName="h2"
@@ -103,6 +104,7 @@ registerBlockType('borncreative/header-block', {
                         onChange={changeBodyContent}
                         />
                 </div>
+                </div>
             </div>,
         ];
     },
@@ -117,6 +119,7 @@ registerBlockType('borncreative/header-block', {
                     <img src={attributes.imgUrl}/>
                 </div>
                 <div className="copy">
+                <div class="col-full">
                     <RichText.Content 
                         class="copy-hd"
                         tagName="h2"
@@ -127,6 +130,7 @@ registerBlockType('borncreative/header-block', {
                         tagName="h3" 
                         value={attributes.bodyContent} 
                         />
+                </div>
                 </div>
             </div>
         );

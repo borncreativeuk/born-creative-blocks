@@ -10,16 +10,18 @@
   .wp-block-borncreative-header-block .copy {
     position: absolute;
     bottom: 1rem;
-    left: 1rem;
+    left: 0;
+    right: 0;
     color: white; }
     .wp-block-borncreative-header-block .copy .copy-hd {
+      padding: 0 1rem;
       margin: 0;
       color: white; }
       .wp-block-borncreative-header-block .copy .copy-hd:before {
         display: none; }
     .wp-block-borncreative-header-block .copy .copy-bd {
       margin: 0;
-      padding: 0;
+      padding: 0 1rem;
       color: white; }
 
 .wp-block-borncreative-intro-text-block .col-full {
