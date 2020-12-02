@@ -221,7 +221,7 @@ registerBlockType('borncreative/intro-text-block', {
                 </div>
             </InspectorControls>,
             <div className={className}>
-                <div className="copy">
+                <div className="copy col-full">
                     <RichText 
                         className="copy-bd"
                         tagName="p"
@@ -285,7 +285,7 @@ registerBlockType('borncreative/intro-text-block', {
 
         return (
             <div className={className}>
-                <div className="copy">
+                <div className="copy col-full">
                     <RichText.Content 
                         className="copy-bd" 
                         tagName="p" 
