@@ -1,40 +1,59 @@
 .wp-block-borncreative-header-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: .5em;
-  font-family: 'Avenir', 'Helvetica', sans-serif;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3); }
-  @media screen and (min-width: 376px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5em;
+    font-family: 'Avenir', 'Helvetica', sans-serif;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 376px) {
     .wp-block-borncreative-header-block {
-      flex-direction: row; } }
-  .wp-block-borncreative-header-block .media {
+        flex-direction: row;
+    }
+}
+
+.wp-block-borncreative-header-block .media {
     flex-shrink: 0;
     width: 100%;
-    margin: 0 0 1em 0; }
-    @media screen and (min-width: 376px) {
-      .wp-block-borncreative-header-block .media {
+    margin: 0 0 1em 0;
+}
+
+@media screen and (min-width: 376px) {
+    .wp-block-borncreative-header-block .media {
         width: 35%;
-        margin: 0 1em 0 0; } }
-    .wp-block-borncreative-header-block .media img {
-      display: block;
-      width: 100%; }
-  .wp-block-borncreative-header-block .copy .copy-hd {
+        margin: 0 1em 0 0;
+    }
+}
+
+.wp-block-borncreative-header-block .media img {
+    display: block;
+    width: 100%;
+}
+
+.wp-block-borncreative-header-block .copy .copy-hd {
     font-size: 36px;
     font-weight: 300;
-    margin: 0 0 22px 0; }
-    .wp-block-borncreative-header-block .copy .copy-hd:before {
-      display: none; }
+    margin: 0 0 22px 0;
+}
+
+.wp-block-borncreative-header-block .copy .copy-hd:before {
+    display: none;
+}
+
 
 /*
 * For styles only loaded in the editor
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.
 */
+
 .wp-block-borncreative-header-block .media:hover,
 .wp-block-borncreative-header-block .media:focus {
-  cursor: pointer; }
-  .wp-block-borncreative-header-block .media:hover:after,
-  .wp-block-borncreative-header-block .media:focus:after {
+    cursor: pointer;
+}
+
+.wp-block-borncreative-header-block .media:hover:after,
+.wp-block-borncreative-header-block .media:focus:after {
     position: absolute;
     content: '';
     left: 0;
@@ -42,14 +61,18 @@
     width: 100%;
     height: 100%;
     border: 4px solid lightgreen;
-    pointer-events: none; }
+    pointer-events: none;
+}
 
 .wp-block-borncreative-header-block .media {
-  position: relative; }
-  .wp-block-borncreative-header-block .media button {
+    position: relative;
+}
+
+.wp-block-borncreative-header-block .media button {
     border: none;
     padding: 0;
-    display: block; }
+    display: block;
+}
 
 
 /*# sourceMappingURL=index.css.map*/
