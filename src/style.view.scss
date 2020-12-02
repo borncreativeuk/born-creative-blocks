@@ -30,3 +30,12 @@
         }
     }
 }
+
+.wp-block-borncreative-intro-text-block {
+    .row {
+        display: flex;
+        .column {
+            flex: 50%
+        }
+    }
+}

@@ -22,6 +22,11 @@
       padding: 0;
       color: white; }
 
+.wp-block-borncreative-intro-text-block .row {
+  display: flex; }
+  .wp-block-borncreative-intro-text-block .row .column {
+    flex: 50%; }
+
 /*
 * For styles only loaded in the editor
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.

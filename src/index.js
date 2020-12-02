@@ -222,6 +222,8 @@ registerBlockType('borncreative/intro-text-block', {
             </InspectorControls>,
             <div className={className}>
                 <div className="copy col-full">
+                <div class="row">
+                    <div class="column">
                     <RichText 
                         className="copy-bd"
                         tagName="p"
@@ -229,8 +231,8 @@ registerBlockType('borncreative/intro-text-block', {
                         value={attributes.bodyContent}
                         onChange={changeBodyContent}
                         />
-
-
+                    </div>
+                    <div class="column">
                     <RichText 
                         className="headinga"
                         tagName="h4"
@@ -273,7 +275,8 @@ registerBlockType('borncreative/intro-text-block', {
                         value={attributes.linec}
                         onChange={changeLinec}
                         />
-
+                    </div>
+                    </div>
                 </div>
             </div>,
         ];
@@ -286,11 +289,15 @@ registerBlockType('borncreative/intro-text-block', {
         return (
             <div className={className}>
                 <div className="copy col-full">
+                    <div class="row">
+                    <div class="column">
                     <RichText.Content 
                         className="copy-bd" 
                         tagName="p" 
                         value={attributes.bodyContent} 
                         />
+                    </div>
+                    <div class="column">
                     <RichText.Content 
                         class="headinga"
                         tagName="h4"
@@ -324,9 +331,8 @@ registerBlockType('borncreative/intro-text-block', {
                         value={attributes.linec}
                         />
 
-
-                    
-                    
+                    </div>
+                    </div>
                 </div>
             </div>
         );
