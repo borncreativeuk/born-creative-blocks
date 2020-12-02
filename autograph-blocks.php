@@ -20,3 +20,21 @@ wp_register_script(
     $asset_file['dependencies'],
     $asset_file['version']
 );
+
+
+/* this function name I believe is arbitrary, but I 
+* generally see  people follow 
+* {namespace}_{blockname}_editor_assets as a 
+* naming convention
+*/
+function autograph_block_editor_assets() {
+    wp_enqueue_script(
+        'autograph-block',
+        plugins_url( 'build/index.js', __FILE__ ),
+        $asset_file['dependencies'],
+        $asset_file['version']
+    );
+};
+
+// and then, we actually have the function run when the editor loads...
+add_action( 'enqueue_block_editor_assets', 'autograph_block_editor_assets' );
