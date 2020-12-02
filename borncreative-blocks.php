@@ -30,12 +30,6 @@ function borncreative_block_editor_assets() {
         $asset_file['dependencies'],
         $asset_file['version']
     );
-    wp_enqueue_script(
-        'borncreative-block-stylesheets',
-        plugins_url( 'build/index.css', __FILE__ ),
-        [ 'wp-edit-blocks' ],
-        filemtime( plugin_dir_path( __FILE__ ) . 'build/index.css' ) 
-    );
 };
 
 // and then, we actually have the function run when the editor loads...
@@ -52,7 +46,7 @@ wp_register_style(
 
 
 function borncreative_block_assets() {
-    wp_enqueue_script(
+    wp_enqueue_style(
         'borncreative-block-stylesheets',
         plugins_url( 'build/index.css', __FILE__ ),
         [ 'wp-edit-blocks' ],
