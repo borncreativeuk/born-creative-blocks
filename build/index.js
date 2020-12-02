@@ -185,7 +185,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       onChange: changeHeading
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       className: "copy-bd",
-      tagName: "div",
+      tagName: "h3",
       placeholder: "Enter your text here",
       value: attributes.bodyContent,
       onChange: changeBodyContent
@@ -208,7 +208,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       value: attributes.heading
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       className: "copy-bd",
-      tagName: "div",
+      tagName: "h3",
       value: attributes.bodyContent
     })));
   }

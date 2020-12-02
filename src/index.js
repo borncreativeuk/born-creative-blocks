@@ -97,7 +97,7 @@ registerBlockType('borncreative/header-block', {
                     we want it to show as. */}
                     <RichText 
                         className="copy-bd"
-                        tagName="div"
+                        tagName="h3"
                         placeholder="Enter your text here"
                         value={attributes.bodyContent}
                         onChange={changeBodyContent}
@@ -124,7 +124,7 @@ registerBlockType('borncreative/header-block', {
                         />
                     <RichText.Content 
                         className="copy-bd" 
-                        tagName="div" 
+                        tagName="h3" 
                         value={attributes.bodyContent} 
                         />
                 </div>
