@@ -202,8 +202,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media",
       style: attributes.imgUrl ? {
         'background': "url(".concat(attributes.imgUrl, ")"),
-        'background-position': center,
-        'background-size': cover
+        'background-position': 'center',
+        'background-size': 'cover'
       } : ''
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "copy"

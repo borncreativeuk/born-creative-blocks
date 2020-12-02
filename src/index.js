@@ -124,8 +124,8 @@ registerBlockType('borncreative/header-block', {
                 style={
                     attributes.imgUrl ? {
                         'background': `url(${ attributes.imgUrl })`,
-                        'background-position': center,
-                        'background-size': cover,
+                        'background-position': 'center',
+                        'background-size': 'cover',
                     } : ''
                     
                 }
