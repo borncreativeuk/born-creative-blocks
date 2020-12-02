@@ -34,9 +34,10 @@ registerBlockType('autograph/hero', {
         );
     },
 
-    save() {
+    save(props) {
+        const { attributes } = props;
         return (
-            <div>Only the front end will show this</div>
+            <h2>{attributes.textString}</h2>
         );
     }
 });
