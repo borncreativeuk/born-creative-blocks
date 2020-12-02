@@ -9,7 +9,8 @@
       width: 100%; }
   .wp-block-borncreative-header-block .copy {
     position: absolute;
-    bottom: 1rem; }
+    bottom: 1rem;
+    color: white; }
     .wp-block-borncreative-header-block .copy .copy-hd:before {
       display: none; }
 
