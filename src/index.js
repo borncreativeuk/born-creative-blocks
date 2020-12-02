@@ -113,15 +113,22 @@ registerBlockType('borncreative/header-block', {
         const className = getBlockDefaultClassName('borncreative/header-block');
         const { attributes } = props;
 
-        const style={
-            'background-image': `url(${ url })`,
-            'background-position': center,
-            'background-size': cover,
-        }
+        
+            
+        
 
         return (
             <div className={className}>
-                <div className="media" style={style}
+                <div 
+                className="media" 
+                style={
+                    attributes.imgUrl ? {
+                        'background': `url(${ attributes.imgUrl })`,
+                        'background-position': center,
+                        'background-size': cover,
+                    } : ''
+                    
+                }
                 ></div>
                 <div className="copy">
                 <div class="col-full">

@@ -196,16 +196,15 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
   save: function save(props) {
     var className = getBlockDefaultClassName('borncreative/header-block');
     var attributes = props.attributes;
-    var style = {
-      'background-image': "url(".concat(url, ")"),
-      'background-position': center,
-      'background-size': cover
-    };
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: className
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "media",
-      style: style
+      style: attributes.imgUrl ? {
+        'background': "url(".concat(attributes.imgUrl, ")"),
+        'background-position': center,
+        'background-size': cover
+      } : ''
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "copy"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
