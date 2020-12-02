@@ -28,11 +28,19 @@ function borncreative_block_editor_assets() {
     // Enqueue block editor styles
     wp_register_style(
         'borncreative-block/stylesheets',
-        plugins_url( 'assets/dist/style.css', __FILE__ ),
+        plugins_url( 'build/index.css', __FILE__ ),
         [ 'wp-edit-blocks' ],
-        filemtime( plugin_dir_path( __FILE__ ) . 'assets/dist/style.css' ) 
+        filemtime( plugin_dir_path( __FILE__ ) . 'build/index.css' ) 
     );
 
+    $asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
+
+    wp_enqueue_script(
+        'borncreative-block',
+        plugins_url( 'build/index.js', __FILE__ ),
+        $asset_file['dependencies'],
+        $asset_file['version']
+    );
 
 };
 
