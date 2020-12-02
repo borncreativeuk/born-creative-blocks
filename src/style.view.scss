@@ -32,10 +32,27 @@
 }
 
 .wp-block-borncreative-intro-text-block {
+    .col-full {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
     .row {
         display: flex;
         .column {
             flex: 50%
         }
+    }
+    .headinga,
+    .headingb,
+    .headingc {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+    }
+    .linea,
+    .lineb,
+    .linec {
+        font-size: 0.8rem;
+        margin: 0;
     }
 }
