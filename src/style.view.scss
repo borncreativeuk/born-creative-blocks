@@ -1,7 +1,7 @@
 // for styles loaded in editor and in the view
 // This class name is automatically generated for the blocks we make
 @function rem($size) {
-    @return $size / 16 * 1rem;
+    @return $size / 14 * 1rem;
 }
 
 @mixin font-size($number) {
