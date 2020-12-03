@@ -1,5 +1,10 @@
-img {
-  border-radius: 0; }
+.media img {
+  border-radius: 0;
+  transition: 1s ease-out; }
+
+.media:hover img {
+  border-radius: 0;
+  transform: scale3d(1.1, 1.1, 1); }
 
 .wp-block-borncreative-header-block {
   position: relative;
