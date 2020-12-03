@@ -194,6 +194,7 @@
             align-items: stretch;
             .column1 {
                 @include grid-size(4);
+                padding: 0 1rem 0 0;
             }
             .column2 {
                 @include grid-size(5);

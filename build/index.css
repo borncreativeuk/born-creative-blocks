@@ -138,7 +138,8 @@
       display: flex;
       align-items: stretch; }
       .wp-block-borncreative-the-solution-block .row .column1 {
-        width: 33.33333%; }
+        width: 33.33333%;
+        padding: 0 1rem 0 0; }
       .wp-block-borncreative-the-solution-block .row .column2 {
         width: 41.66667%; } }
   .wp-block-borncreative-the-solution-block .media.column1 img,
