@@ -2,7 +2,7 @@
 // This class name is automatically generated for the blocks we make
 // wordpress uses 782 px as their point between mobile and desktop, so will I
 @function rem($size) {
-    @return $size / 14 * 1rem;
+    @return $size / 16 * 1rem;
 }
 
 @function grid($size) {

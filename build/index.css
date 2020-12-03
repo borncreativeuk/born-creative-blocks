@@ -26,15 +26,15 @@
     right: 0;
     color: white; }
     .wp-block-borncreative-header-block .copy .copy-hd {
-      font-size: 2.85714rem;
-      line-height: 3.57143rem;
+      font-size: 2.5rem;
+      line-height: 3.125rem;
       margin: 0;
       color: white; }
       .wp-block-borncreative-header-block .copy .copy-hd:before {
         display: none; }
     .wp-block-borncreative-header-block .copy .copy-bd {
-      font-size: 2.42857rem;
-      line-height: 3.14286rem;
+      font-size: 2.125rem;
+      line-height: 2.75rem;
       margin: 0;
       color: white; }
 
@@ -52,22 +52,22 @@
     padding: 0 0 0 1rem; }
 
 .wp-block-borncreative-intro-text-block .copy-bd {
-  font-size: 1.85714rem;
-  line-height: 2.57143rem; }
+  font-size: 1.625rem;
+  line-height: 2.25rem; }
 
 .wp-block-borncreative-intro-text-block .headinga,
 .wp-block-borncreative-intro-text-block .headingb,
 .wp-block-borncreative-intro-text-block .headingc {
-  font-size: 1rem;
-  line-height: 1.71429rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   font-weight: bold;
   margin: 0; }
 
 .wp-block-borncreative-intro-text-block .linea,
 .wp-block-borncreative-intro-text-block .lineb,
 .wp-block-borncreative-intro-text-block .linec {
-  font-size: 1rem;
-  line-height: 1.71429rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   margin: 0; }
 
 @media (max-width: 782px) {
