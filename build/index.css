@@ -3,7 +3,7 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold !important; }
 
 .zoom {
   overflow: hidden; }
@@ -133,6 +133,12 @@ h4 {
   position: relative;
   color: white;
   background: #BCC3BD; }
+  .wp-block-borncreative-the-solution-block .headinga {
+    font-size: 2rem;
+    line-height: 2.625rem; }
+  .wp-block-borncreative-the-solution-block .headingb {
+    font-size: 1.625rem;
+    line-height: 2.25rem; }
   .wp-block-borncreative-the-solution-block h1,
   .wp-block-borncreative-the-solution-block h2,
   .wp-block-borncreative-the-solution-block h3,

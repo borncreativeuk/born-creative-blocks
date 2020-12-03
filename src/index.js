@@ -351,6 +351,78 @@ registerBlockType('borncreative/intro-text-block', {
 
 
 
+registerBlockType('borncreative/title-only-block', {
+    title: 'Title Only Block',
+    icon: 'smiley',
+    category: 'common',
+
+    attributes: {
+        heading: {
+            source: 'html',
+            selector: 'h2',
+        },
+    },
+
+    edit(props) {
+        const { className, setAttributes } = props;
+        const { attributes } = props;
+
+        function changeHeading(heading) {
+            // using some nice js features instead of typing
+            // { heading: heading }
+            setAttributes({ heading });
+        }
+
+        return [
+            <InspectorControls>
+                {/* Later, when we have customizable options we will add stuff here! */}
+                <div
+                    style={{
+                        padding: '1em 0',
+                    }}
+                >
+                    Options
+                </div>
+            </InspectorControls>,
+            <div className={className}>
+                <div class="col-full">
+                    <RichText 
+                        className="copy-hd"
+                        tagName="h2"
+                        placeholder="Enter your heading"
+                        value={attributes.heading}
+                        onChange={changeHeading}
+                        />
+                </div>
+            </div>,
+        ];
+    },
+
+    save(props) {
+        const className = getBlockDefaultClassName('borncreative/title-only-block');
+        const { attributes } = props;
+
+        return (
+            <div className={className}>
+                <div class="col-full">
+                    <RichText.Content 
+                        class="copy-hd"
+                        tagName="h2"
+                        value={attributes.heading}
+                        />
+                    <hr/>
+                </div>
+            </div>
+        );
+    },
+});
+
+
+
+
+
+
+
 
 registerBlockType('borncreative/the-process-block', {
     title: 'The Process Block',
