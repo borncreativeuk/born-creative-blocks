@@ -13,6 +13,9 @@ h4 {
   .zoom:hover img {
     transform: scale3d(1.1, 1.1, 1); }
 
+.storefront-handheld-footer-bar {
+  display: none; }
+
 .wp-block-borncreative-header-block {
   position: relative;
   display: block; }
@@ -110,7 +113,7 @@ h4 {
     .wp-block-borncreative-the-process-block .row .media.column1 img,
     .wp-block-borncreative-the-process-block .row .media.column2 img {
       height: auto !important; }
-  .wp-block-borncreative-the-process-block .column3 {
+  .wp-block-borncreative-the-process-block .copy .col-full .column3 {
     width: 100%; } }
 
 @media (min-width: 783px) {
