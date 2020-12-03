@@ -432,15 +432,15 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     },
     figurea: {
       source: 'html',
-      selector: '.figure1'
+      selector: '.figurea'
     },
     figureb: {
       source: 'html',
-      selector: '.figure2'
+      selector: '.figureb'
     },
     figurec: {
       source: 'html',
-      selector: '.figure3'
+      selector: '.figurec'
     }
   },
   edit: function edit(props) {
