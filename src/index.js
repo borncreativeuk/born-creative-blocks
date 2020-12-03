@@ -994,13 +994,13 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
         
         function selectImaged(value) {
             setAttributes({
-                imagec: value.sizes.full.url,
+                imaged: value.sizes.full.url,
             })
         }
         
         function selectImagee(value) {
             setAttributes({
-                imagec: value.sizes.full.url,
+                imagee: value.sizes.full.url,
             })
         }
         

@@ -273,4 +273,15 @@ h4 {
     }
 }
 
-.wp-block-borncreative-the-5-image-gallery-block {}
+.wp-block-borncreative-the-5-image-gallery-block {
+    display: flex;
+    flex-direction: row;
+    .column1 {
+        display: flex;
+        flex-direction: column;
+        .extra-row {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
