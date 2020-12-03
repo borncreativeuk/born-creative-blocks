@@ -946,7 +946,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
   }
 });
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/the-5-image-gallery-block', {
-  title: 'The Process Block',
+  title: '5 image gallery',
   icon: 'smiley',
   category: 'common',
   attributes: {

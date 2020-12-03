@@ -942,7 +942,7 @@ registerBlockType('borncreative/the-solution-block', {
 
 
 registerBlockType('borncreative/the-5-image-gallery-block', {
-    title: 'The Process Block',
+    title: '5 image gallery',
     icon: 'smiley',
     category: 'common',
 
