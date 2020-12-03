@@ -50,14 +50,28 @@ h4 {
   padding-top: 8rem !important;
   padding-bottom: 8rem !important; }
 
-.wp-block-borncreative-intro-text-block .row {
-  display: flex; }
-  .wp-block-borncreative-intro-text-block .row .column1 {
-    width: 58.33333%;
-    padding: 0 1rem 0 0; }
-  .wp-block-borncreative-intro-text-block .row .column2 {
-    width: 41.66667%;
-    padding: 0 0 0 1rem; }
+@media (max-width: 782px) {
+  .wp-block-borncreative-intro-text-block .row {
+    display: flex;
+    flex-direction: column; }
+    .wp-block-borncreative-intro-text-block .row .column1 {
+      width: 100%;
+      padding: 0;
+      order: 2; }
+    .wp-block-borncreative-intro-text-block .row .column2 {
+      width: 100%;
+      padding: 0 0 1rem 0;
+      order: 1; } }
+
+@media (min-width: 783px) {
+  .wp-block-borncreative-intro-text-block .row {
+    display: flex; }
+    .wp-block-borncreative-intro-text-block .row .column1 {
+      width: 58.33333%;
+      padding: 0 1rem 0 0; }
+    .wp-block-borncreative-intro-text-block .row .column2 {
+      width: 41.66667%;
+      padding: 0 0 0 1rem; } }
 
 .wp-block-borncreative-intro-text-block .copy-bd {
   font-size: 1.625rem;
@@ -95,7 +109,9 @@ h4 {
       width: 100%; }
     .wp-block-borncreative-the-process-block .row .media.column1 img,
     .wp-block-borncreative-the-process-block .row .media.column2 img {
-      height: auto !important; } }
+      height: auto !important; }
+  .wp-block-borncreative-the-process-block .column3 {
+    width: 100%; } }
 
 @media (min-width: 783px) {
   .wp-block-borncreative-the-process-block .row {
@@ -159,7 +175,9 @@ h4 {
         width: 100%; }
       .wp-block-borncreative-the-solution-block .row .media.column1 img,
       .wp-block-borncreative-the-solution-block .row .media.column2 img {
-        height: auto !important; } }
+        height: auto !important; }
+    .wp-block-borncreative-the-solution-block .imagec {
+      display: none; } }
   @media (min-width: 783px) {
     .wp-block-borncreative-the-solution-block .row {
       display: flex;
