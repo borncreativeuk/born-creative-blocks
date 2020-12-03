@@ -96,11 +96,14 @@
 .wp-block-borncreative-the-process-block {
     @media (max-width: 782px) {
         .flex {
-            display: flex;
+            display: block;
             align-items: stretch;
         }
         .column1 {
-            flex: 100%;
+            width: 100%;
+        }
+        .wp-block-borncreative-the-process-block .media.column1 img {
+            height: auto;
         }
     }
     @media (min-width: 783px) {
