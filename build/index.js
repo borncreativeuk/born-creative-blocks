@@ -583,13 +583,15 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       placeholder: "Enter your text here",
       value: attributes.headingb,
       onChange: changeHeadingb
-    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "column3"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       className: "copy-bd",
       tagName: "p",
       placeholder: "Enter your text here",
       value: attributes.bodyContent,
       onChange: changeBodyContent
-    }))))];
+    })))))];
   },
   save: function save(props) {
     var className = getBlockDefaultClassName('borncreative/the-process-block');
@@ -624,11 +626,13 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       class: "headingb",
       tagName: "h3",
       value: attributes.headingb
-    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "column3"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       className: "copy-bd",
       tagName: "p",
       value: attributes.bodyContent
-    }))));
+    })))));
   }
 });
 

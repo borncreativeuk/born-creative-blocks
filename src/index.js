@@ -535,7 +535,7 @@ registerBlockType('borncreative/the-process-block', {
                         value={attributes.headingb}
                         onChange={changeHeadingb}
                         />
-
+                        <div class="column3">
                         <RichText 
                         className="copy-bd"
                         tagName="p"
@@ -543,6 +543,7 @@ registerBlockType('borncreative/the-process-block', {
                         value={attributes.bodyContent}
                         onChange={changeBodyContent}
                         />
+                        </div>
                     </div>
                 </div>
             </div>,
@@ -589,11 +590,13 @@ registerBlockType('borncreative/the-process-block', {
                     tagName="h3"
                     value={attributes.headingb}
                     />
+                    <div class="column3">
                     <RichText.Content 
                         className="copy-bd" 
                         tagName="p" 
                         value={attributes.bodyContent} 
                         />
+                    </div>
                 </div>
                 </div>
             </div>
