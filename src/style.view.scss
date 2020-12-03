@@ -1,5 +1,14 @@
 // for styles loaded in editor and in the view
 // This class name is automatically generated for the blocks we make
+@function rem($size) {
+    @return $size / 16 * 1rem;
+}
+
+@mixin font-size($number) {
+    font-size: rem($number);
+    line-height: rem($number+10);
+}
+
 .wp-block-borncreative-header-block {
     position: relative;
     display: block;
@@ -51,19 +60,19 @@
         }
     }
     .copy-bd {
-        font-size: 1.5rem;
+        @include font-size(26);
     }
     .headinga,
     .headingb,
     .headingc {
-        font-size: 1rem;
+        @include font-size(14);
         font-weight: bold;
         margin: 0;
     }
     .linea,
     .lineb,
     .linec {
-        font-size: 0.8rem;
+        @include font-size(14);
         margin: 0;
     }
 }

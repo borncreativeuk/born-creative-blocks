@@ -39,19 +39,22 @@
     padding: 0 1rem; }
 
 .wp-block-borncreative-intro-text-block .copy-bd {
-  font-size: 1.5rem; }
+  font-size: 1.625rem;
+  line-height: 2.25rem; }
 
 .wp-block-borncreative-intro-text-block .headinga,
 .wp-block-borncreative-intro-text-block .headingb,
 .wp-block-borncreative-intro-text-block .headingc {
-  font-size: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   font-weight: bold;
   margin: 0; }
 
 .wp-block-borncreative-intro-text-block .linea,
 .wp-block-borncreative-intro-text-block .lineb,
 .wp-block-borncreative-intro-text-block .linec {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   margin: 0; }
 
 /*
