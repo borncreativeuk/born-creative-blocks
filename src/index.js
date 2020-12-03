@@ -113,7 +113,7 @@ registerBlockType('borncreative/header-block', {
         const { attributes } = props;
 
         return (
-            <div className={className} data-aos="fade-up">
+            <div className={className}>
                 <div 
                 className="media">
                     <img src={ attributes.image }/>
@@ -287,7 +287,7 @@ registerBlockType('borncreative/intro-text-block', {
         const { attributes } = props;
 
         return (
-            <div className={className} data-aos="fade-up">
+            <div className={className} data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
                 <div className="copy col-full">
                     <div class="row">
                     <div class="column1">
@@ -398,7 +398,7 @@ registerBlockType('borncreative/title-only-block', {
         const { attributes } = props;
 
         return (
-            <div className={className} data-aos="fade-up">
+            <div className={className} data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
                 <div class="col-full">
                     <RichText.Content 
                         class="copy-hd"
@@ -618,7 +618,7 @@ registerBlockType('borncreative/the-process-block', {
         
             
         return (
-            <div className={className} data-aos="fade-up">
+            <div className={className} data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
                 <div className="col-full">
                     <RichText.Content 
                         class="headinga"
@@ -872,7 +872,7 @@ registerBlockType('borncreative/the-solution-block', {
 
 
         return (
-            <div className={className} data-aos="fade-up">
+            <div className={className} data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
                 <div className="col-full ws-t ws-b">
                     <RichText.Content 
                         class="headinga"
@@ -1091,7 +1091,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
         
             
         return (
-            <div className={className} data-aos="fade-up">
+            <div className={className} data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
                 <div class="column1">
                     <div 
                     className="media pr">
@@ -1228,7 +1228,7 @@ registerBlockType('borncreative/double-title-text-block', {
         const { attributes } = props;
 
         return (
-            <div className={className} data-aos="fade-up">
+            <div className={className} data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
                 <div class="col-full">
                     <RichText.Content 
                         class="headinga"
