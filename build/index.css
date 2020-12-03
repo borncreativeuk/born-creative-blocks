@@ -129,6 +129,8 @@ h4 {
     .wp-block-borncreative-the-process-block .row .media.column1 img,
     .wp-block-borncreative-the-process-block .row .media.column2 img {
       height: auto !important; }
+    .wp-block-borncreative-the-process-block .row .media figure {
+      margin: 1rem 2.617924rem; }
   .wp-block-borncreative-the-process-block .column3 {
     width: 100%; } }
 

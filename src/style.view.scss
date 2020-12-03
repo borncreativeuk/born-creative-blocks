@@ -171,9 +171,14 @@ h4 {
             .column1 {
                 @include grid-size(12);
             }
-            .media.column1 img,
-            .media.column2 img {
-                height: auto !important;
+            .media {
+                &.column1 img,
+                &.column2 img {
+                    height: auto !important;
+                }
+                figure {
+                    margin: 1rem 2.617924rem;
+                }
             }
         }
         .column3 {
