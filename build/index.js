@@ -533,7 +533,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       className: "figurea",
-      tagName: "figure",
+      tagName: "span",
       placeholder: "Enter your text here",
       value: attributes.figurea,
       onChange: changeFigurea
@@ -551,7 +551,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       className: "figureb",
-      tagName: "figure",
+      tagName: "span",
       placeholder: "Enter your text here",
       value: attributes.figureb,
       onChange: changeFigureb
@@ -569,7 +569,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       }
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       className: "figurec",
-      tagName: "figure",
+      tagName: "span",
       placeholder: "Enter your text here",
       value: attributes.figurec,
       onChange: changeFigurec

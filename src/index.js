@@ -477,7 +477,7 @@ registerBlockType('borncreative/the-process-block', {
                     />
                     <RichText 
                         className="figurea"
-                        tagName="figure"
+                        tagName="span"
                         placeholder="Enter your text here"
                         value={attributes.figurea}
                         onChange={changeFigurea}
@@ -498,7 +498,7 @@ registerBlockType('borncreative/the-process-block', {
                     />
                     <RichText 
                         className="figureb"
-                        tagName="figure"
+                        tagName="span"
                         placeholder="Enter your text here"
                         value={attributes.figureb}
                         onChange={changeFigureb}
@@ -519,7 +519,7 @@ registerBlockType('borncreative/the-process-block', {
                     />
                     <RichText 
                         className="figurec"
-                        tagName="figure"
+                        tagName="span"
                         placeholder="Enter your text here"
                         value={attributes.figurec}
                         onChange={changeFigurec}
