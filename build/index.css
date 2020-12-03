@@ -102,6 +102,22 @@ h4 {
   font-size: 1.625rem;
   line-height: 2.25rem; }
 
+.wp-block-borncreative-the-process-block .media.column1 img,
+.wp-block-borncreative-the-process-block .media.column2 img {
+  height: 33vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%; }
+
+.wp-block-borncreative-the-process-block .copy {
+  padding-bottom: 8rem; }
+  .wp-block-borncreative-the-process-block .copy .col-full {
+    display: flex;
+    flex-direction: column; }
+    .wp-block-borncreative-the-process-block .copy .col-full .copy-bd {
+      font-size: 1.125rem;
+      line-height: 1.75rem; }
+
 @media (max-width: 782px) {
   .wp-block-borncreative-the-process-block .row {
     padding-top: 8rem !important;
@@ -113,7 +129,7 @@ h4 {
     .wp-block-borncreative-the-process-block .row .media.column1 img,
     .wp-block-borncreative-the-process-block .row .media.column2 img {
       height: auto !important; }
-  .wp-block-borncreative-the-process-block .copy .col-full .column3 {
+  .wp-block-borncreative-the-process-block .column3 {
     width: 100%; } }
 
 @media (min-width: 783px) {
@@ -128,25 +144,9 @@ h4 {
     .wp-block-borncreative-the-process-block .row .column2 {
       /*custom grid*/
       width: 28.6%;
-      padding: 0 1rem; } }
-
-.wp-block-borncreative-the-process-block .media.column1 img,
-.wp-block-borncreative-the-process-block .media.column2 img {
-  height: 33vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%; }
-
-.wp-block-borncreative-the-process-block .copy {
-  padding-bottom: 8rem; }
-  .wp-block-borncreative-the-process-block .copy .col-full {
-    display: flex;
-    flex-direction: column; }
-    .wp-block-borncreative-the-process-block .copy .col-full .column3 {
-      width: 41.66667%; }
-      .wp-block-borncreative-the-process-block .copy .col-full .column3 .copy-bd {
-        font-size: 1.125rem;
-        line-height: 1.75rem; }
+      padding: 0 1rem; }
+  .wp-block-borncreative-the-process-block .column3 {
+    width: 41.66667%; } }
 
 .wp-block-borncreative-the-solution-block {
   position: relative;
