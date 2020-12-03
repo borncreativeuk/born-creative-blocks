@@ -121,7 +121,7 @@ registerBlockType('borncreative/header-block', {
             <div className={className}>
                 <div 
                 className="media">
-                    <img src="{ attributes.imgUrl }">
+                    <img src="{ attributes.imgUrl }"/>
                 </div>
                 <div className="copy">
                 <div class="col-full">
