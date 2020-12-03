@@ -215,6 +215,9 @@ h4 {
     width: 50%; }
     .wp-block-borncreative-the-5-image-gallery-block .column1 .media {
       flex: 1; }
+      .wp-block-borncreative-the-5-image-gallery-block .column1 .media .zoom {
+        width: 100%;
+        height: 100%; }
       .wp-block-borncreative-the-5-image-gallery-block .column1 .media img {
         width: 100%;
         height: 100%;
