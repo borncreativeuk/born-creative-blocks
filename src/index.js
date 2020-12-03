@@ -452,6 +452,7 @@ registerBlockType('borncreative/the-process-block', {
                 </div>
             </InspectorControls>,
             <div className={className}>
+            <div className="col-full">
             <RichText 
                 className="headinga"
                 tagName="h2"
@@ -459,7 +460,9 @@ registerBlockType('borncreative/the-process-block', {
                 value={attributes.headinga}
                 onChange={changeHeadinga}
                 />
-                <div className="media">
+                </div>
+                <div class="flex">
+                <div className="media column1">
                     <MediaUpload 
                         onSelect={selectImagea}
                         render={ ({open}) => {
@@ -480,7 +483,7 @@ registerBlockType('borncreative/the-process-block', {
                         onChange={changeFigurea}
                         />
                 </div>
-                <div className="media">
+                <div className="media column1">
                     <MediaUpload 
                         onSelect={selectImageb}
                         render={ ({open}) => {
@@ -501,7 +504,7 @@ registerBlockType('borncreative/the-process-block', {
                         onChange={changeFigureb}
                         />
                 </div>
-                <div className="media">
+                <div className="media column1">
                     <MediaUpload 
                         onSelect={selectImagec}
                         render={ ({open}) => {
@@ -521,6 +524,7 @@ registerBlockType('borncreative/the-process-block', {
                         value={attributes.figurec}
                         onChange={changeFigurec}
                         />
+                </div>
                 </div>
                 <div className="copy">
                     <div class="col-full">
