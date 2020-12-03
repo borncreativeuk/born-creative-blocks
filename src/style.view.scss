@@ -263,3 +263,9 @@ h4 {
         }
     }
 }
+
+.wp-block-borncreative-the-solution-block {
+    .headinga {
+        @include font-size(32);
+    }
+}
