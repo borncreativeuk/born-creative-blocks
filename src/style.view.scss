@@ -30,15 +30,18 @@
     padding-bottom: 8rem !important;
 }
 
-.zoom img {
-    border-radius: 0;
-    transition: 1s ease-out;
-}
-
-.zoom:hover img {
-    border-radius: 0;
-    -webkit-transform: scale3d(1.1, 1.1, 1);
-    transform: scale3d(1.1, 1.1, 1);
+.zoom {
+    overflow: hidden;
+    img {
+        border-radius: 0;
+        transition: 1s ease-out;
+    }
+    &:hover {
+        img {
+            -webkit-transform: scale3d(1.1, 1.1, 1);
+            transform: scale3d(1.1, 1.1, 1);
+        }
+    }
 }
 
 .wp-block-borncreative-header-block {
