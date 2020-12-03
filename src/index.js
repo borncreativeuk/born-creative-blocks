@@ -27,7 +27,7 @@ registerBlockType('borncreative/header-block', {
             source: 'html',
             selector: 'h2',
         },
-        imgUrl: {
+        image: {
             type: 'string',
             default: 'http://placehold.it/500'
         }
@@ -54,7 +54,7 @@ registerBlockType('borncreative/header-block', {
         function selectImage(value) {
             console.log(value);
             setAttributes({
-                imgUrl: value.sizes.full.url,
+                image: value.sizes.full.url,
             })
         }
 
@@ -77,7 +77,7 @@ registerBlockType('borncreative/header-block', {
                             return (
                                 <button onClick={open}>
                                     <img 
-                                        src={attributes.imgUrl}
+                                        src={attributes.image}
                                         />
                                 </button>
                             );
@@ -121,7 +121,7 @@ registerBlockType('borncreative/header-block', {
             <div className={className}>
                 <div 
                 className="media">
-                    <img src={ attributes.imgUrl }/>
+                    <img src={ attributes.image }/>
                 </div>
                 <div className="copy">
                 <div class="col-full">
@@ -143,10 +143,6 @@ registerBlockType('borncreative/header-block', {
 });
 
  
-
-
-
-
 
 
 
@@ -347,3 +343,254 @@ registerBlockType('borncreative/intro-text-block', {
         );
     },
 });
+
+
+
+
+
+
+
+
+
+registerBlockType('borncreative/the-process-block', {
+    title: 'The Process Block',
+    icon: 'smiley',
+    category: 'common',
+
+    attributes: {
+        headinga: {
+            source: 'html',
+            selector: 'h2',
+        },
+        headingb: {
+            source: 'html',
+            selector: 'h3',
+        },
+        bodyContent: {
+            source: 'html',
+            selector: 'p',
+        },
+        imagea: {
+            type: 'string',
+            default: 'http://placehold.it/500'
+        },
+        imageb: {
+            type: 'string',
+            default: 'http://placehold.it/500'
+        },
+        imagec: {
+            type: 'string',
+            default: 'http://placehold.it/500'
+        },
+        figurea: {
+            source: 'html',
+            selector: '.figure1'
+        },
+        figureb: {
+            source: 'html',
+            selector: '.figure2'
+        },
+        figurec: {
+            source: 'html',
+            selector: '.figure3'
+        },
+    },
+
+    edit(props) {
+        const { className, setAttributes } = props;
+        const { attributes } = props;
+
+        // we create a function that will take the changes from RichText
+        // and update the attributes
+        function changeHeadinga(headinga) {
+            setAttributes({ headinga });
+        }
+        function changeHeadingb(headingb) {
+            setAttributes({ headingb });
+        }
+
+        function selectImagea(value) {
+            setAttributes({
+                imagea: value.sizes.full.url,
+            })
+        }
+        function selectImageb(value) {
+            setAttributes({
+                imageb: value.sizes.full.url,
+            })
+        }
+        function selectImagec(value) {
+            setAttributes({
+                imagec: value.sizes.full.url,
+            })
+        }
+        function changeFigurea(figurea) {
+            setAttributes({ figurea });
+        }
+        function changeFigureb(figureb) {
+            setAttributes({ figureb });
+        }
+        function changeFigurec(figurec) {
+            setAttributes({ figurec });
+        }
+        function changeBodyContent(changes) {
+            setAttributes({
+                bodyContent: changes
+            })
+        }
+
+
+        return [
+            <InspectorControls>
+                {/* Later, when we have customizable options we will add stuff here! */}
+                <div
+                    style={{
+                        padding: '1em 0',
+                    }}
+                >
+                    Options
+                </div>
+            </InspectorControls>,
+            <div className={className}>
+            <RichText 
+                className="headinga"
+                tagName="h2"
+                placeholder="Enter your text here"
+                value={attributes.headinga}
+                onChange={changeHeadinga}
+                />
+                <div className="media">
+                    <MediaUpload 
+                        onSelect={selectImagea}
+                        render={ ({open}) => {
+                            return (
+                                <button onClick={open}>
+                                    <img 
+                                        src={attributes.imagea}
+                                        />
+                                </button>
+                            );
+                        }}
+                    />
+                    <RichText 
+                        className="figurea"
+                        tagName="figure"
+                        placeholder="Enter your text here"
+                        value={attributes.figurea}
+                        onChange={changeFigurea}
+                        />
+                </div>
+                <div className="media">
+                    <MediaUpload 
+                        onSelect={selectImageb}
+                        render={ ({open}) => {
+                            return (
+                                <button onClick={open}>
+                                    <img 
+                                        src={attributes.imageb}
+                                        />
+                                </button>
+                            );
+                        }}
+                    />
+                    <RichText 
+                        className="figureb"
+                        tagName="figure"
+                        placeholder="Enter your text here"
+                        value={attributes.figureb}
+                        onChange={changeFigureb}
+                        />
+                </div>
+                <div className="media">
+                    <MediaUpload 
+                        onSelect={selectImagec}
+                        render={ ({open}) => {
+                            return (
+                                <button onClick={open}>
+                                    <img 
+                                        src={attributes.imagec}
+                                        />
+                                </button>
+                            );
+                        }}
+                    />
+                    <RichText 
+                        className="figurec"
+                        tagName="figure"
+                        placeholder="Enter your text here"
+                        value={attributes.figurec}
+                        onChange={changeFigurec}
+                        />
+                </div>
+                <div className="copy">
+                    <div class="col-full">
+                        <RichText 
+                        className="headingb"
+                        tagName="h3"
+                        placeholder="Enter your text here"
+                        value={attributes.headingb}
+                        onChange={changeHeadingb}
+                        />
+
+                        <RichText 
+                        className="copy-bd"
+                        tagName="p"
+                        placeholder="Enter your text here"
+                        value={attributes.bodyContent}
+                        onChange={changeBodyContent}
+                        />
+                    </div>
+                </div>
+            </div>,
+        ];
+    },
+
+    save(props) {
+        const className = getBlockDefaultClassName('borncreative/the-process-block');
+        const { attributes } = props;
+
+        
+            
+        return (
+            <div className={className}>
+                <RichText.Content 
+                    class="headinga"
+                    tagName="h2"
+                    value={attributes.headinga}
+                    />
+                <hr/>
+                <div 
+                className="media column1">
+                    <img src={ attributes.imagea }/>
+                    <figure>{ attributes.figurea }</figure>
+                </div>
+                <div 
+                className="media column1">
+                    <img src={ attributes.imageb }/>
+                    <figure>{ attributes.figureb }</figure>
+                </div>
+                <div 
+                className="media column1">
+                    <img src={ attributes.imagec }/>
+                    <figure>{ attributes.figurec }</figure>
+                </div>
+                <div className="copy">
+                <div class="col-full">
+                    <RichText.Content 
+                    class="headingb"
+                    tagName="h3"
+                    value={attributes.headingb}
+                    />
+                    <RichText.Content 
+                        className="copy-bd" 
+                        tagName="p" 
+                        value={attributes.bodyContent} 
+                        />
+                </div>
+                </div>
+            </div>
+        );
+    },
+});
+
+ 
