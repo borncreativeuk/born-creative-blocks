@@ -64,12 +64,19 @@
   line-height: 1.71429rem;
   margin: 0; }
 
-.wp-block-borncreative-the-process-block .flex {
-  display: flex;
-  align-items: stretch; }
+@media (max-width: 782px) {
+  .wp-block-borncreative-the-process-block .flex {
+    display: flex;
+    align-items: stretch; }
+  .wp-block-borncreative-the-process-block .column1 {
+    flex: 100%; } }
 
-.wp-block-borncreative-the-process-block .column1 {
-  flex: 33%; }
+@media (min-width: 783px) {
+  .wp-block-borncreative-the-process-block .flex {
+    display: flex;
+    align-items: stretch; }
+  .wp-block-borncreative-the-process-block .column1 {
+    flex: 33%; } }
 
 .wp-block-borncreative-the-process-block .column2 {
   flex: 41.66667%;
