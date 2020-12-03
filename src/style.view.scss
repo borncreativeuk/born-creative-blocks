@@ -160,6 +160,8 @@
 }
 
 .wp-block-borncreative-the-solution-block {
+    position: relative;
+    color: white;
     .ws-b {
         padding-bottom: 8rem !important;
     }
@@ -169,7 +171,6 @@
     background: #BCC3BD;
     @media (max-width: 782px) {
         .row {
-            @include whitespace;
             display: block;
             align-items: stretch;
             .column1 {
@@ -183,7 +184,6 @@
     }
     @media (min-width: 783px) {
         .row {
-            @include whitespace;
             display: flex;
             align-items: stretch;
             .column1 {
@@ -201,7 +201,6 @@
         width: 100%;
     }
     .copy {
-        padding-bottom: 8rem;
         .col-full {
             display: flex;
             flex-direction: column;
@@ -209,5 +208,11 @@
                 @include grid-size(5);
             }
         }
+    }
+    .imagec {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 33%;
     }
 }

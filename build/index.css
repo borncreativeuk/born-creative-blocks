@@ -112,6 +112,8 @@
       width: 41.66667%; }
 
 .wp-block-borncreative-the-solution-block {
+  position: relative;
+  color: white;
   background: #BCC3BD; }
   .wp-block-borncreative-the-solution-block .ws-b {
     padding-bottom: 8rem !important; }
@@ -119,8 +121,6 @@
     padding-top: 8rem !important; }
   @media (max-width: 782px) {
     .wp-block-borncreative-the-solution-block .row {
-      padding-top: 8rem !important;
-      padding-bottom: 8rem !important;
       display: block;
       align-items: stretch; }
       .wp-block-borncreative-the-solution-block .row .column1 {
@@ -130,8 +130,6 @@
         height: auto !important; } }
   @media (min-width: 783px) {
     .wp-block-borncreative-the-solution-block .row {
-      padding-top: 8rem !important;
-      padding-bottom: 8rem !important;
       display: flex;
       align-items: stretch; }
       .wp-block-borncreative-the-solution-block .row .column1 {
@@ -144,13 +142,16 @@
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%; }
-  .wp-block-borncreative-the-solution-block .copy {
-    padding-bottom: 8rem; }
-    .wp-block-borncreative-the-solution-block .copy .col-full {
-      display: flex;
-      flex-direction: column; }
-      .wp-block-borncreative-the-solution-block .copy .col-full .column3 {
-        width: 41.66667%; }
+  .wp-block-borncreative-the-solution-block .copy .col-full {
+    display: flex;
+    flex-direction: column; }
+    .wp-block-borncreative-the-solution-block .copy .col-full .column3 {
+      width: 41.66667%; }
+  .wp-block-borncreative-the-solution-block .imagec {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 33%; }
 
 /*
 * For styles only loaded in the editor
