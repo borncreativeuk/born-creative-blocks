@@ -36,8 +36,8 @@ img {
       color: white; }
 
 .wp-block-borncreative-intro-text-block .col-full {
-  padding-top: 8rem;
-  padding-bottom: 8rem; }
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important; }
 
 .wp-block-borncreative-intro-text-block .row {
   display: flex; }
