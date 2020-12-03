@@ -4,9 +4,18 @@
     @return $size / 14 * 1rem;
 }
 
+@function grid($size) {
+    @return $size / 12 * 100%;
+}
+
 @mixin font-size($number) {
     font-size: rem($number);
     line-height: rem($number+10);
+}
+
+@mixin grid-size($number) {
+    flex: grid($number);
+    padding: 0 1rem;
 }
 
 .wp-block-borncreative-header-block {
@@ -55,12 +64,10 @@
     .row {
         display: flex;
         .column1 {
-            flex: 58%;
-            padding: 0 1rem;
+            @include grid-size(7)
         }
         .column2 {
-            flex: 42%;
-            padding: 0 1rem;
+            @include grid-size(5)
         }
     }
     .copy-bd {
