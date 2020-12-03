@@ -160,6 +160,12 @@
 }
 
 .wp-block-borncreative-the-solution-block {
+    .ws-b {
+        padding-bottom: 8rem !important;
+    }
+    .ws-t {
+        padding-top: 8rem !important;
+    }
     background: #BCC3BD;
     @media (max-width: 782px) {
         .row {
@@ -181,13 +187,10 @@
             display: flex;
             align-items: stretch;
             .column1 {
-                /* custom grid*/
-                width: 35.7%;
+                @include grid-size(4);
             }
             .column2 {
-                /*custom grid*/
-                width: 28.6%;
-                padding: 0 1rem;
+                @include grid-size(5);
             }
         }
     }

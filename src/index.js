@@ -706,7 +706,7 @@ registerBlockType('borncreative/the-solution-block', {
             </InspectorControls>,
             <div className={className}>
 
-                <div className="col-full">
+                <div className="col-full ws-t ws-b">
                     <RichText 
                         className="headinga"
                         tagName="h2"
@@ -779,7 +779,7 @@ registerBlockType('borncreative/the-solution-block', {
                             />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row ws-t">
                     <div class="column1"></div> 
                     <div className="copy">
                         <RichText 
@@ -791,7 +791,7 @@ registerBlockType('borncreative/the-solution-block', {
                         />
                     </div>   
                 </div>
-                <div class="row">   
+                <div class="row ws-b">   
                     <div class="column1"></div> 
                     <div class="column2">        
                         <RichText 
@@ -815,7 +815,7 @@ registerBlockType('borncreative/the-solution-block', {
 
         return (
             <div className={className}>
-                <div className="col-full">
+                <div className="col-full ws-t ws-b">
                     <RichText.Content 
                         class="headinga"
                         tagName="h2"
@@ -838,7 +838,7 @@ registerBlockType('borncreative/the-solution-block', {
                             <figure className="figureb">{ attributes.figureb }</figure>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row ws-t">
                         <div class="column1"></div>
                         <div className="copy">
                             <RichText.Content 
@@ -848,7 +848,7 @@ registerBlockType('borncreative/the-solution-block', {
                             />
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row ws-b">
                         <div class="column1"></div>
                         <div class="column2">
                             <RichText.Content 

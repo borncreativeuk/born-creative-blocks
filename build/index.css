@@ -113,6 +113,10 @@
 
 .wp-block-borncreative-the-solution-block {
   background: #BCC3BD; }
+  .wp-block-borncreative-the-solution-block .ws-b {
+    padding-bottom: 8rem !important; }
+  .wp-block-borncreative-the-solution-block .ws-t {
+    padding-top: 8rem !important; }
   @media (max-width: 782px) {
     .wp-block-borncreative-the-solution-block .row {
       padding-top: 8rem !important;
@@ -131,12 +135,9 @@
       display: flex;
       align-items: stretch; }
       .wp-block-borncreative-the-solution-block .row .column1 {
-        /* custom grid*/
-        width: 35.7%; }
+        width: 33.33333%; }
       .wp-block-borncreative-the-solution-block .row .column2 {
-        /*custom grid*/
-        width: 28.6%;
-        padding: 0 1rem; } }
+        width: 41.66667%; } }
   .wp-block-borncreative-the-solution-block .media.column1 img,
   .wp-block-borncreative-the-solution-block .media.column2 img {
     height: 33vh;
