@@ -176,9 +176,6 @@ h4 {
       align-items: stretch; }
       .wp-block-borncreative-the-solution-block .row .column1 {
         width: 100%; }
-      .wp-block-borncreative-the-solution-block .row .media.column1 img,
-      .wp-block-borncreative-the-solution-block .row .media.column2 img {
-        height: auto !important; }
     .wp-block-borncreative-the-solution-block .imagec {
       display: none; } }
   @media (min-width: 783px) {
