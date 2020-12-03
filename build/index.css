@@ -1,3 +1,6 @@
+img {
+  border-radius: 0; }
+
 .wp-block-borncreative-header-block {
   position: relative;
   display: block; }
@@ -71,7 +74,7 @@
   .wp-block-borncreative-the-process-block .column1 {
     width: 100%; }
   .wp-block-borncreative-the-process-block .media.column1 img {
-    height: auto; } }
+    height: auto !important; } }
 
 @media (min-width: 783px) {
   .wp-block-borncreative-the-process-block .flex {
@@ -85,7 +88,7 @@
   padding: 0 1rem; }
 
 .wp-block-borncreative-the-process-block .media.column1 img {
-  height: 50vh;
+  height: 33vh;
   -o-object-fit: cover;
      object-fit: cover; }
 

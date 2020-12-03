@@ -26,6 +26,10 @@
     object-fit: cover;
 }
 
+img {
+    border-radius: 0;
+}
+
 .wp-block-borncreative-header-block {
     position: relative;
     display: block;
@@ -103,7 +107,7 @@
             width: 100%;
         }
         .media.column1 img {
-            height: auto;
+            height: auto !important;
         }
     }
     @media (min-width: 783px) {
@@ -119,7 +123,7 @@
         @include grid-size(5);
     }
     .media.column1 img {
-        height: 50vh;
+        height: 33vh;
         object-fit: cover;
     }
 }
