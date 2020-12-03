@@ -1020,7 +1020,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
             <div className={className}>
             
             
-            
+            <div class="column1">
                 <div className="media">
                     <MediaUpload 
                         onSelect={selectImagea}
@@ -1035,6 +1035,8 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         }}
                     />
                 </div>
+            </div>
+            <div class="column1">
                 <div className="media">
                     <MediaUpload 
                         onSelect={selectImageb}
@@ -1063,6 +1065,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         }}
                     />
                 </div>
+                <div class="extra-row">
                 <div className="media">
                     <MediaUpload 
                         onSelect={selectImaged}
@@ -1091,6 +1094,8 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         }}
                     />
                 </div>
+                </div>
+            </div>
             </div>,
         ];
     },
@@ -1103,10 +1108,13 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
             
         return (
             <div className={className}>
+                <div class="column1">
                     <div 
                     className="media">
                         <div class="zoom"><img src={ attributes.imagea }/></div>
                     </div>
+                </div>
+                <div class="column1">
                     <div 
                     className="media">
                         <div class="zoom"><img src={ attributes.imageb }/></div>
@@ -1115,15 +1123,17 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                     className="media">
                         <div class="zoom"><img src={ attributes.imagec }/></div>
                     </div>
-                    <div 
-                    className="media">
-                        <div class="zoom"><img src={ attributes.imaged }/></div>
+                    <div class="extra-row">
+                        <div 
+                        className="media">
+                            <div class="zoom"><img src={ attributes.imaged }/></div>
+                        </div>
+                        <div 
+                        className="media">
+                            <div class="zoom"><img src={ attributes.imagee }/></div>
+                        </div>
                     </div>
-                    <div 
-                    className="media">
-                        <div class="zoom"><img src={ attributes.imagee }/></div>
-                    </div>
-                
+                </div>
             </div>
         );
     },
