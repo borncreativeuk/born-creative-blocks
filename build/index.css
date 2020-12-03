@@ -64,6 +64,16 @@
   line-height: 1.71429rem;
   margin: 0; }
 
+.wp-block-borncreative-the-process-block .flex {
+  display: flex; }
+
+.wp-block-borncreative-the-process-block .column1 {
+  flex: 33%; }
+
+.wp-block-borncreative-the-process-block .column2 {
+  flex: 41.66667%;
+  padding: 0 1rem; }
+
 /*
 * For styles only loaded in the editor
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.

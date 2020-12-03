@@ -91,3 +91,15 @@
         margin: 0;
     }
 }
+
+.wp-block-borncreative-the-process-block {
+    .flex {
+        display: flex;
+    }
+    .column1 {
+        flex: 33%;
+    }
+    .column2 {
+        @include grid-size(5);
+    }
+}

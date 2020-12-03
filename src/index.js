@@ -553,26 +553,30 @@ registerBlockType('borncreative/the-process-block', {
             
         return (
             <div className={className}>
-                <RichText.Content 
-                    class="headinga"
-                    tagName="h2"
-                    value={attributes.headinga}
-                    />
-                <hr/>
-                <div 
-                className="media column1">
-                    <img src={ attributes.imagea }/>
-                    <figure>{ attributes.figurea }</figure>
+                <div className="col-full">
+                    <RichText.Content 
+                        class="headinga"
+                        tagName="h2"
+                        value={attributes.headinga}
+                        />
+                    <hr/>
                 </div>
-                <div 
-                className="media column1">
-                    <img src={ attributes.imageb }/>
-                    <figure>{ attributes.figureb }</figure>
-                </div>
-                <div 
-                className="media column1">
-                    <img src={ attributes.imagec }/>
-                    <figure>{ attributes.figurec }</figure>
+                <div class="flex">
+                    <div 
+                    className="media column1">
+                        <img src={ attributes.imagea }/>
+                        <figure>{ attributes.figurea }</figure>
+                    </div>
+                    <div 
+                    className="media column1">
+                        <img src={ attributes.imageb }/>
+                        <figure>{ attributes.figureb }</figure>
+                    </div>
+                    <div 
+                    className="media column1">
+                        <img src={ attributes.imagec }/>
+                        <figure>{ attributes.figurec }</figure>
+                    </div>
                 </div>
                 <div className="copy">
                 <div class="col-full">
