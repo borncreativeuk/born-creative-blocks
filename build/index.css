@@ -249,10 +249,9 @@ h4 {
   max-width: 100%;
   overflow: hidden; }
 
-.wp-admin .media:hover,
-.wp-admin .media:focus {
-  cursor: pointer;
-  border: 4px solid #ccc; }
+.wp-admin .wp-block img:hover,
+.wp-admin .wp-block img:focus {
+  cursor: copy; }
 
 
 /*# sourceMappingURL=index.css.map*/
