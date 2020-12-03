@@ -66,30 +66,32 @@ img {
   margin: 0; }
 
 @media (max-width: 782px) {
-  .wp-block-borncreative-the-process-block .flex {
+  .wp-block-borncreative-the-process-block .row {
     padding-top: 8rem !important;
     padding-bottom: 8rem !important;
     display: block;
     align-items: stretch; }
-    .wp-block-borncreative-the-process-block .flex .column1 {
+    .wp-block-borncreative-the-process-block .row .column1 {
       width: 100%; }
-    .wp-block-borncreative-the-process-block .flex .media.column1 img,
-    .wp-block-borncreative-the-process-block .flex .media.column2 img {
+    .wp-block-borncreative-the-process-block .row .media.column1 img,
+    .wp-block-borncreative-the-process-block .row .media.column2 img {
       height: auto !important; } }
 
 @media (min-width: 783px) {
-  .wp-block-borncreative-the-process-block .flex {
+  .wp-block-borncreative-the-process-block .row {
     padding-top: 8rem !important;
     padding-bottom: 8rem !important;
     display: flex;
     align-items: stretch; }
-    .wp-block-borncreative-the-process-block .flex .column1 {
+    .wp-block-borncreative-the-process-block .row .column1 {
+      /* custom grid*/
       flex: 35.7%; }
-    .wp-block-borncreative-the-process-block .flex .column2 {
-      flex: 28.6%; } }
-
-.wp-block-borncreative-the-process-block .column3 {
-  flex: 41.66667%; }
+    .wp-block-borncreative-the-process-block .row .column2 {
+      /*custom grid*/
+      flex: 28.6%;
+      padding: 0 1rem; }
+    .wp-block-borncreative-the-process-block .row .column3 {
+      flex: 41.66667%; } }
 
 .wp-block-borncreative-the-process-block .media.column1 img,
 .wp-block-borncreative-the-process-block .media.column2 img {

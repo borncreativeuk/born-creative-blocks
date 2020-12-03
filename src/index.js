@@ -461,7 +461,7 @@ registerBlockType('borncreative/the-process-block', {
                 onChange={changeHeadinga}
                 />
                 </div>
-                <div class="flex">
+                <div class="row">
                 <div className="media column1">
                     <MediaUpload 
                         onSelect={selectImagea}
@@ -566,7 +566,7 @@ registerBlockType('borncreative/the-process-block', {
                         />
                     <hr/>
                 </div>
-                <div class="flex">
+                <div class="row">
                     <div 
                     className="media column1">
                         <img src={ attributes.imagea }/>

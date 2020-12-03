@@ -102,7 +102,7 @@ img {
 
 .wp-block-borncreative-the-process-block {
     @media (max-width: 782px) {
-        .flex {
+        .row {
             @include whitespace;
             display: block;
             align-items: stretch;
@@ -116,20 +116,23 @@ img {
         }
     }
     @media (min-width: 783px) {
-        .flex {
+        .row {
             @include whitespace;
             display: flex;
             align-items: stretch;
             .column1 {
+                /* custom grid*/
                 flex: 35.7%;
             }
             .column2 {
+                /*custom grid*/
                 flex: 28.6%;
+                padding: 0 1rem;
+            }
+            .column3 {
+                @include grid-size(5);
             }
         }
-    }
-    .column3 {
-        @include grid-size(5);
     }
     .media.column1 img,
     .media.column2 img {
