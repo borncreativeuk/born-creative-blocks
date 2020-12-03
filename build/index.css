@@ -88,7 +88,14 @@
   .wp-admin .wp-block-borncreative-header-block .media button {
     border: none;
     padding: 0;
-    display: block; }
+    display: block;
+    width: 100%;
+    height: 100vh; }
+  .wp-admin .wp-block-borncreative-header-block .media img {
+    width: 100%;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 
 /*# sourceMappingURL=index.css.map*/
