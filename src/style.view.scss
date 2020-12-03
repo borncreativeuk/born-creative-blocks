@@ -15,7 +15,7 @@
 }
 
 @mixin grid-size($number) {
-    flex: grid($number);
+    width: grid($number);
 }
 
 @mixin image-block {
@@ -122,11 +122,11 @@ img {
             align-items: stretch;
             .column1 {
                 /* custom grid*/
-                flex: 35.7%;
+                width: 35.7%;
             }
             .column2 {
                 /*custom grid*/
-                flex: 28.6%;
+                width: 28.6%;
                 padding: 0 1rem;
             }
         }
@@ -141,6 +141,7 @@ img {
         padding-bottom: 8rem;
         .col-full {
             display: flex;
+            flex-direction: column;
             .column3 {
                 @include grid-size(5);
             }
