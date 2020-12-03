@@ -538,7 +538,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       value: attributes.figurea,
       onChange: changeFigurea
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      className: "media column1"
+      className: "media column2"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImageb,
       render: function render(_ref3) {
@@ -609,7 +609,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
       src: attributes.imagea
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("figure", null, attributes.figurea)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      className: "media column1"
+      className: "media column2"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
       src: attributes.imageb
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("figure", null, attributes.figureb)), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {

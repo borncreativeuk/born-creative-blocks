@@ -106,7 +106,8 @@ img {
         .column1 {
             width: 100%;
         }
-        .media.column1 img {
+        .media.column1 img,
+        .media.column2 img {
             height: auto !important;
         }
     }
@@ -116,14 +117,19 @@ img {
             align-items: stretch;
         }
         .column1 {
-            flex: 33%;
+            width: 35.7%;
+        }
+        .column2 {
+            width: 28.6%;
         }
     }
     .column2 {
         @include grid-size(5);
     }
-    .media.column1 img {
+    .media.column1 img,
+    .media.column2 img {
         height: 33vh;
         object-fit: cover;
+        width: 100%;
     }
 }

@@ -483,7 +483,7 @@ registerBlockType('borncreative/the-process-block', {
                         onChange={changeFigurea}
                         />
                 </div>
-                <div className="media column1">
+                <div className="media column2">
                     <MediaUpload 
                         onSelect={selectImageb}
                         render={ ({open}) => {
@@ -572,7 +572,7 @@ registerBlockType('borncreative/the-process-block', {
                         <figure>{ attributes.figurea }</figure>
                     </div>
                     <div 
-                    className="media column1">
+                    className="media column2">
                         <img src={ attributes.imageb }/>
                         <figure>{ attributes.figureb }</figure>
                     </div>
