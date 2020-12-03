@@ -115,6 +115,11 @@
   position: relative;
   color: white;
   background: #BCC3BD; }
+  .wp-block-borncreative-the-solution-block h1,
+  .wp-block-borncreative-the-solution-block h2,
+  .wp-block-borncreative-the-solution-block h3,
+  .wp-block-borncreative-the-solution-block h4 {
+    color: white; }
   .wp-block-borncreative-the-solution-block .ws-b {
     padding-bottom: 8rem !important; }
   .wp-block-borncreative-the-solution-block .ws-t {

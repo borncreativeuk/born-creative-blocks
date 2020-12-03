@@ -162,6 +162,12 @@
 .wp-block-borncreative-the-solution-block {
     position: relative;
     color: white;
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: white;
+    }
     .ws-b {
         padding-bottom: 8rem !important;
     }
