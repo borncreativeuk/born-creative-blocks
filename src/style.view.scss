@@ -183,6 +183,9 @@ h4 {
     .headingb {
         @include font-size(26);
     }
+    .copy-bd {
+        @include font-size(18);
+    }
     position: relative;
     color: white;
     h1,
@@ -305,5 +308,19 @@ h4 {
     }
     .pb {
         padding-bottom: 1rem;
+    }
+}
+
+.wp-block-borncreative-double-title-text-block {
+    .col-full {
+        @include whitespace;
+    }
+    .headinga,
+    .headingb {
+        @include font-size(32);
+    }
+    .contenta,
+    .contentb {
+        @include font-size(18);
     }
 }

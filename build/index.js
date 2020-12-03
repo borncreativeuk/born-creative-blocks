@@ -1112,6 +1112,117 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     }))))));
   }
 });
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/double-title-text-block', {
+  title: 'Double Title and Text Block',
+  icon: 'smiley',
+  category: 'common',
+  attributes: {
+    headinga: {
+      source: 'html',
+      selector: '.headinga'
+    },
+    headingb: {
+      source: 'html',
+      selector: '.headingb'
+    },
+    contenta: {
+      source: 'html',
+      selector: '.contenta'
+    },
+    contentb: {
+      source: 'html',
+      selector: '.contentb'
+    }
+  },
+  edit: function edit(props) {
+    var className = props.className,
+        setAttributes = props.setAttributes;
+    var attributes = props.attributes;
+
+    function changeHeadinga(headinga) {
+      setAttributes({
+        headinga: headinga
+      });
+    }
+
+    function changeHeadingb(headingb) {
+      setAttributes({
+        headingb: headingb
+      });
+    }
+
+    function changeContenta(contenta) {
+      setAttributes({
+        contenta: contenta
+      });
+    }
+
+    function changeContentb(contentb) {
+      setAttributes({
+        contentb: contentb
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      style: {
+        padding: '1em 0'
+      }
+    }, "Options")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "col-full"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "headinga",
+      tagName: "h2",
+      placeholder: "Enter your heading",
+      value: attributes.headinga,
+      onChange: changeHeadinga
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "contenta",
+      tagName: "p",
+      placeholder: "Enter your heading",
+      value: attributes.contenta,
+      onChange: changeContenta
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("hr", null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "headingb",
+      tagName: "h2",
+      placeholder: "Enter your heading",
+      value: attributes.headingb,
+      onChange: changeHeadingb
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "contentb",
+      tagName: "p",
+      placeholder: "Enter your heading",
+      value: attributes.contentb,
+      onChange: changeContentb
+    })))];
+  },
+  save: function save(props) {
+    var className = getBlockDefaultClassName('borncreative/double-title-text-block');
+    var attributes = props.attributes;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "col-full"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "headinga",
+      tagName: "h2",
+      value: attributes.headinga
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "contenta",
+      tagName: "h2",
+      value: attributes.contenta
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("hr", null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "headingb",
+      tagName: "h2",
+      value: attributes.headingb
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "contentb",
+      tagName: "h2",
+      value: attributes.contentb
+    })));
+  }
+});
 
 /***/ }),
 

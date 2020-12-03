@@ -139,6 +139,9 @@ h4 {
   .wp-block-borncreative-the-solution-block .headingb {
     font-size: 1.625rem;
     line-height: 2.25rem; }
+  .wp-block-borncreative-the-solution-block .copy-bd {
+    font-size: 1.125rem;
+    line-height: 1.75rem; }
   .wp-block-borncreative-the-solution-block h1,
   .wp-block-borncreative-the-solution-block h2,
   .wp-block-borncreative-the-solution-block h3,
@@ -232,6 +235,20 @@ h4 {
     padding-right: 1rem; }
   .wp-block-borncreative-the-5-image-gallery-block .pb {
     padding-bottom: 1rem; }
+
+.wp-block-borncreative-double-title-text-block .col-full {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important; }
+
+.wp-block-borncreative-double-title-text-block .headinga,
+.wp-block-borncreative-double-title-text-block .headingb {
+  font-size: 2rem;
+  line-height: 2.625rem; }
+
+.wp-block-borncreative-double-title-text-block .contenta,
+.wp-block-borncreative-double-title-text-block .contentb {
+  font-size: 1.125rem;
+  line-height: 1.75rem; }
 
 /*
 * For styles only loaded in the editor
