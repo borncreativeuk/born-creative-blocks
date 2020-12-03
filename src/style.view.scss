@@ -16,7 +16,6 @@
 
 @mixin grid-size($number) {
     flex: grid($number);
-    padding: 0 1rem;
 }
 
 @mixin image-block {
@@ -24,6 +23,11 @@
     width: 100%;
     height: 100vh;
     object-fit: cover;
+}
+
+@mixin whitespace {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
 }
 
 img {
@@ -49,7 +53,6 @@ img {
         color: white;
         .copy-hd {
             @include font-size(40);
-            padding: 0 1rem;
             margin: 0;
             color: white;
             &:before {
@@ -59,24 +62,24 @@ img {
         .copy-bd {
             @include font-size(34);
             margin: 0;
-            padding: 0 1rem;
             color: white;
         }
     }
 }
 
 .wp-block-borncreative-intro-text-block {
-    .col-full {
-        padding-top: 8rem !important;
-        padding-bottom: 8rem !important;
+    .copy {
+        @include whitespace;
     }
     .row {
         display: flex;
         .column1 {
-            @include grid-size(7)
+            @include grid-size(7);
+            padding: 0 1rem 0 0;
         }
         .column2 {
-            @include grid-size(5)
+            @include grid-size(5);
+            padding: 0 0 0 1rem;
         }
     }
     .copy-bd {
@@ -100,6 +103,7 @@ img {
 .wp-block-borncreative-the-process-block {
     @media (max-width: 782px) {
         .flex {
+            @include whitespace;
             display: block;
             align-items: stretch;
             .column1 {
@@ -113,6 +117,7 @@ img {
     }
     @media (min-width: 783px) {
         .flex {
+            @include whitespace;
             display: flex;
             align-items: stretch;
             .column1 {
@@ -131,5 +136,8 @@ img {
         height: 33vh;
         object-fit: cover;
         width: 100%;
+    }
+    .copy {
+        padding-bottom: 8rem;
     }
 }

@@ -23,7 +23,6 @@ img {
     .wp-block-borncreative-header-block .copy .copy-hd {
       font-size: 2.85714rem;
       line-height: 3.57143rem;
-      padding: 0 1rem;
       margin: 0;
       color: white; }
       .wp-block-borncreative-header-block .copy .copy-hd:before {
@@ -32,10 +31,9 @@ img {
       font-size: 2.42857rem;
       line-height: 3.14286rem;
       margin: 0;
-      padding: 0 1rem;
       color: white; }
 
-.wp-block-borncreative-intro-text-block .col-full {
+.wp-block-borncreative-intro-text-block .copy {
   padding-top: 8rem !important;
   padding-bottom: 8rem !important; }
 
@@ -43,10 +41,10 @@ img {
   display: flex; }
   .wp-block-borncreative-intro-text-block .row .column1 {
     flex: 58.33333%;
-    padding: 0 1rem; }
+    padding: 0 1rem 0 0; }
   .wp-block-borncreative-intro-text-block .row .column2 {
     flex: 41.66667%;
-    padding: 0 1rem; }
+    padding: 0 0 0 1rem; }
 
 .wp-block-borncreative-intro-text-block .copy-bd {
   font-size: 1.85714rem;
@@ -69,6 +67,8 @@ img {
 
 @media (max-width: 782px) {
   .wp-block-borncreative-the-process-block .flex {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
     display: block;
     align-items: stretch; }
     .wp-block-borncreative-the-process-block .flex .column1 {
@@ -79,6 +79,8 @@ img {
 
 @media (min-width: 783px) {
   .wp-block-borncreative-the-process-block .flex {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
     display: flex;
     align-items: stretch; }
     .wp-block-borncreative-the-process-block .flex .column1 {
@@ -87,8 +89,7 @@ img {
       flex: 28.6%; } }
 
 .wp-block-borncreative-the-process-block .column2 {
-  flex: 41.66667%;
-  padding: 0 1rem; }
+  flex: 41.66667%; }
 
 .wp-block-borncreative-the-process-block .media.column1 img,
 .wp-block-borncreative-the-process-block .media.column2 img {
@@ -96,6 +97,9 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%; }
+
+.wp-block-borncreative-the-process-block .copy {
+  padding-bottom: 8rem; }
 
 /*
 * For styles only loaded in the editor
