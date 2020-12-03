@@ -1199,7 +1199,7 @@ registerBlockType('borncreative/double-title-text-block', {
                     <RichText 
                         className="contenta"
                         tagName="p"
-                        placeholder="Enter your heading"
+                        placeholder="Enter your content"
                         value={attributes.contenta}
                         onChange={changeContenta}
                         />
@@ -1214,7 +1214,7 @@ registerBlockType('borncreative/double-title-text-block', {
                     <RichText 
                         className="contentb"
                         tagName="p"
-                        placeholder="Enter your heading"
+                        placeholder="Enter your content"
                         value={attributes.contentb}
                         onChange={changeContentb}
                         />

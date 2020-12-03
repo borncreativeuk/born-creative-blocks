@@ -312,6 +312,14 @@ h4 {
 }
 
 .wp-block-borncreative-double-title-text-block {
+    background: #BCC3BD;
+    color: white;
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: white;
+    }
     .col-full {
         @include whitespace;
     }
