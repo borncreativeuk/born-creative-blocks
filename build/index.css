@@ -89,9 +89,7 @@ img {
     .wp-block-borncreative-the-process-block .row .column2 {
       /*custom grid*/
       flex: 28.6%;
-      padding: 0 1rem; }
-    .wp-block-borncreative-the-process-block .row .column3 {
-      flex: 41.66667%; } }
+      padding: 0 1rem; } }
 
 .wp-block-borncreative-the-process-block .media.column1 img,
 .wp-block-borncreative-the-process-block .media.column2 img {
@@ -102,6 +100,10 @@ img {
 
 .wp-block-borncreative-the-process-block .copy {
   padding-bottom: 8rem; }
+  .wp-block-borncreative-the-process-block .copy .col-full {
+    display: flex; }
+    .wp-block-borncreative-the-process-block .copy .col-full .column3 {
+      flex: 41.66667%; }
 
 /*
 * For styles only loaded in the editor
