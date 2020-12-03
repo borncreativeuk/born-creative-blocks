@@ -4,6 +4,10 @@
 */
 
 .wp-admin {
+    .editor-styles-wrapper .storefront-has-sidebar .wp-block {
+        max-width: 100%;
+        overflow: hidden;
+    }
     .wp-block-borncreative-header-block {
         .media:hover,
         .media:focus {

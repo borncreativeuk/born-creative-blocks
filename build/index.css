@@ -61,6 +61,10 @@
 * For styles only loaded in the editor
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.
 */
+.wp-admin .editor-styles-wrapper .storefront-has-sidebar .wp-block {
+  max-width: 100%;
+  overflow: hidden; }
+
 .wp-admin .wp-block-borncreative-header-block .media:hover,
 .wp-admin .wp-block-borncreative-header-block .media:focus {
   cursor: pointer; }
