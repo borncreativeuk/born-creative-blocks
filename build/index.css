@@ -111,6 +111,47 @@
     .wp-block-borncreative-the-process-block .copy .col-full .column3 {
       width: 41.66667%; }
 
+@media (max-width: 782px) {
+  .wp-block-borncreative-the-solution-block .row {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+    display: block;
+    align-items: stretch; }
+    .wp-block-borncreative-the-solution-block .row .column1 {
+      width: 100%; }
+    .wp-block-borncreative-the-solution-block .row .media.column1 img,
+    .wp-block-borncreative-the-solution-block .row .media.column2 img {
+      height: auto !important; } }
+
+@media (min-width: 783px) {
+  .wp-block-borncreative-the-solution-block .row {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+    display: flex;
+    align-items: stretch; }
+    .wp-block-borncreative-the-solution-block .row .column1 {
+      /* custom grid*/
+      width: 35.7%; }
+    .wp-block-borncreative-the-solution-block .row .column2 {
+      /*custom grid*/
+      width: 28.6%;
+      padding: 0 1rem; } }
+
+.wp-block-borncreative-the-solution-block .media.column1 img,
+.wp-block-borncreative-the-solution-block .media.column2 img {
+  height: 33vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%; }
+
+.wp-block-borncreative-the-solution-block .copy {
+  padding-bottom: 8rem; }
+  .wp-block-borncreative-the-solution-block .copy .col-full {
+    display: flex;
+    flex-direction: column; }
+    .wp-block-borncreative-the-solution-block .copy .col-full .column3 {
+      width: 41.66667%; }
+
 /*
 * For styles only loaded in the editor
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.

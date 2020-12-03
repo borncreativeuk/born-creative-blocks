@@ -158,3 +158,52 @@
         }
     }
 }
+
+.wp-block-borncreative-the-solution-block {
+    @media (max-width: 782px) {
+        .row {
+            @include whitespace;
+            display: block;
+            align-items: stretch;
+            .column1 {
+                width: 100%;
+            }
+            .media.column1 img,
+            .media.column2 img {
+                height: auto !important;
+            }
+        }
+    }
+    @media (min-width: 783px) {
+        .row {
+            @include whitespace;
+            display: flex;
+            align-items: stretch;
+            .column1 {
+                /* custom grid*/
+                width: 35.7%;
+            }
+            .column2 {
+                /*custom grid*/
+                width: 28.6%;
+                padding: 0 1rem;
+            }
+        }
+    }
+    .media.column1 img,
+    .media.column2 img {
+        height: 33vh;
+        object-fit: cover;
+        width: 100%;
+    }
+    .copy {
+        padding-bottom: 8rem;
+        .col-full {
+            display: flex;
+            flex-direction: column;
+            .column3 {
+                @include grid-size(5);
+            }
+        }
+    }
+}
