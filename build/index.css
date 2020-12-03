@@ -42,6 +42,7 @@ h4 {
     .wp-block-borncreative-header-block .copy .copy-bd {
       font-size: 2.125rem;
       line-height: 2.75rem;
+      text-transform: none;
       margin: 0;
       color: white; }
 
@@ -75,6 +76,14 @@ h4 {
   font-size: 0.875rem;
   line-height: 1.5rem;
   margin: 0; }
+
+.wp-block-borncreative-the-process-block .headinga {
+  font-size: 2rem;
+  line-height: 2.625rem; }
+
+.wp-block-borncreative-the-process-block .headingb {
+  font-size: 1.625rem;
+  line-height: 2.25rem; }
 
 @media (max-width: 782px) {
   .wp-block-borncreative-the-process-block .row {
@@ -116,6 +125,9 @@ h4 {
     flex-direction: column; }
     .wp-block-borncreative-the-process-block .copy .col-full .column3 {
       width: 41.66667%; }
+      .wp-block-borncreative-the-process-block .copy .col-full .column3 .copy-bd {
+        font-size: 1.125rem;
+        line-height: 1.75rem; }
 
 .wp-block-borncreative-the-solution-block {
   position: relative;

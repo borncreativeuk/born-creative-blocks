@@ -79,6 +79,7 @@ h4 {
         }
         .copy-bd {
             @include font-size(34);
+            text-transform: none;
             margin: 0;
             color: white;
         }
@@ -118,6 +119,12 @@ h4 {
 }
 
 .wp-block-borncreative-the-process-block {
+    .headinga {
+        @include font-size(32);
+    }
+    .headingb {
+        @include font-size(26);
+    }
     @media (max-width: 782px) {
         .row {
             @include whitespace;
@@ -161,12 +168,21 @@ h4 {
             flex-direction: column;
             .column3 {
                 @include grid-size(5);
+                .copy-bd {
+                    @include font-size(18);
+                }
             }
         }
     }
 }
 
 .wp-block-borncreative-the-solution-block {
+    .headinga {
+        @include font-size(32);
+    }
+    .headingb {
+        @include font-size(26);
+    }
     position: relative;
     color: white;
     h1,
