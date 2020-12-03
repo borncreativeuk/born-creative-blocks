@@ -1,4 +1,4 @@
-    // for styles loaded in editor and in the view
+// for styles loaded in editor and in the view
 // This class name is automatically generated for the blocks we make
 // wordpress uses 782 px as their point between mobile and desktop, so will I
 @function rem($size) {
@@ -225,120 +225,124 @@ h4 {
     }
     .ws-t {
         padding-top: 8rem !important;
-        .media.column1 img,
-        .media.column2 img {
-            height: 33vh;
-            object-fit: cover;
-            width: 100%;
+    }
+    .media.column1 img,
+    .media.column2 img {
+        height: 33vh;
+        object-fit: cover;
+        width: 100%;
+    }
+    .copy {
+        .col-full {
+            display: flex;
+            flex-direction: column;
+            .column3 {
+                @include grid-size(5);
+            }
         }
-        .copy {
-            .col-full {
-                display: flex;
-                flex-direction: column;
-                .column3 {
-                    @include grid-size(5);
-                }
+    }
+    .imagec {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 33%;
+        height: 60%;
+    }
+    @media (max-width: 782px) {
+        .row {
+            display: block;
+            align-items: stretch;
+            .column1 {
+                @include grid-size(12);
             }
         }
         .imagec {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 33%;
-            height: 60%;
-        }
-        @media (max-width: 782px) {
-            .row {
-                display: block;
-                align-items: stretch;
-                .column1 {
-                    @include grid-size(12);
-                }
-            }
-            .imagec {
-                display: none;
-            }
-        }
-        @media (min-width: 783px) {
-            .row {
-                display: flex;
-                align-items: stretch;
-                .column1 {
-                    @include grid-size(4);
-                    padding: 0 1rem 0 0;
-                }
-                .column2 {
-                    @include grid-size(5);
-                }
-            }
+            display: none;
         }
     }
-    .wp-block-borncreative-title-only-block {
-        .col-full {
-            @include whitespace;
-        }
-        .headinga {
-            @include font-size(32);
-        }
-    }
-    .wp-block-borncreative-the-5-image-gallery-block {
-        padding-bottom: 1rem;
-        display: flex;
-        flex-direction: row;
-        .column1 {
+    @media (min-width: 783px) {
+        .row {
             display: flex;
-            flex-direction: column;
-            width: 50%;
+            align-items: stretch;
+            .column1 {
+                @include grid-size(4);
+                padding: 0 1rem 0 0;
+            }
+            .column2 {
+                @include grid-size(5);
+            }
+        }
+    }
+}
+
+.wp-block-borncreative-title-only-block {
+    .col-full {
+        @include whitespace;
+    }
+    .headinga {
+        @include font-size(32);
+    }
+}
+
+.wp-block-borncreative-the-5-image-gallery-block {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    .column1 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        .media {
+            flex: 1;
+            .zoom {
+                width: 100%;
+                height: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .extra-row {
+            display: flex;
+            flex-direction: row;
             .media {
-                flex: 1;
-                .zoom {
-                    width: 100%;
-                    height: 100%;
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
+                width: 50%;
             }
-            .extra-row {
-                display: flex;
-                flex-direction: row;
-                .media {
-                    width: 50%;
-                }
-            }
-        }
-        .pr {
-            padding-right: 1rem;
-        }
-        .pb {
-            padding-bottom: 1rem;
         }
     }
-    .wp-block-borncreative-double-title-text-block {
-        background: #BCC3BD;
+    .pr {
+        padding-right: 1rem;
+    }
+    .pb {
+        padding-bottom: 1rem;
+    }
+}
+
+.wp-block-borncreative-double-title-text-block {
+    background: #BCC3BD;
+    color: white;
+    h1,
+    h2,
+    h3,
+    h4 {
         color: white;
-        h1,
-        h2,
-        h3,
-        h4 {
-            color: white;
-        }
-        .col-full {
-            @include whitespace;
-            .col-8 {
-                @include grid-size(8);
-                padding-left: 16.667%;
-                display: block;
-            }
-        }
-        .headinga,
-        .headingb {
-            @include font-size(32);
-        }
-        .contenta,
-        .contentb {
-            @include font-size(18);
+    }
+    .col-full {
+        @include whitespace;
+        .col-8 {
+            @include grid-size(8);
+            padding-left: 16.667%;
+            display: block;
         }
     }
+    .headinga,
+    .headingb {
+        @include font-size(32);
+    }
+    .contenta,
+    .contentb {
+        @include font-size(18);
+    }
+}
