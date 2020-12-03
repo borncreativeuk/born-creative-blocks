@@ -477,7 +477,7 @@ registerBlockType('borncreative/the-process-block', {
                     />
                     <RichText 
                         className="figurea"
-                        tagName="span"
+                        tagName="figure"
                         placeholder="Enter your text here"
                         value={attributes.figurea}
                         onChange={changeFigurea}
@@ -498,7 +498,7 @@ registerBlockType('borncreative/the-process-block', {
                     />
                     <RichText 
                         className="figureb"
-                        tagName="span"
+                        tagName="figure"
                         placeholder="Enter your text here"
                         value={attributes.figureb}
                         onChange={changeFigureb}
@@ -519,7 +519,7 @@ registerBlockType('borncreative/the-process-block', {
                     />
                     <RichText 
                         className="figurec"
-                        tagName="span"
+                        tagName="figure"
                         placeholder="Enter your text here"
                         value={attributes.figurec}
                         onChange={changeFigurec}
@@ -570,17 +570,17 @@ registerBlockType('borncreative/the-process-block', {
                     <div 
                     className="media column1">
                         <img src={ attributes.imagea }/>
-                        <figure>{ attributes.figurea }</figure>
+                        <figure className="figurea">{ attributes.figurea }</figure>
                     </div>
                     <div 
                     className="media column2">
                         <img src={ attributes.imageb }/>
-                        <figure>{ attributes.figureb }</figure>
+                        <figure className="figureb">{ attributes.figureb }</figure>
                     </div>
                     <div 
                     className="media column1">
                         <img src={ attributes.imagec }/>
-                        <figure>{ attributes.figurec }</figure>
+                        <figure className="figurec">{ attributes.figurec }</figure>
                     </div>
                 </div>
                 <div className="copy">
