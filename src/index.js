@@ -75,11 +75,10 @@ registerBlockType('borncreative/header-block', {
                         onSelect={selectImage}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.image}
-                                        />
-                                </button>
+                                <img 
+                                    onClick={open}
+                                    src={attributes.image}
+                                    />
                             );
                         }}
                     />
@@ -112,10 +111,6 @@ registerBlockType('borncreative/header-block', {
     save(props) {
         const className = getBlockDefaultClassName('borncreative/header-block');
         const { attributes } = props;
-
-        
-            
-        
 
         return (
             <div className={className}>
@@ -536,11 +531,10 @@ registerBlockType('borncreative/the-process-block', {
                         onSelect={selectImagea}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imagea}
-                                        />
-                                </button>
+                                <img 
+                                    onClick={open}
+                                    src={attributes.imagea}
+                                    />
                             );
                         }}
                     />
@@ -557,11 +551,10 @@ registerBlockType('borncreative/the-process-block', {
                         onSelect={selectImageb}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imageb}
-                                        />
-                                </button>
+                                <img 
+                                    onClick={open}
+                                    src={attributes.imageb}
+                                    />
                             );
                         }}
                     />
@@ -578,11 +571,10 @@ registerBlockType('borncreative/the-process-block', {
                         onSelect={selectImagec}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imagec}
-                                        />
-                                </button>
+                                <img 
+                                    onClick={open}
+                                    src={attributes.imagec}
+                                    />
                             );
                         }}
                     />
@@ -605,13 +597,13 @@ registerBlockType('borncreative/the-process-block', {
                         onChange={changeHeadingb}
                         />
                         <div class="column3">
-                        <RichText 
-                        className="copy-bd"
-                        tagName="p"
-                        placeholder="Enter your text here"
-                        value={attributes.bodyContent}
-                        onChange={changeBodyContent}
-                        />
+                            <RichText 
+                            className="copy-bd"
+                            tagName="p"
+                            placeholder="Enter your text here"
+                            value={attributes.bodyContent}
+                            onChange={changeBodyContent}
+                            />
                         </div>
                     </div>
                 </div>
@@ -791,11 +783,10 @@ registerBlockType('borncreative/the-solution-block', {
                         onSelect={selectImagec}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imagec}
-                                        />
-                                </button>
+                                <img 
+                                    onClick={open}
+                                    src={attributes.imagec}
+                                    />
                             );
                         }}
                     />
@@ -810,11 +801,10 @@ registerBlockType('borncreative/the-solution-block', {
                             onSelect={selectImagea}
                             render={ ({open}) => {
                                 return (
-                                    <button onClick={open}>
-                                        <img 
-                                            src={attributes.imagea}
-                                            />
-                                    </button>
+                                    <img 
+                                        onClick={open}
+                                        src={attributes.imagea}
+                                        />
                                 );
                             }}
                         />
@@ -831,11 +821,10 @@ registerBlockType('borncreative/the-solution-block', {
                             onSelect={selectImageb}
                             render={ ({open}) => {
                                 return (
-                                    <button onClick={open}>
-                                        <img 
-                                            src={attributes.imageb}
-                                            />
-                                    </button>
+                                    <img 
+                                        onClick={open}
+                                        src={attributes.imageb}
+                                        />
                                 );
                             }}
                         />
