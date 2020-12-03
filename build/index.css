@@ -1,8 +1,8 @@
-.media img {
+.zoom img {
   border-radius: 0;
   transition: 1s ease-out; }
 
-.media:hover img {
+.zoom:hover img {
   border-radius: 0;
   transform: scale3d(1.1, 1.1, 1); }
 

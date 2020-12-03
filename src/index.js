@@ -569,17 +569,17 @@ registerBlockType('borncreative/the-process-block', {
                 <div class="row">
                     <div 
                     className="media column1">
-                        <img src={ attributes.imagea }/>
+                        <div class="zoom"><img src={ attributes.imagea }/></div>
                         <figure className="figurea">{ attributes.figurea }</figure>
                     </div>
                     <div 
                     className="media column2">
-                        <img src={ attributes.imageb }/>
+                        <div class="zoom"><img src={ attributes.imageb }/></div>
                         <figure className="figureb">{ attributes.figureb }</figure>
                     </div>
                     <div 
                     className="media column1">
-                        <img src={ attributes.imagec }/>
+                        <div class="zoom"><img src={ attributes.imagec }/></div>
                         <figure className="figurec">{ attributes.figurec }</figure>
                     </div>
                 </div>
