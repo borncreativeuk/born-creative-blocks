@@ -323,6 +323,11 @@ h4 {
     }
     .col-full {
         @include whitespace;
+        .col-8 {
+            @include grid-size(8);
+            padding-left: 16.667%;
+            display: block;
+        }
     }
     .headinga,
     .headingb {

@@ -248,6 +248,10 @@ h4 {
   .wp-block-borncreative-double-title-text-block .col-full {
     padding-top: 8rem !important;
     padding-bottom: 8rem !important; }
+    .wp-block-borncreative-double-title-text-block .col-full .col-8 {
+      width: 66.66667%;
+      padding-left: 16.667%;
+      display: block; }
   .wp-block-borncreative-double-title-text-block .headinga,
   .wp-block-borncreative-double-title-text-block .headingb {
     font-size: 2rem;
