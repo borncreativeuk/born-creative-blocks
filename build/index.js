@@ -1210,7 +1210,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       value: attributes.headinga
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       class: "contenta",
-      tagName: "h2",
+      tagName: "p",
       value: attributes.contenta
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("hr", null), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       class: "headingb",
@@ -1218,7 +1218,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       value: attributes.headingb
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       class: "contentb",
-      tagName: "h2",
+      tagName: "p",
       value: attributes.contentb
     })));
   }

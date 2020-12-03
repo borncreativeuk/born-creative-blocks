@@ -1237,7 +1237,7 @@ registerBlockType('borncreative/double-title-text-block', {
                         />
                     <RichText.Content 
                         class="contenta"
-                        tagName="h2"
+                        tagName="p"
                         value={attributes.contenta}
                         />
                     <hr/>
@@ -1248,7 +1248,7 @@ registerBlockType('borncreative/double-title-text-block', {
                         />
                     <RichText.Content 
                         class="contentb"
-                        tagName="h2"
+                        tagName="p"
                         value={attributes.contentb}
                         />
                 </div>
