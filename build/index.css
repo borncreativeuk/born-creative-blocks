@@ -65,7 +65,8 @@
   margin: 0; }
 
 .wp-block-borncreative-the-process-block .flex {
-  display: flex; }
+  display: flex;
+  align-items: stretch; }
 
 .wp-block-borncreative-the-process-block .column1 {
   flex: 33%; }
@@ -73,6 +74,11 @@
 .wp-block-borncreative-the-process-block .column2 {
   flex: 41.66667%;
   padding: 0 1rem; }
+
+.wp-block-borncreative-the-process-block .media.column1 img {
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 /*
 * For styles only loaded in the editor

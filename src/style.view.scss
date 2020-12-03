@@ -95,11 +95,16 @@
 .wp-block-borncreative-the-process-block {
     .flex {
         display: flex;
+        align-items: stretch;
     }
     .column1 {
         flex: 33%;
     }
     .column2 {
         @include grid-size(5);
+    }
+    .media.column1 img {
+        height: 50vh;
+        object-fit: cover;
     }
 }
