@@ -28,6 +28,7 @@
         right: 0;
         color: white;
         .copy-hd {
+            @include font-size(40);
             padding: 0 1rem;
             margin: 0;
             color: white;
@@ -36,6 +37,7 @@
             }
         }
         .copy-bd {
+            @include font-size(34);
             margin: 0;
             padding: 0 1rem;
             color: white;

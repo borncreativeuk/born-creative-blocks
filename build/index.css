@@ -15,12 +15,16 @@
     right: 0;
     color: white; }
     .wp-block-borncreative-header-block .copy .copy-hd {
+      font-size: 2.85714rem;
+      line-height: 3.57143rem;
       padding: 0 1rem;
       margin: 0;
       color: white; }
       .wp-block-borncreative-header-block .copy .copy-hd:before {
         display: none; }
     .wp-block-borncreative-header-block .copy .copy-bd {
+      font-size: 2.42857rem;
+      line-height: 3.14286rem;
       margin: 0;
       padding: 0 1rem;
       color: white; }
