@@ -265,6 +265,9 @@ h4 {
 }
 
 .wp-block-borncreative-the-solution-block {
+    .col-full {
+        @include whitespace;
+    }
     .headinga {
         @include font-size(32);
     }

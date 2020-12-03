@@ -198,6 +198,10 @@ h4 {
         width: 100%;
         height: auto; }
 
+.wp-block-borncreative-the-solution-block .col-full {
+  padding-top: 8rem !important;
+  padding-bottom: 8rem !important; }
+
 .wp-block-borncreative-the-solution-block .headinga {
   font-size: 2rem;
   line-height: 2.625rem; }
