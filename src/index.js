@@ -1010,7 +1010,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
             
             
             <div class="column1">
-                <div className="media">
+                <div className="media pr">
                     <MediaUpload 
                         onSelect={selectImagea}
                         render={ ({open}) => {
@@ -1025,7 +1025,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                 </div>
             </div>
             <div class="column1">
-                <div className="media">
+                <div className="media pb">
                     <MediaUpload 
                         onSelect={selectImageb}
                         render={ ({open}) => {
@@ -1038,7 +1038,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         }}
                     />
                 </div>
-                <div className="media">
+                <div className="media pb">
                     <MediaUpload 
                         onSelect={selectImagec}
                         render={ ({open}) => {
@@ -1052,7 +1052,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                     />
                 </div>
                 <div class="extra-row">
-                <div className="media">
+                <div className="media pr">
                     <MediaUpload 
                         onSelect={selectImaged}
                         render={ ({open}) => {
@@ -1094,22 +1094,22 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
             <div className={className}>
                 <div class="column1">
                     <div 
-                    className="media">
+                    className="media pr">
                         <div class="zoom"><img src={ attributes.imagea }/></div>
                     </div>
                 </div>
                 <div class="column1">
                     <div 
-                    className="media">
+                    className="media pb">
                         <div class="zoom"><img src={ attributes.imageb }/></div>
                     </div>
                     <div 
-                    className="media">
+                    className="media pb">
                         <div class="zoom"><img src={ attributes.imagec }/></div>
                     </div>
                     <div class="extra-row">
                         <div 
-                        className="media">
+                        className="media pr">
                             <div class="zoom"><img src={ attributes.imaged }/></div>
                         </div>
                         <div 
