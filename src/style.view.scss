@@ -102,25 +102,25 @@ img {
         .flex {
             display: block;
             align-items: stretch;
-        }
-        .column1 {
-            width: 100%;
-        }
-        .media.column1 img,
-        .media.column2 img {
-            height: auto !important;
+            .column1 {
+                width: 100%;
+            }
+            .media.column1 img,
+            .media.column2 img {
+                height: auto !important;
+            }
         }
     }
     @media (min-width: 783px) {
         .flex {
             display: flex;
             align-items: stretch;
-        }
-        .column1 {
-            width: 35.7%;
-        }
-        .column2 {
-            width: 28.6%;
+            .column1 {
+                flex: 35.7%;
+            }
+            .column2 {
+                flex: 28.6%;
+            }
         }
     }
     .column2 {

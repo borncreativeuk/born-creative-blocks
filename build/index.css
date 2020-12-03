@@ -71,20 +71,20 @@ img {
   .wp-block-borncreative-the-process-block .flex {
     display: block;
     align-items: stretch; }
-  .wp-block-borncreative-the-process-block .column1 {
-    width: 100%; }
-  .wp-block-borncreative-the-process-block .media.column1 img,
-  .wp-block-borncreative-the-process-block .media.column2 img {
-    height: auto !important; } }
+    .wp-block-borncreative-the-process-block .flex .column1 {
+      width: 100%; }
+    .wp-block-borncreative-the-process-block .flex .media.column1 img,
+    .wp-block-borncreative-the-process-block .flex .media.column2 img {
+      height: auto !important; } }
 
 @media (min-width: 783px) {
   .wp-block-borncreative-the-process-block .flex {
     display: flex;
     align-items: stretch; }
-  .wp-block-borncreative-the-process-block .column1 {
-    width: 35.7%; }
-  .wp-block-borncreative-the-process-block .column2 {
-    width: 28.6%; } }
+    .wp-block-borncreative-the-process-block .flex .column1 {
+      flex: 35.7%; }
+    .wp-block-borncreative-the-process-block .flex .column2 {
+      flex: 28.6%; } }
 
 .wp-block-borncreative-the-process-block .column2 {
   flex: 41.66667%;
