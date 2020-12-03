@@ -1,3 +1,10 @@
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-weight: bold; }
+
 .zoom {
   overflow: hidden; }
   .zoom img {
@@ -60,7 +67,6 @@
 .wp-block-borncreative-intro-text-block .headingc {
   font-size: 0.875rem;
   line-height: 1.5rem;
-  font-weight: bold;
   margin: 0; }
 
 .wp-block-borncreative-intro-text-block .linea,

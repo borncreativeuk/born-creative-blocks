@@ -30,6 +30,14 @@
     padding-bottom: 8rem !important;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .zoom {
     overflow: hidden;
     img {
@@ -99,7 +107,6 @@
     .headingb,
     .headingc {
         @include font-size(14);
-        font-weight: bold;
         margin: 0;
     }
     .linea,
