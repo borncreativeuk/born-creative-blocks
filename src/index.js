@@ -1026,11 +1026,10 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         onSelect={selectImagea}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imagea}
-                                        />
-                                </button>
+                             <img 
+                                onClick={open}
+                                src={attributes.imagea}
+                                />
                             );
                         }}
                     />
@@ -1042,11 +1041,10 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         onSelect={selectImageb}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imageb}
-                                        />
-                                </button>
+                             <img 
+                                onClick={open}
+                                src={attributes.imageb}
+                                />
                             );
                         }}
                     />
@@ -1056,11 +1054,10 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         onSelect={selectImagec}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imagec}
-                                        />
-                                </button>
+                             <img 
+                                onClick={open}
+                                src={attributes.imagec}
+                                />
                             );
                         }}
                     />
@@ -1071,11 +1068,10 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         onSelect={selectImaged}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imaged}
-                                        />
-                                </button>
+                             <img 
+                                onClick={open}
+                                src={attributes.imaged}
+                                />
                             );
                         }}
                     />
@@ -1085,11 +1081,10 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                         onSelect={selectImagee}
                         render={ ({open}) => {
                             return (
-                                <button onClick={open}>
-                                    <img 
-                                        src={attributes.imagee}
-                                        />
-                                </button>
+                             <img 
+                                onClick={open}
+                                src={attributes.imagee}
+                                />
                             );
                         }}
                     />
