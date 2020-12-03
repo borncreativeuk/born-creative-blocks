@@ -733,7 +733,9 @@ registerBlockType('borncreative/the-solution-block', {
                 </div>
 
 
-            <div class="col-full offset">
+            <div class="col-full">
+                <div class="row">
+                    <div class="column1"></div>
                     <div className="media column1">
                         <MediaUpload 
                             onSelect={selectImagea}
@@ -776,7 +778,9 @@ registerBlockType('borncreative/the-solution-block', {
                             onChange={changeFigureb}
                             />
                     </div>
-                
+                </div>
+                <div class="row">
+                    <div class="column1"></div> 
                     <div className="copy">
                         <RichText 
                         className="headingb"
@@ -785,18 +789,22 @@ registerBlockType('borncreative/the-solution-block', {
                         value={attributes.headingb}
                         onChange={changeHeadingb}
                         />
-                        <div class="column3">
-                            <RichText 
-                            className="copy-bd"
-                            tagName="p"
-                            placeholder="Enter your text here"
-                            value={attributes.bodyContent}
-                            onChange={changeBodyContent}
-                            />
-                        </div>
+                    </div>   
+                </div>
+                <div class="row">   
+                    <div class="column1"></div> 
+                    <div class="column2">        
+                        <RichText 
+                        className="copy-bd"
+                        tagName="p"
+                        placeholder="Enter your text here"
+                        value={attributes.bodyContent}
+                        onChange={changeBodyContent}
+                        />
                     </div>
                 </div>
-            </div>,
+            </div>
+        </div>,
         ];
     },
 
@@ -818,27 +826,31 @@ registerBlockType('borncreative/the-solution-block', {
 
                 <img class="imagec" src={ attributes.imagec }/>
 
-                <div class="col-full offset">
-                    <div 
-                    className="media column1">
-                        <div class="zoom"><img src={ attributes.imagea }/></div>
-                        <figure className="figurea">{ attributes.figurea }</figure>
+                <div class="col-full">
+                    <div class="row">
+                        <div class="column1"></div>
+                        <div class="media column1">
+                            <div class="zoom"><img src={ attributes.imagea }/></div>
+                            <figure className="figurea">{ attributes.figurea }</figure>
+                        </div>
+                        <div class="media column1">
+                            <div class="zoom"><img src={ attributes.imageb }/></div>
+                            <figure className="figureb">{ attributes.figureb }</figure>
+                        </div>
                     </div>
-                    <div 
-                    className="media column2">
-                        <div class="zoom"><img src={ attributes.imageb }/></div>
-                        <figure className="figureb">{ attributes.figureb }</figure>
+                    <div class="row">
+                        <div class="column1"></div>
+                        <div className="copy">
+                            <RichText.Content 
+                            class="headingb"
+                            tagName="h3"
+                            value={attributes.headingb}
+                            />
+                        </div>
                     </div>
-                    
-                
-                    <div className="copy">
-                    
-                        <RichText.Content 
-                        class="headingb"
-                        tagName="h3"
-                        value={attributes.headingb}
-                        />
-                        <div class="column3">
+                    <div class="row">
+                        <div class="column1"></div>
+                        <div class="column2">
                             <RichText.Content 
                                 className="copy-bd" 
                                 tagName="p" 
