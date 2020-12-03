@@ -249,28 +249,10 @@ h4 {
   max-width: 100%;
   overflow: hidden; }
 
-.wp-admin .wp-block-borncreative-header-block .media:hover,
-.wp-admin .wp-block-borncreative-header-block .media:focus {
-  cursor: pointer; }
-  .wp-admin .wp-block-borncreative-header-block .media:hover:after,
-  .wp-admin .wp-block-borncreative-header-block .media:focus:after {
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: 4px solid lightgreen;
-    pointer-events: none; }
-
-.wp-admin .wp-block-borncreative-header-block .media {
-  position: relative; }
-  .wp-admin .wp-block-borncreative-header-block .media button {
-    border: none;
-    padding: 0;
-    display: block;
-    width: 100%;
-    height: 100vh; }
+.wp-admin .media:hover,
+.wp-admin .media:focus {
+  cursor: pointer;
+  border: 4px solid #ccc; }
 
 
 /*# sourceMappingURL=index.css.map*/
