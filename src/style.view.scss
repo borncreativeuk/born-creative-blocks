@@ -35,32 +35,28 @@
     @include whitespace;
 }
 
-.ws-b {
-    padding-bottom: 8rem !important;
-}
-
-.ws-t {
-    padding-top: 8rem !important;
-}
-
-.pl {
-    padding-left: 1rem;
-}
-
-.pr {
-    padding-right: 1rem;
-}
-
-.pb {
-    padding-bottom: 1rem;
-}
-
-.pt-0 {
-    padding-top: 0!important;
-}
-
-.pb-0 {
-    padding-top: 0!important;
+body {
+    .ws-b {
+        padding-bottom: 8rem !important;
+    }
+    .ws-t {
+        padding-top: 8rem !important;
+    }
+    .pl {
+        padding-left: 1rem;
+    }
+    .pr {
+        padding-right: 1rem;
+    }
+    .pb {
+        padding-bottom: 1rem;
+    }
+    .pt-0 {
+        padding-top: 0!important;
+    }
+    .pb-0 {
+        padding-top: 0!important;
+    }
 }
 
 h1,

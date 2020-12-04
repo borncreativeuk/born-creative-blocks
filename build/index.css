@@ -3,25 +3,25 @@
   padding-top: 8rem !important;
   padding-bottom: 8rem !important; }
 
-.ws-b {
+body .ws-b {
   padding-bottom: 8rem !important; }
 
-.ws-t {
+body .ws-t {
   padding-top: 8rem !important; }
 
-.pl {
+body .pl {
   padding-left: 1rem; }
 
-.pr {
+body .pr {
   padding-right: 1rem; }
 
-.pb {
+body .pb {
   padding-bottom: 1rem; }
 
-.pt-0 {
+body .pt-0 {
   padding-top: 0 !important; }
 
-.pb-0 {
+body .pb-0 {
   padding-top: 0 !important; }
 
 h1,
