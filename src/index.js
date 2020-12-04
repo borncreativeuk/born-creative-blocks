@@ -474,7 +474,6 @@ registerBlockType('borncreative/text-only-block', {
                         tagName="div"
                         value={attributes.heading}
                         />
-                    <hr/>
                 </div>
             </div>
         );
