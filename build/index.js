@@ -457,6 +457,61 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("hr", null)));
   }
 });
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/text-only-block', {
+  title: 'Text Only Block',
+  icon: 'smiley',
+  category: 'common',
+  attributes: {
+    heading: {
+      source: 'html',
+      selector: '.copy-bd'
+    }
+  },
+  edit: function edit(props) {
+    var className = props.className,
+        setAttributes = props.setAttributes;
+    var attributes = props.attributes;
+
+    function changeHeading(heading) {
+      // using some nice js features instead of typing
+      // { heading: heading }
+      setAttributes({
+        heading: heading
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      style: {
+        padding: '1em 0'
+      }
+    }, "Options")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "col-full whitespace"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "copy-bd",
+      tagName: "div",
+      placeholder: "Enter your heading",
+      value: attributes.heading,
+      onChange: changeHeading
+    })))];
+  },
+  save: function save(props) {
+    var className = getBlockDefaultClassName('borncreative/text-only-block');
+    var attributes = props.attributes;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className,
+      "data-aos": "fade-up",
+      "data-aos-duration": "2000"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "col-full whitespace"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "copy-hd",
+      tagName: "div",
+      value: attributes.heading
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("hr", null)));
+  }
+});
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/the-process-block', {
   title: 'The Process Block',
   icon: 'smiley',
