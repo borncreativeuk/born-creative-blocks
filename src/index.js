@@ -470,7 +470,7 @@ registerBlockType('borncreative/text-only-block', {
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div class="col-full">
                     <RichText.Content 
-                        class="copy-hd"
+                        class="copy-bd"
                         tagName="div"
                         value={attributes.heading}
                         />
