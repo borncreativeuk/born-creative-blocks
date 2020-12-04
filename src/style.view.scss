@@ -30,6 +30,10 @@
     padding-bottom: 8rem !important;
 }
 
+.whitespace {
+    @include whitespace;
+}
+
 h1,
 h2,
 h3,
