@@ -30,8 +30,37 @@
     padding-bottom: 8rem !important;
 }
 
-.whitespace {
+.whitespace,
+.ws {
     @include whitespace;
+}
+
+.ws-b {
+    padding-bottom: 8rem !important;
+}
+
+.ws-t {
+    padding-top: 8rem !important;
+}
+
+.pl {
+    padding-left: 1rem;
+}
+
+.pr {
+    padding-right: 1rem;
+}
+
+.pb {
+    padding-bottom: 1rem;
+}
+
+.pt-0 {
+    padding-top: 0!important;
+}
+
+.pb-0 {
+    padding-top: 0!important;
 }
 
 h1,
@@ -229,24 +258,6 @@ h4 {
     h3,
     h4 {
         color: white;
-    }
-    .ws-b {
-        padding-bottom: 8rem !important;
-    }
-    .ws-t {
-        padding-top: 8rem !important;
-    }
-    .pr {
-        padding-right: 1rem;
-    }
-    .pb {
-        padding-bottom: 1rem;
-    }
-    .pt-0 {
-        padding-top: 0!important;
-    }
-    .pb-0 {
-        padding-top: 0!important;
     }
     .media.column1 img,
     .media.column2 img {
