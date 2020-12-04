@@ -272,6 +272,10 @@ h4 {
     font-size: 1.125rem;
     line-height: 1.75rem; }
 
+.wp-block-borncreative-text-only-block .copy-bd {
+  font-size: 1.625rem;
+  line-height: 2.25rem; }
+
 /*
 * For styles only loaded in the editor
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.

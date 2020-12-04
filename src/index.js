@@ -449,7 +449,7 @@ registerBlockType('borncreative/text-only-block', {
                 </div>
             </InspectorControls>,
             <div className={className}>
-                <div class="col-full whitespace">
+                <div class="col-full">
                     <RichText 
                         className="copy-bd"
                         tagName="div"
@@ -468,7 +468,7 @@ registerBlockType('borncreative/text-only-block', {
 
         return (
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
-                <div class="col-full whitespace">
+                <div class="col-full">
                     <RichText.Content 
                         class="copy-hd"
                         tagName="div"

@@ -487,7 +487,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     }, "Options")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: className
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      class: "col-full whitespace"
+      class: "col-full"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
       className: "copy-bd",
       tagName: "div",
@@ -504,7 +504,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       "data-aos": "fade-up",
       "data-aos-duration": "2000"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-      class: "col-full whitespace"
+      class: "col-full"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
       class: "copy-hd",
       tagName: "div",
