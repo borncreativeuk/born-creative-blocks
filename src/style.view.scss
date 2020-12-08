@@ -64,7 +64,7 @@ h2,
 h3,
 h4 {
     text-transform: uppercase;
-    font-weight: bold !important;
+    font-weight: 700 !important;
 }
 
 .zoom {
@@ -172,7 +172,8 @@ h4 {
 
 .wp-block-borncreative-the-process-block {
     .headinga {
-        @include font-size(32);
+        @include font-size(40);
+        margin-bottom: 0.25rem;
     }
     .headingb {
         @include font-size(26);
@@ -241,7 +242,8 @@ h4 {
     color: white;
     background: #BCC3BD;
     .headinga {
-        @include font-size(32);
+        @include font-size(40);
+        margin-bottom: 0.25rem;
     }
     .headingb {
         @include font-size(26);
@@ -309,7 +311,8 @@ h4 {
         @include whitespace;
     }
     .headinga {
-        @include font-size(32);
+        @include font-size(40);
+        margin-bottom: 0.25rem;
     }
 }
 
@@ -355,18 +358,32 @@ h4 {
     .col-full {
         @include whitespace;
         .col-8 {
-            @include grid-size(8);
             padding-left: 16.667%;
             display: block;
         }
     }
     .headinga,
     .headingb {
-        @include font-size(32);
+        @include font-size(40);
+        margin-bottom: 0.25rem;
     }
     .contenta,
     .contentb {
         @include font-size(18);
+    }
+    @media (max-width: 782px) {
+        .col-full {
+            .col-8 {
+                @include grid-size(12);
+            }
+        }
+    }
+    @media (min-width: 783px) {
+        .col-full {
+            .col-8 {
+                @include grid-size(8);
+            }
+        }
     }
 }
 

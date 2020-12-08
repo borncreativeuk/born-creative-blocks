@@ -29,7 +29,7 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
-  font-weight: bold !important; }
+  font-weight: 700 !important; }
 
 .zoom {
   overflow: hidden; }
@@ -122,8 +122,9 @@ h4 {
   margin: 0; }
 
 .wp-block-borncreative-the-process-block .headinga {
-  font-size: 2rem;
-  line-height: 2.625rem; }
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+  margin-bottom: 0.25rem; }
 
 .wp-block-borncreative-the-process-block .headingb {
   font-size: 1.625rem;
@@ -182,8 +183,9 @@ h4 {
   color: white;
   background: #BCC3BD; }
   .wp-block-borncreative-the-solution-block .headinga {
-    font-size: 2rem;
-    line-height: 2.625rem; }
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    margin-bottom: 0.25rem; }
   .wp-block-borncreative-the-solution-block .headingb {
     font-size: 1.625rem;
     line-height: 2.25rem; }
@@ -235,8 +237,9 @@ h4 {
   padding-bottom: 8rem !important; }
 
 .wp-block-borncreative-title-only-block .headinga {
-  font-size: 2rem;
-  line-height: 2.625rem; }
+  font-size: 2.5rem;
+  line-height: 3.125rem;
+  margin-bottom: 0.25rem; }
 
 .wp-block-borncreative-the-5-image-gallery-block {
   padding-bottom: 1rem;
@@ -274,17 +277,23 @@ h4 {
     padding-top: 8rem !important;
     padding-bottom: 8rem !important; }
     .wp-block-borncreative-double-title-text-block .col-full .col-8 {
-      width: 66.66667%;
       padding-left: 16.667%;
       display: block; }
   .wp-block-borncreative-double-title-text-block .headinga,
   .wp-block-borncreative-double-title-text-block .headingb {
-    font-size: 2rem;
-    line-height: 2.625rem; }
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    margin-bottom: 0.25rem; }
   .wp-block-borncreative-double-title-text-block .contenta,
   .wp-block-borncreative-double-title-text-block .contentb {
     font-size: 1.125rem;
     line-height: 1.75rem; }
+  @media (max-width: 782px) {
+    .wp-block-borncreative-double-title-text-block .col-full .col-8 {
+      width: 100%; } }
+  @media (min-width: 783px) {
+    .wp-block-borncreative-double-title-text-block .col-full .col-8 {
+      width: 66.66667%; } }
 
 .wp-block-borncreative-text-only-block {
   padding-top: 8rem !important;
