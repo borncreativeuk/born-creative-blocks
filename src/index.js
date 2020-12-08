@@ -240,7 +240,7 @@ registerBlockType('borncreative/header-block', {
             <div className={className}>
                 <div 
                 className="media">
-                    <video>
+                    <video loop="true" autoplay="autoplay" controls muted>
                         <source src={ attributes.image } type="video/mp4" />
                     </video>
                 </div>

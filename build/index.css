@@ -76,33 +76,33 @@ h4 {
       margin: 0;
       color: white; }
 
-.wp-block-borncreative-video-header-block {
+.wp-block-borncreative-header-block-video {
   position: relative;
   display: block; }
-  .wp-block-borncreative-video-header-block .media {
+  .wp-block-borncreative-header-block-video .media {
     width: 100%;
     margin: 0;
     height: 100vh; }
-    .wp-block-borncreative-video-header-block .media video {
+    .wp-block-borncreative-header-block-video .media video {
       display: block;
       width: 100%;
       height: 100vh;
       -o-object-fit: cover;
          object-fit: cover; }
-  .wp-block-borncreative-video-header-block .copy {
+  .wp-block-borncreative-header-block-video .copy {
     position: absolute;
     bottom: 1rem;
     left: 0;
     right: 0;
     color: white; }
-    .wp-block-borncreative-video-header-block .copy .copy-hd {
+    .wp-block-borncreative-header-block-video .copy .copy-hd {
       font-size: 2.5rem;
       line-height: 3.125rem;
       margin: 0;
       color: white; }
-      .wp-block-borncreative-video-header-block .copy .copy-hd:before {
+      .wp-block-borncreative-header-block-video .copy .copy-hd:before {
         display: none; }
-    .wp-block-borncreative-video-header-block .copy .copy-bd {
+    .wp-block-borncreative-header-block-video .copy .copy-bd {
       font-size: 2.125rem;
       line-height: 2.75rem;
       font-weight: normal !important;
