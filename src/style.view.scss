@@ -373,14 +373,14 @@ h4 {
     }
     @media (max-width: 782px) {
         .col-full {
-            .col-8 {
+            .contenta {
                 @include grid-size(12);
             }
         }
     }
     @media (min-width: 783px) {
         .col-full {
-            .col-8 {
+            .contenta {
                 @include grid-size(8);
             }
         }
