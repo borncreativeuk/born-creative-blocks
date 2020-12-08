@@ -273,9 +273,11 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       render: function render(_ref2) {
         var open = _ref2.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("video", {
-          onClick: open,
-          src: attributes.image
-        });
+          onClick: open
+        }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("source", {
+          src: attributes.image,
+          type: "video/mp4"
+        }));
       }
     })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "copy"
@@ -302,9 +304,10 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: className
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "media"
-    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("video", {
-      src: attributes.image
-    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("video", null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("source", {
+      src: attributes.image,
+      type: "video/mp4"
+    }))), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       className: "copy"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
       class: "col-full"

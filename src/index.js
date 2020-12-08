@@ -200,10 +200,9 @@ registerBlockType('borncreative/header-block', {
                         onSelect={selectImage}
                         render={ ({open}) => {
                             return (
-                                <video 
-                                    onClick={open}
-                                    src={attributes.image}
-                                    />
+                                <video onClick={open}>
+                                    <source src={attributes.image} type="video/mp4" />
+                                </video>
                             );
                         }}
                     />
@@ -241,7 +240,9 @@ registerBlockType('borncreative/header-block', {
             <div className={className}>
                 <div 
                 className="media">
-                    <video src={ attributes.image }/>
+                    <video>
+                        <source src={ attributes.image } type="video/mp4" />
+                    </video>
                 </div>
                 <div className="copy">
                 <div class="col-full">
