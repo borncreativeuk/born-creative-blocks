@@ -216,6 +216,109 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     }))));
   }
 });
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/header-block-video', {
+  title: 'Video Header Block',
+  icon: 'smiley',
+  category: 'common',
+  attributes: {
+    bodyContent: {
+      source: 'html',
+      selector: '.copy-bd'
+    },
+    heading: {
+      source: 'html',
+      selector: 'h2'
+    },
+    image: {
+      type: 'string'
+    }
+  },
+  edit: function edit(props) {
+    var className = props.className,
+        setAttributes = props.setAttributes;
+    var attributes = props.attributes; // we create a function that will take the changes from RichText
+    // and update the attributes
+
+    function changeBodyContent(changes) {
+      setAttributes({
+        bodyContent: changes
+      });
+    }
+
+    function changeHeading(heading) {
+      // using some nice js features instead of typing
+      // { heading: heading }
+      setAttributes({
+        heading: heading
+      });
+    }
+
+    function selectImage(value) {
+      console.log(value);
+      setAttributes({
+        image: value.sizes.full.url
+      });
+    }
+
+    return [Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(InspectorControls, null, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      style: {
+        padding: '1em 0'
+      }
+    }, "Options")), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "media"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
+      onSelect: selectImage,
+      render: function render(_ref2) {
+        var open = _ref2.open;
+        return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("video", {
+          onClick: open,
+          src: attributes.image
+        });
+      }
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "copy"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "col-full"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "copy-hd",
+      tagName: "h2",
+      placeholder: "Enter your heading",
+      value: attributes.heading,
+      onChange: changeHeading
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText, {
+      className: "copy-bd",
+      tagName: "h3",
+      placeholder: "Enter your text here",
+      value: attributes.bodyContent,
+      onChange: changeBodyContent
+    }))))];
+  },
+  save: function save(props) {
+    var className = getBlockDefaultClassName('borncreative/header-block');
+    var attributes = props.attributes;
+    return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: className
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "media"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("video", {
+      src: attributes.image
+    })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      className: "copy"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
+      class: "col-full"
+    }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      class: "copy-hd",
+      tagName: "h2",
+      value: attributes.heading
+    }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(RichText.Content, {
+      className: "copy-bd",
+      tagName: "h3",
+      value: attributes.bodyContent
+    }))));
+  }
+});
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('borncreative/intro-text-block', {
   title: 'Intro Text Block',
   icon: 'smiley',
@@ -634,8 +737,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media column1"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImagea,
-      render: function render(_ref2) {
-        var open = _ref2.open;
+      render: function render(_ref3) {
+        var open = _ref3.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imagea
@@ -651,8 +754,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media column2"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImageb,
-      render: function render(_ref3) {
-        var open = _ref3.open;
+      render: function render(_ref4) {
+        var open = _ref4.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imageb
@@ -668,8 +771,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media column1"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImagec,
-      render: function render(_ref4) {
-        var open = _ref4.open;
+      render: function render(_ref5) {
+        var open = _ref5.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imagec
@@ -867,8 +970,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media imagec"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImagec,
-      render: function render(_ref5) {
-        var open = _ref5.open;
+      render: function render(_ref6) {
+        var open = _ref6.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imagec
@@ -884,8 +987,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media column1"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImagea,
-      render: function render(_ref6) {
-        var open = _ref6.open;
+      render: function render(_ref7) {
+        var open = _ref7.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imagea
@@ -901,8 +1004,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media column1"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImageb,
-      render: function render(_ref7) {
-        var open = _ref7.open;
+      render: function render(_ref8) {
+        var open = _ref8.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imageb
@@ -1074,8 +1177,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media pr"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImagea,
-      render: function render(_ref8) {
-        var open = _ref8.open;
+      render: function render(_ref9) {
+        var open = _ref9.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imagea
@@ -1087,8 +1190,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media pb"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImageb,
-      render: function render(_ref9) {
-        var open = _ref9.open;
+      render: function render(_ref10) {
+        var open = _ref10.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imageb
@@ -1098,8 +1201,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media pb"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImagec,
-      render: function render(_ref10) {
-        var open = _ref10.open;
+      render: function render(_ref11) {
+        var open = _ref11.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imagec
@@ -1111,8 +1214,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media pr"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImaged,
-      render: function render(_ref11) {
-        var open = _ref11.open;
+      render: function render(_ref12) {
+        var open = _ref12.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imaged
@@ -1122,8 +1225,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       className: "media"
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(MediaUpload, {
       onSelect: selectImagee,
-      render: function render(_ref12) {
-        var open = _ref12.open;
+      render: function render(_ref13) {
+        var open = _ref13.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
           onClick: open,
           src: attributes.imagee
