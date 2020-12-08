@@ -273,7 +273,9 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
       render: function render(_ref2) {
         var open = _ref2.open;
         return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("video", {
-          onClick: open
+          onClick: open,
+          autoplay: "autoplay",
+          muted: true
         }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("source", {
           src: attributes.image,
           type: "video/mp4"
@@ -307,7 +309,6 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("video", {
       loop: "true",
       autoplay: "autoplay",
-      controls: true,
       muted: true
     }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("source", {
       src: attributes.image,

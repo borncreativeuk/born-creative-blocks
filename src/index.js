@@ -200,7 +200,7 @@ registerBlockType('borncreative/header-block', {
                         onSelect={selectImage}
                         render={ ({open}) => {
                             return (
-                                <video onClick={open}>
+                                <video onClick={open} autoplay="autoplay" muted>
                                     <source src={attributes.image} type="video/mp4" />
                                 </video>
                             );
@@ -240,7 +240,7 @@ registerBlockType('borncreative/header-block', {
             <div className={className}>
                 <div 
                 className="media">
-                    <video loop="true" autoplay="autoplay" controls muted>
+                    <video loop="true" autoplay="autoplay" muted>
                         <source src={ attributes.image } type="video/mp4" />
                     </video>
                 </div>
