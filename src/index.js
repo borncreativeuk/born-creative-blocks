@@ -179,7 +179,7 @@ registerBlockType('borncreative/header-block', {
         function selectImage(value) {
             console.log(value);
             setAttributes({
-                image: value.sizes.full.url,
+                image: value.url,
             })
         }
 

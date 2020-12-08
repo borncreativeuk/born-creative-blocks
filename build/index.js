@@ -256,7 +256,7 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_1__["registerBlockType"])('bor
     function selectImage(value) {
       console.log(value);
       setAttributes({
-        image: value.sizes.full.url
+        image: value.url
       });
     }
 
