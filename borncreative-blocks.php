@@ -3,10 +3,15 @@
  * Plugin Name: borncreative-blocks
  * Description: Blocks!
  * Version: 0.0.1
- * Author: borncreative
+ * Plugin URI: https://www.born-creative.co.uk
+ * Author: BORN CREATIVE
+ * Author URI: https://www.born-creative.co.uk
  *
  * @package borncreative-blocks
  */
+
+
+
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
