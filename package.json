@@ -20,14 +20,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/borncreativeuk/autograph-blocks.git"
+        "url": "git+https://github.com/borncreativeuk/born-creative-blocks.git"
     },
     "author": "",
     "license": "closed",
     "bugs": {
-        "url": "https://github.com/borncreativeuk/autograph-blocks/issues"
+        "url": "https://github.com/borncreativeuk/born-creative-blocks/issues"
     },
-    "homepage": "https://github.com/borncreativeuk/autograph-blocks#readme",
+    "homepage": "https://github.com/borncreativeuk/born-creative-blocks#readme",
     "devDependencies": {
         "@wordpress/scripts": "12.5.0"
     }
