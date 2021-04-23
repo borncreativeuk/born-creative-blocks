@@ -3,12 +3,15 @@ import { registerBlockType } from '@wordpress/blocks';
 import './style.view.scss';
 import './style.editor.scss';
 
+import {
+    InspectorControls,
+} from '@wordpress/block-editor';
+
 const {
     getBlockDefaultClassName
 } = wp.blocks;
 
-const { 
-    InspectorControls,
+const {
     RichText,
     MediaUpload
 } = wp.editor;
@@ -71,38 +74,38 @@ registerBlockType('borncreative/header-block', {
             </InspectorControls>,
             <div className={className}>
                 <div className="media">
-                    <MediaUpload 
+                    <MediaUpload
                         onSelect={selectImage}
-                        render={ ({open}) => {
+                        render={({ open }) => {
                             return (
-                                <img 
+                                <img
                                     onClick={open}
                                     src={attributes.image}
-                                    />
+                                />
                             );
                         }}
                     />
                 </div>
                 <div className="copy">
-                <div class="col-full">
-                    <RichText 
+                    <div class="col-full">
+                        <RichText
                             className="copy-hd"
                             tagName="h2"
                             placeholder="Enter your heading"
                             value={attributes.heading}
                             onChange={changeHeading}
-                            />
-                    {/* Content is replaced by this guy.
+                        />
+                        {/* Content is replaced by this guy.
                     We determin the class name and the html tag that
                     we want it to show as. */}
-                    <RichText 
-                        className="copy-bd"
-                        tagName="h3"
-                        placeholder="Enter your text here"
-                        value={attributes.bodyContent}
-                        onChange={changeBodyContent}
+                        <RichText
+                            className="copy-bd"
+                            tagName="h3"
+                            placeholder="Enter your text here"
+                            value={attributes.bodyContent}
+                            onChange={changeBodyContent}
                         />
-                </div>
+                    </div>
                 </div>
             </div>,
         ];
@@ -114,32 +117,32 @@ registerBlockType('borncreative/header-block', {
 
         return (
             <div className={className}>
-                <div 
-                className="media">
-                    <img src={ attributes.image }/>
+                <div
+                    className="media">
+                    <img src={attributes.image} />
                 </div>
                 <div className="copy">
-                <div class="col-full">
-                    <RichText.Content 
-                        class="copy-hd"
-                        tagName="h2"
-                        value={attributes.heading}
+                    <div class="col-full">
+                        <RichText.Content
+                            class="copy-hd"
+                            tagName="h2"
+                            value={attributes.heading}
                         />
-                    <RichText.Content 
-                        className="copy-bd" 
-                        tagName="h3" 
-                        value={attributes.bodyContent} 
+                        <RichText.Content
+                            className="copy-bd"
+                            tagName="h3"
+                            value={attributes.bodyContent}
                         />
-                </div>
+                    </div>
                 </div>
             </div>
         );
     },
 });
 
- 
 
- registerBlockType('borncreative/header-block-video', {
+
+registerBlockType('borncreative/header-block-video', {
     title: 'Video Header Block',
     icon: 'smiley',
     category: 'common',
@@ -196,9 +199,9 @@ registerBlockType('borncreative/header-block', {
             </InspectorControls>,
             <div className={className}>
                 <div className="media">
-                    <MediaUpload 
+                    <MediaUpload
                         onSelect={selectImage}
-                        render={ ({open}) => {
+                        render={({ open }) => {
                             return (
                                 <video onClick={open} autoplay="autoplay" muted>
                                     <source src={attributes.image} type="video/mp4" />
@@ -208,25 +211,25 @@ registerBlockType('borncreative/header-block', {
                     />
                 </div>
                 <div className="copy">
-                <div class="col-full">
-                    <RichText 
+                    <div class="col-full">
+                        <RichText
                             className="copy-hd"
                             tagName="h2"
                             placeholder="Enter your heading"
                             value={attributes.heading}
                             onChange={changeHeading}
-                            />
-                    {/* Content is replaced by this guy.
+                        />
+                        {/* Content is replaced by this guy.
                     We determin the class name and the html tag that
                     we want it to show as. */}
-                    <RichText 
-                        className="copy-bd"
-                        tagName="h3"
-                        placeholder="Enter your text here"
-                        value={attributes.bodyContent}
-                        onChange={changeBodyContent}
+                        <RichText
+                            className="copy-bd"
+                            tagName="h3"
+                            placeholder="Enter your text here"
+                            value={attributes.bodyContent}
+                            onChange={changeBodyContent}
                         />
-                </div>
+                    </div>
                 </div>
             </div>,
         ];
@@ -238,25 +241,25 @@ registerBlockType('borncreative/header-block', {
 
         return (
             <div className={className}>
-                <div 
-                className="media">
+                <div
+                    className="media">
                     <video loop="true" autoplay="autoplay" muted>
-                        <source src={ attributes.image } type="video/mp4" />
+                        <source src={attributes.image} type="video/mp4" />
                     </video>
                 </div>
                 <div className="copy">
-                <div class="col-full">
-                    <RichText.Content 
-                        class="copy-hd"
-                        tagName="h2"
-                        value={attributes.heading}
+                    <div class="col-full">
+                        <RichText.Content
+                            class="copy-hd"
+                            tagName="h2"
+                            value={attributes.heading}
                         />
-                    <RichText.Content 
-                        className="copy-bd" 
-                        tagName="h3" 
-                        value={attributes.bodyContent} 
+                        <RichText.Content
+                            className="copy-bd"
+                            tagName="h3"
+                            value={attributes.bodyContent}
                         />
-                </div>
+                    </div>
                 </div>
             </div>
         );
@@ -346,60 +349,60 @@ registerBlockType('borncreative/intro-text-block', {
             </InspectorControls>,
             <div className={className}>
                 <div className="copy col-full">
-                <div class="row">
-                    <div class="column1">
-                    <RichText 
-                        className="copy-bd"
-                        tagName="p"
-                        placeholder="Enter your text here"
-                        value={attributes.bodyContent}
-                        onChange={changeBodyContent}
-                        />
-                    </div>
-                    <div class="column2">
-                    <RichText 
-                        className="headinga"
-                        tagName="h4"
-                        placeholder="Client"
-                        value={attributes.headinga}
-                        onChange={changeHeadinga}
-                        />
-                    <RichText 
-                        className="linea"
-                        tagName="p"
-                        placeholder="Client Name"
-                        value={attributes.linea}
-                        onChange={changeLinea}
-                        />
-                    <RichText 
-                        className="headingb"
-                        tagName="h4"
-                        placeholder="Project Type"
-                        value={attributes.headingb}
-                        onChange={changeHeadingb}
-                        />
-                    <RichText 
-                        className="lineb"
-                        tagName="p"
-                        placeholder="Client Name"
-                        value={attributes.lineb}
-                        onChange={changeLineb}
-                        />
-                    <RichText 
-                        className="headingc"
-                        tagName="h4"
-                        placeholder="Services"
-                        value={attributes.headingc}
-                        onChange={changeHeadingc}
-                        />
-                    <RichText 
-                        className="linec"
-                        tagName="p"
-                        placeholder="Client Name"
-                        value={attributes.linec}
-                        onChange={changeLinec}
-                        />
-                    </div>
+                    <div class="row">
+                        <div class="column1">
+                            <RichText
+                                className="copy-bd"
+                                tagName="p"
+                                placeholder="Enter your text here"
+                                value={attributes.bodyContent}
+                                onChange={changeBodyContent}
+                            />
+                        </div>
+                        <div class="column2">
+                            <RichText
+                                className="headinga"
+                                tagName="h4"
+                                placeholder="Client"
+                                value={attributes.headinga}
+                                onChange={changeHeadinga}
+                            />
+                            <RichText
+                                className="linea"
+                                tagName="p"
+                                placeholder="Client Name"
+                                value={attributes.linea}
+                                onChange={changeLinea}
+                            />
+                            <RichText
+                                className="headingb"
+                                tagName="h4"
+                                placeholder="Project Type"
+                                value={attributes.headingb}
+                                onChange={changeHeadingb}
+                            />
+                            <RichText
+                                className="lineb"
+                                tagName="p"
+                                placeholder="Client Name"
+                                value={attributes.lineb}
+                                onChange={changeLineb}
+                            />
+                            <RichText
+                                className="headingc"
+                                tagName="h4"
+                                placeholder="Services"
+                                value={attributes.headingc}
+                                onChange={changeHeadingc}
+                            />
+                            <RichText
+                                className="linec"
+                                tagName="p"
+                                placeholder="Client Name"
+                                value={attributes.linec}
+                                onChange={changeLinec}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>,
@@ -414,48 +417,48 @@ registerBlockType('borncreative/intro-text-block', {
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div className="copy col-full">
                     <div class="row">
-                    <div class="column1">
-                    <RichText.Content 
-                        className="copy-bd" 
-                        tagName="p" 
-                        value={attributes.bodyContent} 
-                        />
-                    </div>
-                    <div class="column2">
-                    <RichText.Content 
-                        class="headinga"
-                        tagName="h4"
-                        value={attributes.headinga}
-                        />
-                    <RichText.Content 
-                        class="linea"
-                        tagName="p"
-                        value={attributes.linea}
-                        />
+                        <div class="column1">
+                            <RichText.Content
+                                className="copy-bd"
+                                tagName="p"
+                                value={attributes.bodyContent}
+                            />
+                        </div>
+                        <div class="column2">
+                            <RichText.Content
+                                class="headinga"
+                                tagName="h4"
+                                value={attributes.headinga}
+                            />
+                            <RichText.Content
+                                class="linea"
+                                tagName="p"
+                                value={attributes.linea}
+                            />
 
-                    <RichText.Content 
-                        class="headingb"
-                        tagName="h4"
-                        value={attributes.headingb}
-                        />
-                    <RichText.Content 
-                        class="lineb"
-                        tagName="p"
-                        value={attributes.lineb}
-                        />
+                            <RichText.Content
+                                class="headingb"
+                                tagName="h4"
+                                value={attributes.headingb}
+                            />
+                            <RichText.Content
+                                class="lineb"
+                                tagName="p"
+                                value={attributes.lineb}
+                            />
 
-                    <RichText.Content 
-                        class="headingc"
-                        tagName="h4"
-                        value={attributes.headingc}
-                        />
-                    <RichText.Content 
-                        class="linec"
-                        tagName="p"
-                        value={attributes.linec}
-                        />
+                            <RichText.Content
+                                class="headingc"
+                                tagName="h4"
+                                value={attributes.headingc}
+                            />
+                            <RichText.Content
+                                class="linec"
+                                tagName="p"
+                                value={attributes.linec}
+                            />
 
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -505,13 +508,13 @@ registerBlockType('borncreative/title-only-block', {
             </InspectorControls>,
             <div className={className}>
                 <div class="col-full">
-                    <RichText 
+                    <RichText
                         className="copy-hd"
                         tagName="h2"
                         placeholder="Enter your heading"
                         value={attributes.heading}
                         onChange={changeHeading}
-                        />
+                    />
                 </div>
             </div>,
         ];
@@ -524,12 +527,12 @@ registerBlockType('borncreative/title-only-block', {
         return (
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div class="col-full">
-                    <RichText.Content 
+                    <RichText.Content
                         class="copy-hd"
                         tagName="h2"
                         value={attributes.heading}
-                        />
-                    <hr/>
+                    />
+                    <hr />
                 </div>
             </div>
         );
@@ -574,13 +577,13 @@ registerBlockType('borncreative/text-only-block', {
             </InspectorControls>,
             <div className={className}>
                 <div class="col-full">
-                    <RichText 
+                    <RichText
                         className="copy-bd"
                         tagName="div"
                         placeholder="Enter your heading"
                         value={attributes.heading}
                         onChange={changeHeading}
-                        />
+                    />
                 </div>
             </div>,
         ];
@@ -593,11 +596,11 @@ registerBlockType('borncreative/text-only-block', {
         return (
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div class="col-full">
-                    <RichText.Content 
+                    <RichText.Content
                         class="copy-bd"
                         tagName="div"
                         value={attributes.heading}
-                        />
+                    />
                 </div>
             </div>
         );
@@ -707,93 +710,93 @@ registerBlockType('borncreative/the-process-block', {
                 </div>
             </InspectorControls>,
             <div className={className}>
-            <div className="col-full">
-            <RichText 
-                className="headinga"
-                tagName="h2"
-                placeholder="Enter your text here"
-                value={attributes.headinga}
-                onChange={changeHeadinga}
-                />
+                <div className="col-full">
+                    <RichText
+                        className="headinga"
+                        tagName="h2"
+                        placeholder="Enter your text here"
+                        value={attributes.headinga}
+                        onChange={changeHeadinga}
+                    />
                 </div>
                 <div class="row">
-                <div className="media column1">
-                    <MediaUpload 
-                        onSelect={selectImagea}
-                        render={ ({open}) => {
-                            return (
-                                <img 
-                                    onClick={open}
-                                    src={attributes.imagea}
+                    <div className="media column1">
+                        <MediaUpload
+                            onSelect={selectImagea}
+                            render={({ open }) => {
+                                return (
+                                    <img
+                                        onClick={open}
+                                        src={attributes.imagea}
                                     />
-                            );
-                        }}
-                    />
-                    <RichText 
-                        className="figurea"
-                        tagName="figure"
-                        placeholder="Enter your text here"
-                        value={attributes.figurea}
-                        onChange={changeFigurea}
+                                );
+                            }}
                         />
-                </div>
-                <div className="media column2">
-                    <MediaUpload 
-                        onSelect={selectImageb}
-                        render={ ({open}) => {
-                            return (
-                                <img 
-                                    onClick={open}
-                                    src={attributes.imageb}
+                        <RichText
+                            className="figurea"
+                            tagName="figure"
+                            placeholder="Enter your text here"
+                            value={attributes.figurea}
+                            onChange={changeFigurea}
+                        />
+                    </div>
+                    <div className="media column2">
+                        <MediaUpload
+                            onSelect={selectImageb}
+                            render={({ open }) => {
+                                return (
+                                    <img
+                                        onClick={open}
+                                        src={attributes.imageb}
                                     />
-                            );
-                        }}
-                    />
-                    <RichText 
-                        className="figureb"
-                        tagName="figure"
-                        placeholder="Enter your text here"
-                        value={attributes.figureb}
-                        onChange={changeFigureb}
+                                );
+                            }}
                         />
-                </div>
-                <div className="media column1">
-                    <MediaUpload 
-                        onSelect={selectImagec}
-                        render={ ({open}) => {
-                            return (
-                                <img 
-                                    onClick={open}
-                                    src={attributes.imagec}
+                        <RichText
+                            className="figureb"
+                            tagName="figure"
+                            placeholder="Enter your text here"
+                            value={attributes.figureb}
+                            onChange={changeFigureb}
+                        />
+                    </div>
+                    <div className="media column1">
+                        <MediaUpload
+                            onSelect={selectImagec}
+                            render={({ open }) => {
+                                return (
+                                    <img
+                                        onClick={open}
+                                        src={attributes.imagec}
                                     />
-                            );
-                        }}
-                    />
-                    <RichText 
-                        className="figurec"
-                        tagName="figure"
-                        placeholder="Enter your text here"
-                        value={attributes.figurec}
-                        onChange={changeFigurec}
+                                );
+                            }}
                         />
-                </div>
+                        <RichText
+                            className="figurec"
+                            tagName="figure"
+                            placeholder="Enter your text here"
+                            value={attributes.figurec}
+                            onChange={changeFigurec}
+                        />
+                    </div>
                 </div>
                 <div className="copy">
                     <div class="col-full">
-                        <RichText 
-                        className="headingb"
-                        tagName="h3"
-                        placeholder="Enter your text here"
-                        value={attributes.headingb}
-                        onChange={changeHeadingb}
+                        <RichText
+                            className="headingb"
+                            tagName="h3"
+                            placeholder="Enter your text here"
+                            value={attributes.headingb}
+                            onChange={changeHeadingb}
                         />
                         <div class="column3">
-                            <RichText 
-                            className="copy-bd"
-                            tagName="p"
-                            placeholder="Enter your text here"
-                            value={attributes.bodyContent}
-                            onChange={changeBodyContent}
+                            <RichText
+                                className="copy-bd"
+                                tagName="p"
+                                placeholder="Enter your text here"
+                                value={attributes.bodyContent}
+                                onChange={changeBodyContent}
                             />
                         </div>
                     </div>
@@ -806,50 +809,50 @@ registerBlockType('borncreative/the-process-block', {
         const className = getBlockDefaultClassName('borncreative/the-process-block');
         const { attributes } = props;
 
-        
-            
+
+
         return (
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div className="col-full">
-                    <RichText.Content 
+                    <RichText.Content
                         class="headinga"
                         tagName="h2"
                         value={attributes.headinga}
-                        />
-                    <hr/>
+                    />
+                    <hr />
                 </div>
                 <div class="row">
-                    <div 
-                    className="media column1">
-                        <div class="zoom"><img src={ attributes.imagea }/></div>
-                        <figure className="figurea">{ attributes.figurea }</figure>
+                    <div
+                        className="media column1">
+                        <div class="zoom"><img src={attributes.imagea} /></div>
+                        <figure className="figurea">{attributes.figurea}</figure>
                     </div>
-                    <div 
-                    className="media column2">
-                        <div class="zoom"><img src={ attributes.imageb }/></div>
-                        <figure className="figureb">{ attributes.figureb }</figure>
+                    <div
+                        className="media column2">
+                        <div class="zoom"><img src={attributes.imageb} /></div>
+                        <figure className="figureb">{attributes.figureb}</figure>
                     </div>
-                    <div 
-                    className="media column1">
-                        <div class="zoom"><img src={ attributes.imagec }/></div>
-                        <figure className="figurec">{ attributes.figurec }</figure>
+                    <div
+                        className="media column1">
+                        <div class="zoom"><img src={attributes.imagec} /></div>
+                        <figure className="figurec">{attributes.figurec}</figure>
                     </div>
                 </div>
                 <div className="copy">
-                <div class="col-full">
-                    <RichText.Content 
-                    class="headingb"
-                    tagName="h3"
-                    value={attributes.headingb}
-                    />
-                    <div class="column3">
-                    <RichText.Content 
-                        className="copy-bd" 
-                        tagName="p" 
-                        value={attributes.bodyContent} 
+                    <div class="col-full">
+                        <RichText.Content
+                            class="headingb"
+                            tagName="h3"
+                            value={attributes.headingb}
                         />
+                        <div class="column3">
+                            <RichText.Content
+                                className="copy-bd"
+                                tagName="p"
+                                value={attributes.bodyContent}
+                            />
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
         );
@@ -959,101 +962,101 @@ registerBlockType('borncreative/the-solution-block', {
             <div className={className}>
 
                 <div className="col-full ws-t ws-b">
-                    <RichText 
+                    <RichText
                         className="headinga"
                         tagName="h2"
                         placeholder="Enter your text here"
                         value={attributes.headinga}
                         onChange={changeHeadinga}
-                        />
+                    />
                 </div>
 
 
                 <div className="media imagec">
-                    <MediaUpload 
+                    <MediaUpload
                         onSelect={selectImagec}
-                        render={ ({open}) => {
+                        render={({ open }) => {
                             return (
-                                <img 
+                                <img
                                     onClick={open}
                                     src={attributes.imagec}
-                                    />
+                                />
                             );
                         }}
                     />
                 </div>
 
 
-            <div class="col-full">
-                <div class="row">
-                    <div class="column1"></div>
-                    <div className="media column1">
-                        <MediaUpload 
-                            onSelect={selectImagea}
-                            render={ ({open}) => {
-                                return (
-                                    <img 
-                                        onClick={open}
-                                        src={attributes.imagea}
+                <div class="col-full">
+                    <div class="row">
+                        <div class="column1"></div>
+                        <div className="media column1">
+                            <MediaUpload
+                                onSelect={selectImagea}
+                                render={({ open }) => {
+                                    return (
+                                        <img
+                                            onClick={open}
+                                            src={attributes.imagea}
                                         />
-                                );
-                            }}
-                        />
-                        <RichText 
-                            className="figurea"
-                            tagName="figure"
-                            placeholder="Enter your text here"
-                            value={attributes.figurea}
-                            onChange={changeFigurea}
+                                    );
+                                }}
                             />
-                    </div>
-                    <div className="media column1">
-                        <MediaUpload 
-                            onSelect={selectImageb}
-                            render={ ({open}) => {
-                                return (
-                                    <img 
-                                        onClick={open}
-                                        src={attributes.imageb}
+                            <RichText
+                                className="figurea"
+                                tagName="figure"
+                                placeholder="Enter your text here"
+                                value={attributes.figurea}
+                                onChange={changeFigurea}
+                            />
+                        </div>
+                        <div className="media column1">
+                            <MediaUpload
+                                onSelect={selectImageb}
+                                render={({ open }) => {
+                                    return (
+                                        <img
+                                            onClick={open}
+                                            src={attributes.imageb}
                                         />
-                                );
-                            }}
-                        />
-                        <RichText 
-                            className="figureb"
-                            tagName="figure"
-                            placeholder="Enter your text here"
-                            value={attributes.figureb}
-                            onChange={changeFigureb}
+                                    );
+                                }}
                             />
+                            <RichText
+                                className="figureb"
+                                tagName="figure"
+                                placeholder="Enter your text here"
+                                value={attributes.figureb}
+                                onChange={changeFigureb}
+                            />
+                        </div>
+                    </div>
+                    <div class="row ws-t">
+                        <div class="column1"></div>
+                        <div className="copy">
+                            <RichText
+                                className="headingb"
+                                tagName="h3"
+                                placeholder="Enter your text here"
+                                value={attributes.headingb}
+                                onChange={changeHeadingb}
+                            />
+                        </div>
+                    </div>
+                    <div class="row ws-b">
+                        <div class="column1"></div>
+                        <div class="column2">
+                            <RichText
+                                className="copy-bd"
+                                tagName="p"
+                                placeholder="Enter your text here"
+                                value={attributes.bodyContent}
+                                onChange={changeBodyContent}
+                            />
+                        </div>
                     </div>
                 </div>
-                <div class="row ws-t">
-                    <div class="column1"></div> 
-                    <div className="copy">
-                        <RichText 
-                        className="headingb"
-                        tagName="h3"
-                        placeholder="Enter your text here"
-                        value={attributes.headingb}
-                        onChange={changeHeadingb}
-                        />
-                    </div>   
-                </div>
-                <div class="row ws-b">   
-                    <div class="column1"></div> 
-                    <div class="column2">        
-                        <RichText 
-                        className="copy-bd"
-                        tagName="p"
-                        placeholder="Enter your text here"
-                        value={attributes.bodyContent}
-                        onChange={changeBodyContent}
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>,
+            </div>,
         ];
     },
 
@@ -1065,46 +1068,46 @@ registerBlockType('borncreative/the-solution-block', {
         return (
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div className="col-full ws-t ws-b">
-                    <RichText.Content 
+                    <RichText.Content
                         class="headinga"
                         tagName="h2"
                         value={attributes.headinga}
-                        />
-                    <hr/>
+                    />
+                    <hr />
                 </div>
 
-                <img class="imagec" src={ attributes.imagec }/>
+                <img class="imagec" src={attributes.imagec} />
 
                 <div class="col-full">
                     <div class="row">
                         <div class="column1"></div>
                         <div class="media column1">
-                            <div class="zoom"><img src={ attributes.imagea }/></div>
-                            <figure className="figurea">{ attributes.figurea }</figure>
+                            <div class="zoom"><img src={attributes.imagea} /></div>
+                            <figure className="figurea">{attributes.figurea}</figure>
                         </div>
                         <div class="media column1">
-                            <div class="zoom"><img src={ attributes.imageb }/></div>
-                            <figure className="figureb">{ attributes.figureb }</figure>
+                            <div class="zoom"><img src={attributes.imageb} /></div>
+                            <figure className="figureb">{attributes.figureb}</figure>
                         </div>
                     </div>
                     <div class="row ws-t">
                         <div class="column1"></div>
                         <div className="copy">
-                            <RichText.Content 
-                            class="headingb"
-                            tagName="h3"
-                            value={attributes.headingb}
+                            <RichText.Content
+                                class="headingb"
+                                tagName="h3"
+                                value={attributes.headingb}
                             />
                         </div>
                     </div>
                     <div class="row ws-b">
                         <div class="column1"></div>
                         <div class="column2">
-                            <RichText.Content 
-                                className="copy-bd" 
-                                tagName="p" 
-                                value={attributes.bodyContent} 
-                                />
+                            <RichText.Content
+                                className="copy-bd"
+                                tagName="p"
+                                value={attributes.bodyContent}
+                            />
                         </div>
                     </div>
                 </div>
@@ -1113,7 +1116,7 @@ registerBlockType('borncreative/the-solution-block', {
     },
 });
 
- 
+
 
 
 
@@ -1147,14 +1150,14 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
             type: 'string',
             default: 'http://placehold.it/500'
         },
-        
+
     },
 
     edit(props) {
         const { className, setAttributes } = props;
         const { attributes } = props;
 
-        
+
 
         function selectImagea(value) {
             setAttributes({
@@ -1171,19 +1174,19 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                 imagec: value.sizes.full.url,
             })
         }
-        
+
         function selectImaged(value) {
             setAttributes({
                 imaged: value.sizes.full.url,
             })
         }
-        
+
         function selectImagee(value) {
             setAttributes({
                 imagee: value.sizes.full.url,
             })
         }
-        
+
 
 
         return [
@@ -1198,79 +1201,79 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
                 </div>
             </InspectorControls>,
             <div className={className}>
-            
-            
-            <div class="column1">
-                <div className="media pr">
-                    <MediaUpload 
-                        onSelect={selectImagea}
-                        render={ ({open}) => {
-                            return (
-                             <img 
-                                onClick={open}
-                                src={attributes.imagea}
-                                />
-                            );
-                        }}
-                    />
+
+
+                <div class="column1">
+                    <div className="media pr">
+                        <MediaUpload
+                            onSelect={selectImagea}
+                            render={({ open }) => {
+                                return (
+                                    <img
+                                        onClick={open}
+                                        src={attributes.imagea}
+                                    />
+                                );
+                            }}
+                        />
+                    </div>
                 </div>
-            </div>
-            <div class="column1">
-                <div className="media pb">
-                    <MediaUpload 
-                        onSelect={selectImageb}
-                        render={ ({open}) => {
-                            return (
-                             <img 
-                                onClick={open}
-                                src={attributes.imageb}
-                                />
-                            );
-                        }}
-                    />
+                <div class="column1">
+                    <div className="media pb">
+                        <MediaUpload
+                            onSelect={selectImageb}
+                            render={({ open }) => {
+                                return (
+                                    <img
+                                        onClick={open}
+                                        src={attributes.imageb}
+                                    />
+                                );
+                            }}
+                        />
+                    </div>
+                    <div className="media pb">
+                        <MediaUpload
+                            onSelect={selectImagec}
+                            render={({ open }) => {
+                                return (
+                                    <img
+                                        onClick={open}
+                                        src={attributes.imagec}
+                                    />
+                                );
+                            }}
+                        />
+                    </div>
+                    <div class="extra-row">
+                        <div className="media pr">
+                            <MediaUpload
+                                onSelect={selectImaged}
+                                render={({ open }) => {
+                                    return (
+                                        <img
+                                            onClick={open}
+                                            src={attributes.imaged}
+                                        />
+                                    );
+                                }}
+                            />
+                        </div>
+                        <div className="media">
+                            <MediaUpload
+                                onSelect={selectImagee}
+                                render={({ open }) => {
+                                    return (
+                                        <img
+                                            onClick={open}
+                                            src={attributes.imagee}
+                                        />
+                                    );
+                                }}
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className="media pb">
-                    <MediaUpload 
-                        onSelect={selectImagec}
-                        render={ ({open}) => {
-                            return (
-                             <img 
-                                onClick={open}
-                                src={attributes.imagec}
-                                />
-                            );
-                        }}
-                    />
-                </div>
-                <div class="extra-row">
-                <div className="media pr">
-                    <MediaUpload 
-                        onSelect={selectImaged}
-                        render={ ({open}) => {
-                            return (
-                             <img 
-                                onClick={open}
-                                src={attributes.imaged}
-                                />
-                            );
-                        }}
-                    />
-                </div>
-                <div className="media">
-                    <MediaUpload 
-                        onSelect={selectImagee}
-                        render={ ({open}) => {
-                            return (
-                             <img 
-                                onClick={open}
-                                src={attributes.imagee}
-                                />
-                            );
-                        }}
-                    />
-                </div>
-                </div>
-            </div>
             </div>,
         ];
     },
@@ -1279,33 +1282,33 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
         const className = getBlockDefaultClassName('borncreative/the-5-image-gallery-block');
         const { attributes } = props;
 
-        
-            
+
+
         return (
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div class="column1">
-                    <div 
-                    className="media pr">
-                        <div class="zoom"><img src={ attributes.imagea }/></div>
+                    <div
+                        className="media pr">
+                        <div class="zoom"><img src={attributes.imagea} /></div>
                     </div>
                 </div>
                 <div class="column1">
-                    <div 
-                    className="media pb">
-                        <div class="zoom"><img src={ attributes.imageb }/></div>
+                    <div
+                        className="media pb">
+                        <div class="zoom"><img src={attributes.imageb} /></div>
                     </div>
-                    <div 
-                    className="media pb">
-                        <div class="zoom"><img src={ attributes.imagec }/></div>
+                    <div
+                        className="media pb">
+                        <div class="zoom"><img src={attributes.imagec} /></div>
                     </div>
                     <div class="extra-row">
-                        <div 
-                        className="media pr">
-                            <div class="zoom"><img src={ attributes.imaged }/></div>
+                        <div
+                            className="media pr">
+                            <div class="zoom"><img src={attributes.imaged} /></div>
                         </div>
-                        <div 
-                        className="media">
-                            <div class="zoom"><img src={ attributes.imagee }/></div>
+                        <div
+                            className="media">
+                            <div class="zoom"><img src={attributes.imagee} /></div>
                         </div>
                     </div>
                 </div>
@@ -1380,35 +1383,35 @@ registerBlockType('borncreative/double-title-text-block', {
             </InspectorControls>,
             <div className={className}>
                 <div class="col-full">
-                    <RichText 
+                    <RichText
                         className="headinga"
                         tagName="h2"
                         placeholder="Enter your heading"
                         value={attributes.headinga}
                         onChange={changeHeadinga}
-                        />
-                    <RichText 
+                    />
+                    <RichText
                         className="contenta"
                         tagName="p"
                         placeholder="Enter your content"
                         value={attributes.contenta}
                         onChange={changeContenta}
-                        />
-                    <hr/>
-                    <RichText 
+                    />
+                    <hr />
+                    <RichText
                         className="headingb"
                         tagName="h2"
                         placeholder="Enter your heading"
                         value={attributes.headingb}
                         onChange={changeHeadingb}
-                        />
-                    <RichText 
+                    />
+                    <RichText
                         className="contentb"
                         tagName="p"
                         placeholder="Enter your content"
                         value={attributes.contentb}
                         onChange={changeContentb}
-                        />
+                    />
                 </div>
             </div>,
         ];
@@ -1421,27 +1424,27 @@ registerBlockType('borncreative/double-title-text-block', {
         return (
             <div className={className} data-aos="fade-up" data-aos-duration="2000">
                 <div class="col-full">
-                    <RichText.Content 
+                    <RichText.Content
                         class="headinga"
                         tagName="h2"
                         value={attributes.headinga}
-                        />
-                    <RichText.Content 
+                    />
+                    <RichText.Content
                         class="contenta"
                         tagName="p"
                         value={attributes.contenta}
-                        />
-                    <hr/>
-                    <RichText.Content 
+                    />
+                    <hr />
+                    <RichText.Content
                         class="headingb"
                         tagName="h2"
                         value={attributes.headingb}
-                        />
-                    <RichText.Content 
+                    />
+                    <RichText.Content
                         class="contentb"
                         tagName="p"
                         value={attributes.contentb}
-                        />
+                    />
                 </div>
             </div>
         );
