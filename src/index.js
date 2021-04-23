@@ -5,16 +5,13 @@ import './style.editor.scss';
 
 import {
     InspectorControls,
+    RichText,
+    MediaUpload
 } from '@wordpress/block-editor';
 
 const {
     getBlockDefaultClassName
 } = wp.blocks;
-
-const {
-    RichText,
-    MediaUpload
-} = wp.editor;
 
 registerBlockType('borncreative/header-block', {
     title: 'Header Block',
