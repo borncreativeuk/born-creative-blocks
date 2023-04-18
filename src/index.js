@@ -16,7 +16,7 @@ const {
 registerBlockType('borncreative/header-block', {
     title: 'Header Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         bodyContent: {
@@ -142,7 +142,7 @@ registerBlockType('borncreative/header-block', {
 registerBlockType('borncreative/header-block-video', {
     title: 'Video Header Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         bodyContent: {
@@ -269,7 +269,7 @@ registerBlockType('borncreative/header-block-video', {
 registerBlockType('borncreative/intro-text-block', {
     title: 'Intro Text Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         bodyContent: {
@@ -473,7 +473,7 @@ registerBlockType('borncreative/intro-text-block', {
 registerBlockType('borncreative/title-only-block', {
     title: 'Title Only Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         heading: {
@@ -542,7 +542,7 @@ registerBlockType('borncreative/title-only-block', {
 registerBlockType('borncreative/text-only-block', {
     title: 'Text Only Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         heading: {
@@ -610,7 +610,7 @@ registerBlockType('borncreative/text-only-block', {
 registerBlockType('borncreative/the-process-block', {
     title: 'The Process Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         headinga: {
@@ -867,7 +867,7 @@ registerBlockType('borncreative/the-process-block', {
 registerBlockType('borncreative/the-solution-block', {
     title: 'The Solution Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         headinga: {
@@ -1124,7 +1124,7 @@ registerBlockType('borncreative/the-solution-block', {
 registerBlockType('borncreative/the-5-image-gallery-block', {
     title: '5 image gallery',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         imagea: {
@@ -1329,7 +1329,7 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
 registerBlockType('borncreative/double-title-text-block', {
     title: 'Double Title and Text Block',
     icon: 'smiley',
-    category: 'common',
+    category: 'born-creative-blocks',
 
     attributes: {
         headinga: {
