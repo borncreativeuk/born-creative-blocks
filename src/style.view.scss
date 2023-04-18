@@ -432,3 +432,522 @@ h4 {
         @include font-size(26);
     }
 }
+
+
+
+
+
+@media (max-width: 1064px) {
+    .wp-block-borncreative-alt-header-block {
+        .copy {
+            .copy-h2 {
+                @include font-size(14);
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            .copy-h3 {
+                @include font-size(24);
+                font-weight: 700;
+            }
+            .copy-body {
+                @include font-size(18);
+                font-weight: 400;
+            }
+            .copy-list {
+                @include font-size(16);
+                font-weight: 400;
+            }
+            .copy-link a {
+                @include font-size(21);
+                font-weight: 700;
+            }
+        }
+    }
+
+    .wp-block-borncreative-outro-text-block {
+        .copy {
+            .copy-h2 {
+                @include font-size(14);
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .copy-h3 {
+                @include font-size(24);
+                font-weight: 700;
+            }
+
+            .copy-link a {
+                @include font-size(21);
+                font-weight: 700;
+            }
+        }
+        .col-full {
+            max-width: 25em;
+            margin: 0 auto;
+        }
+    }
+
+
+    .wp-block-borncreative-alt-intro-text-block {
+
+        .headinga,
+        .headingb,
+        .headingc,
+        .headingd {
+            @include font-size(21);
+            font-weight: 700;
+        }
+
+        .linea,
+        .lineb,
+        .linec,
+        .lined {
+            @include font-size(16);
+            font-weight: 400;
+        }
+
+        .icona,
+        .iconb,
+        .iconc,
+        .icond {
+            @include font-size(36);
+            font-weight: 700;
+        }
+
+        .icone {
+            @include font-size(14);
+            font-weight: 400;
+        }
+
+        .headinge {
+            @include font-size(24);
+        }
+
+        .linee {
+            @include font-size(18);
+        }
+        .col-full {
+            max-width: 32em;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+@media (min-width: 1065px) {
+    .wp-block-borncreative-alt-header-block {
+        .copy {
+            .copy-h2 {
+                @include font-size(14);
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            .copy-h3 {
+                @include font-size(36);
+                font-weight: 700;
+            }
+            .copy-body {
+                @include font-size(16);
+                font-weight: 400;
+            }
+            .copy-list {
+                @include font-size(16);
+                font-weight: 400;
+            }
+            .copy-link a {
+                @include font-size(21);
+                font-weight: 700;
+            }
+        }
+    }
+
+    .wp-block-borncreative-outro-text-block {
+        .copy {
+            .copy-h2 {
+                @include font-size(14);
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .copy-h3 {
+                @include font-size(36);
+                font-weight: 700;
+            }
+
+            .copy-link a {
+                @include font-size(21);
+                font-weight: 700;
+            }
+
+        }
+        .col-full {
+            max-width: 32em;
+            margin: 0 auto;
+        }
+    }
+
+    .wp-block-borncreative-alt-intro-text-block {
+
+        .headinga,
+        .headingb,
+        .headingc,
+        .headingd {
+            @include font-size(24);
+            font-weight: 700;
+        }
+
+        .linea,
+        .lineb,
+        .linec,
+        .lined {
+            @include font-size(18);
+            font-weight: 400;
+        }
+
+        .icona,
+        .iconb,
+        .iconc,
+        .icond {
+            @include font-size(36);
+            font-weight: 700;
+        }
+
+        .icone {
+            @include font-size(14);
+            font-weight: 400;
+        }
+
+        .headinge {
+            @include font-size(36);
+        }
+
+        .linee {
+            @include font-size(18);
+        }
+    }
+}
+
+
+
+
+.wp-block-borncreative-alt-header-block {
+    position: relative;
+    display: block;
+
+    @media (max-width: 569px) {
+        margin: 0 -1.5em;
+    }
+
+    @media (max-width: 1064px) {
+        margin: 0 -3em !important;
+        padding: 0 !important;
+    }
+
+    @media (min-width: 1065px) {
+        padding: 0 !important;
+    }
+
+    .media {
+        width: 100%;
+        margin: 0;
+        height: 100vh;
+
+        & img {
+            @include image-block;
+        }
+    }
+
+    .column1 {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 3em;
+    }
+
+    @media (max-width: 569px) {
+        .column1 {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 1064px) {
+        .column1 {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    @media (min-width: 1065px) {
+        .column1 {
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }   
+    @media (min-width: 1408px) {
+        .column1 {
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 1340px;
+            margin: 0 auto;
+            padding: 0;
+        }
+    }
+
+    .copy {
+        padding: 3em;
+        max-width: 575px;
+        background: rgba(255, 255, 255, 0.95);
+
+        .copy-h2 {
+            margin: 0 0 1.5rem 0;
+            color: #1257A390;
+            &:before {
+                display: none;
+            }
+        }
+        .copy-body {
+            margin: 0;
+            color: #444D57;
+            margin-bottom:1.5rem;
+        }
+        .copy-list {
+            margin: 0;
+            color: #1257A3;
+            margin-bottom:1.5rem;
+        }
+        
+        .copy-h3 {
+            margin: 0;
+            color: #1257A3;
+            border-top: 0 none;
+            margin-bottom: 1.5rem;
+            padding:0;
+        }
+
+        .copy-link {
+            margin: 0;
+
+            a {
+                padding: 0.5em 2em;
+                background: #00D1E2;
+                border: 2px solid #00D1E2;
+                color: white;
+                border-radius: 2em;
+                display: inline-block;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.wp-block-borncreative-outro-text-block {
+    position: relative;
+    display: block;
+
+    @media (max-width: 569px) {
+        margin: 0 -1.5em;
+    }
+
+    @media (max-width: 1064px) {
+        margin: 0 -3em !important;
+        padding: 0 !important;
+    }
+
+    @media (min-width: 1065px) {
+        padding: 80px 0;
+    }
+
+    background: #00D1E2;
+    text-align:center;
+
+    .copy {
+        .copy-h2 {
+            margin: 0;
+            color: #1257A350;
+            margin-top: 5em;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        .copy-h3 {
+            text-transform: none;
+            margin: 0;
+            color: white;
+            border-top: 0 none;
+        }
+
+        .copy-link {
+            margin-top: 2em;
+            margin-bottom: 0;
+            padding-bottom: 2em;
+        }
+
+        .copy-link a {
+            padding: 0.5em 2em;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            border-radius: 2em;
+            display: inline-block;
+            margin-bottom: 1em;
+            text-decoration: 0 none;
+        }
+    }
+}
+
+.wp-block-borncreative-alt-intro-text-block {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #1257A3;
+    }
+
+    color:#1257A3;
+
+    .copy {
+        @include whitespace;
+        @media (min-width: 1065px) {
+            &.col-full {
+                max-width: 1340px;
+            }
+        }
+    }
+
+    @media (max-width: 1064px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+
+            .column1 {
+                @include grid-size(12);
+                padding: 0;
+            }
+
+            .column2 {
+                @include grid-size(12);
+                padding: 0 0 1rem 0;
+                margin-top: 3em;
+            }
+
+            .icon-group-holder {
+                display: flex;
+                margin-bottom: 1.5em;
+
+                .column3 {
+                    @include grid-size(3);
+                    padding: 0 0 0 1rem;
+                }
+
+                .column4 {
+                    @include grid-size(9);
+                    padding: 0 0 0 1rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1065px) {
+        .row {
+            display: flex;
+
+            .column1 {
+                @include grid-size(6);
+                padding: 0 1rem 0 0;
+            }
+
+            .column2 {
+                @include grid-size(6);
+                padding: 0 0 0 1rem;
+            }
+
+            .icon-group-holder {
+                display: flex;
+                margin-bottom: 1em;
+
+                .column3 {
+                    @include grid-size(3);
+                    padding: 0 0 0 1rem;
+                }
+
+                .column4 {
+                    @include grid-size(9);
+                    padding: 0 0 0 1rem;
+                }
+            }
+        }
+    }
+
+    .headinga,
+    .headingb,
+    .headingc,
+    .headingd {
+        margin: 0;
+    }
+
+    .linea,
+    .lineb,
+    .linec,
+    .lined {
+        margin: 0;
+    }
+
+    .icona,
+    .iconb,
+    .iconc,
+    .icond {
+        margin: 0;
+        background: #00D1E2;
+        border-radius: 50%;
+        color: white;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        display: block;
+    }
+
+    /* fix for ultra small devices */
+    @media (max-width: 430px) {
+
+        .icona,
+        .iconb,
+        .iconc,
+        .icond {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+
+    .icone {
+        margin: 0;
+        color: #1257A350;
+    }
+
+    .headinge {
+        margin: 0;
+        margin-top: 1em;
+    }
+
+    .linee {
+        margin: 0;
+        color: #444D57;
+        margin-top: 2em;
+    }
+
+}
