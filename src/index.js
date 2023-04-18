@@ -15,7 +15,7 @@ const {
 
 registerBlockType('borncreative/header-block', {
     title: 'Header Block',
-    icon: 'smiley',
+    icon: 'cover-image',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -141,7 +141,7 @@ registerBlockType('borncreative/header-block', {
 
 registerBlockType('borncreative/header-block-video', {
     title: 'Video Header Block',
-    icon: 'smiley',
+    icon: 'format-video',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -266,9 +266,9 @@ registerBlockType('borncreative/header-block-video', {
 
 
 
-registerBlockType('borncreative/intro-text-block', {
-    title: 'Intro Text Block',
-    icon: 'smiley',
+registerBlockType('borncreative/client-text-block', {
+    title: 'Client Intro Text Block',
+    icon: 'id',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -463,16 +463,9 @@ registerBlockType('borncreative/intro-text-block', {
     },
 });
 
-
-
-
-
-
-
-
 registerBlockType('borncreative/title-only-block', {
     title: 'Title Only Block',
-    icon: 'smiley',
+    icon: 'heading',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -541,7 +534,7 @@ registerBlockType('borncreative/title-only-block', {
 
 registerBlockType('borncreative/text-only-block', {
     title: 'Text Only Block',
-    icon: 'smiley',
+    icon: 'heading',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -609,7 +602,7 @@ registerBlockType('borncreative/text-only-block', {
 
 registerBlockType('borncreative/the-process-block', {
     title: 'The Process Block',
-    icon: 'smiley',
+    icon: 'layout',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -856,17 +849,9 @@ registerBlockType('borncreative/the-process-block', {
     },
 });
 
-
-
-
-
-
-
-
-
 registerBlockType('borncreative/the-solution-block', {
     title: 'The Solution Block',
-    icon: 'smiley',
+    icon: 'layout',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -1123,7 +1108,7 @@ registerBlockType('borncreative/the-solution-block', {
 
 registerBlockType('borncreative/the-5-image-gallery-block', {
     title: '5 image gallery',
-    icon: 'smiley',
+    icon: 'layout',
     category: 'born-creative-blocks',
 
     attributes: {
@@ -1315,20 +1300,9 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
 registerBlockType('borncreative/double-title-text-block', {
     title: 'Double Title and Text Block',
-    icon: 'smiley',
+    icon: 'layout',
     category: 'born-creative-blocks',
 
     attributes: {
