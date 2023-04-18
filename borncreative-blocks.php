@@ -11,8 +11,6 @@
  */
 
 
-
-
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -61,3 +59,19 @@ function borncreative_block_assets() {
 
 // and then, we actually have the function run when the editor loads...
 add_action( 'enqueue_block_assets', 'borncreative_block_assets' );
+
+
+// Register the custom block category
+function register_born_creative_blocks_category( $categories, $post ) {
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'born-creative-blocks',
+                'title' => __( 'Born Creative Blocks', 'born-creative' ),
+                'icon'  => 'wordpress',
+            ),
+        )
+    );
+}
+add_filter( 'block_categories', 'register_born_creative_blocks_category', 10, 2 );

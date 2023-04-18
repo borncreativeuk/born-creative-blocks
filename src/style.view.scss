@@ -1,12 +1,14 @@
 // for styles loaded in editor and in the view
 // This class name is automatically generated for the blocks we make
 // wordpress uses 782 px as their point between mobile and desktop, so will I
+@use "sass:math";
+
 @function rem($size) {
-    @return $size / 16 * 1rem;
+    @return  math.div($size, 16) * 1rem;
 }
 
 @function grid($size) {
-    @return $size / 12 * 100%;
+    @return  math.div($size, 12) * 100%;
 }
 
 @mixin font-size($number) {
