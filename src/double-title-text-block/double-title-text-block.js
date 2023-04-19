@@ -16,6 +16,7 @@ const edit_header_block = (props) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
 	const { textColor, setTextColor } = props;
+	const { backgroundColor, setBackgroundColor } = props;
 
 	let custom_color_class;
 	let custom_color_style = {};
@@ -24,6 +25,16 @@ const edit_header_block = (props) => {
 			custom_color_class = textColor.class;
 		} else {
 			custom_color_style.color = textColor.color;
+		}
+	}
+
+	let custom_backgroundcolor_class;
+	let custom_backgroundcolor_style = {};
+	if (backgroundColor != undefined) {
+		if (backgroundColor.class != undefined) {
+			custom_backgroundcolor_class = backgroundColor.class;
+		} else {
+			custom_backgroundcolor_style.color = backgroundColor.color;
 		}
 	}
 	function changeHeadinga(headinga) {
@@ -58,10 +69,15 @@ const edit_header_block = (props) => {
 							onChange: setTextColor,
 							label: 'Text color'
 						},
+						{
+							value: backgroundColor.color,
+							onChange: setBackgroundColor,
+							label: 'Background color'
+						},
 					]}
 				/>
 			</InspectorControls>
-			<div className={className}>
+			<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style}>
 				<div class="col-full">
 					<RichText
 						className={"headinga " + custom_color_class}
@@ -105,6 +121,7 @@ const save_header_block = (props) => {
 	const className = getBlockDefaultClassName('borncreative/double-title-text-block');
 	const { attributes } = props;
 	const { textColor, customTextColor } = props.attributes;
+	const { backgroundColor, customBackgroundColor } = props.attributes;
 
 	let custom_color_class;
 	let custom_color_style = {};
@@ -114,8 +131,17 @@ const save_header_block = (props) => {
 	if (customTextColor != undefined) {
 		custom_color_style.color = customTextColor;
 	}
+
+	let custom_backgroundcolor_class;
+	let custom_backgroundcolor_style = {};
+	if (backgroundColor != undefined) {
+		custom_backgroundcolor_class = getColorClassName('background-color', backgroundColor);
+	}
+	if (customBackgroundColor != undefined) {
+		custom_backgroundcolor_style.backgroundColor = customBackgroundColor;
+	}
 	return (
-		<div className={className} data-aos="fade-up" data-aos-duration="2000">
+		<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style} data-aos="fade-up" data-aos-duration="2000">
 			<div class="col-full">
 				<RichText.Content
 					className={"headinga " + custom_color_class}
@@ -175,6 +201,12 @@ registerBlockType('borncreative/double-title-text-block', {
 		customTextColor: {
 			type: 'string'
 		},
+		bgColor: {
+			type: 'string'
+		},
+		customBackgroundColor: {
+			type: 'string'
+		},
 	},
 	supports: {
 		// Declare support for block's alignment.
@@ -183,7 +215,7 @@ registerBlockType('borncreative/double-title-text-block', {
 		align: true
 	},
 
-	edit: withColors({ textColor: 'color' })(edit_header_block),
+	edit: withColors({ textColor: 'color', backgroundColor: 'background-color' })(edit_header_block),
 	save: save_header_block
 });
 

@@ -15,7 +15,7 @@ const edit_header_block = (props) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
 	const { textColor, setTextColor } = props;
-	const { bgColor, setBgColor } = props;
+	const { backgroundColor, setBackgroundColor } = props;
 
 	let custom_color_class;
 	let custom_color_style = {};
@@ -27,13 +27,13 @@ const edit_header_block = (props) => {
 		}
 	}
 
-	let custom_bgcolor_class;
-	let custom_bgcolor_style = {};
-	if (bgColor != undefined) {
-		if (bgColor.class != undefined) {
-			custom_bgcolor_class = bgColor.class;
+	let custom_backgroundcolor_class;
+	let custom_backgroundcolor_style = {};
+	if (backgroundColor != undefined) {
+		if (backgroundColor.class != undefined) {
+			custom_backgroundcolor_class = backgroundColor.class;
 		} else {
-			custom_bgcolor_style.color = bgColor.color;
+			custom_backgroundcolor_style.color = backgroundColor.color;
 		}
 	}
 	// we create a function that will take the changes from RichText
@@ -76,15 +76,15 @@ const edit_header_block = (props) => {
 							label: 'Text color'
 						},
 						{
-							value: bgColor.color,
-							onChange: setBgColor,
+							value: backgroundColor.color,
+							onChange: setBackgroundColor,
 							label: 'Background color'
 						},
 					]}
 				/>
 				
 			</InspectorControls>
-			<div className={className + " " + custom_bgcolor_class} style={custom_bgcolor_style}>
+			<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style}>
 				<div className="copy">
 					<div class="col-full">
 						<RichText
@@ -122,7 +122,7 @@ const save_header_block = (props) => {
 	const className = getBlockDefaultClassName('borncreative/outro-text-block');
 	const { attributes } = props;
 	const { textColor, customTextColor } = props.attributes;
-	const { bgColor, customBgColor } = props;
+	const { backgroundColor, customBackgroundColor } = props.attributes;
 
 	let custom_color_class;
 	let custom_color_style = {};
@@ -133,16 +133,16 @@ const save_header_block = (props) => {
 		custom_color_style.color = customTextColor;
 	}
 
-	let custom_bgcolor_class;
-	let custom_bgcolor_style = {};
-	if (bgColor != undefined) {
-		custom_bgcolor_class = getColorClassName('color', bgColor);
+	let custom_backgroundcolor_class;
+	let custom_backgroundcolor_style = {};
+	if (backgroundColor != undefined) {
+		custom_backgroundcolor_class = getColorClassName('background-color', backgroundColor);
 	}
-	if (customBgColor != undefined) {
-		custom_bgcolor_style.color = customBgColor;
+	if (customBackgroundColor != undefined) {
+		custom_backgroundcolor_style.backgrundColor = customBackgroundColor;
 	}
 	return (
-		<div className={className + " " + custom_bgcolor_class} style={custom_bgcolor_style}>
+		<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style}>
 			<div className="copy">
 				<div class="col-full">
 					<RichText.Content
@@ -193,10 +193,10 @@ registerBlockType('borncreative/outro-text-block', {
 		customTextColor: {
 			type: 'string'
 		},
-		bgColor: {
+		backgroundColor: {
 			type: 'string'
 		},
-		customBgColor: {
+		customBackgroundColor: {
 			type: 'string'
 		},
 	},
@@ -207,7 +207,7 @@ registerBlockType('borncreative/outro-text-block', {
 		align: true
 	},
 
-	edit: withColors({ textColor: 'color', bgColor: 'background-color' })(edit_header_block),
+	edit: withColors({ textColor: 'color', backgroundColor: 'background-color' })(edit_header_block),
 	save: save_header_block
 
 });
