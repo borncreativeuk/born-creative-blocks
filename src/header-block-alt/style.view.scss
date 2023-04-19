@@ -1,0 +1,248 @@
+// for styles loaded in editor and in the view
+// This class name is automatically generated for the blocks we make
+// wordpress uses 782 px as their point between mobile and desktop, so will I
+@use "sass:math";
+
+@function rem($size) {
+	@return math.div($size, 16) * 1rem;
+}
+
+@function grid($size) {
+	@return math.div($size, 12) * 100%;
+}
+
+@mixin font-size($number) {
+	font-size: rem($number);
+	line-height: rem($number + 10);
+}
+
+@mixin grid-size($number) {
+	width: grid($number);
+}
+
+@mixin image-block {
+	display: block;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+@mixin whitespace {
+	padding-top: 8rem !important;
+	padding-bottom: 8rem !important;
+}
+
+.whitespace,
+.ws {
+	@include whitespace;
+}
+
+body {
+	.ws-b {
+		padding-bottom: 8rem !important;
+	}
+	.ws-t {
+		padding-top: 8rem !important;
+	}
+	.pl {
+		padding-left: 1rem;
+	}
+	.pr {
+		padding-right: 1rem;
+	}
+	.pb {
+		padding-bottom: 1rem;
+	}
+	.pt-0 {
+		padding-top: 0 !important;
+	}
+	.pb-0 {
+		padding-top: 0 !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+	font-weight: 700 !important;
+}
+
+.zoom {
+	overflow: hidden;
+	img {
+		border-radius: 0;
+		transition: 1s ease-out;
+	}
+	&:hover {
+		img {
+			-webkit-transform: scale3d(1.1, 1.1, 1);
+			transform: scale3d(1.1, 1.1, 1);
+		}
+	}
+}
+
+@media (max-width: 1064px) {
+	.wp-block-borncreative-alt-header-block {
+		.copy {
+			.copy-h2 {
+				@include font-size(14);
+				text-transform: uppercase;
+				font-weight: 400;
+			}
+
+			.copy-h3 {
+				@include font-size(24);
+				font-weight: 700;
+			}
+			.copy-body {
+				@include font-size(18);
+				font-weight: 400;
+			}
+			.copy-list {
+				@include font-size(16);
+				font-weight: 400;
+			}
+			.copy-link a {
+				@include font-size(21);
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+@media (min-width: 1065px) {
+	.wp-block-borncreative-alt-header-block {
+		.copy {
+			.copy-h2 {
+				@include font-size(14);
+				text-transform: uppercase;
+				font-weight: 400;
+			}
+
+			.copy-h3 {
+				@include font-size(36);
+				font-weight: 700;
+			}
+			.copy-body {
+				@include font-size(16);
+				font-weight: 400;
+			}
+			.copy-list {
+				@include font-size(16);
+				font-weight: 400;
+			}
+			.copy-link a {
+				@include font-size(21);
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.wp-block-borncreative-alt-header-block {
+	position: relative;
+	display: block;
+
+	@media (max-width: 569px) {
+		margin: 0 -1.5em;
+	}
+
+	@media (max-width: 1064px) {
+		margin: 0 -3em !important;
+		padding: 0 !important;
+	}
+
+	@media (min-width: 1065px) {
+		padding: 0 !important;
+	}
+
+	.media {
+		width: 100%;
+		margin: 0;
+		height: 100vh;
+
+		& img {
+			@include image-block;
+		}
+	}
+
+	.column1 {
+		display: flex;
+		position: absolute;
+		top: 50%;
+		margin-top: -205px;
+		left: 50%;
+		margin-left: -290px; 
+	}
+
+	@media (max-width: 569px) {
+		.column1 {
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	@media (max-width: 1064px) {
+		.column1 {
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	@media (min-width: 1065px) {
+		.column1 {
+			align-items: center;
+			justify-content: flex-start;
+		}
+	}
+	@media (min-width: 1408px) {
+		.column1 {
+			align-items: center;
+			justify-content: flex-start;
+			max-width: 1340px;
+			padding: 0;
+		}
+	}
+
+	.copy {
+		padding: 3em;
+		max-width: 575px;
+		background: rgba(255, 255, 255, 0.95);
+
+		.copy-h2 {
+			margin: 0 0 1.5rem 0;
+			&:before {
+				display: none;
+			}
+		}
+		.copy-body {
+			margin: 0;
+			margin-bottom: 1.5rem;
+		}
+		.copy-list {
+			margin: 0;
+			margin-bottom: 1.5rem;
+		}
+
+		.copy-h3 {
+			margin: 0;
+			border-top: 0 none;
+			margin-bottom: 1.5rem;
+			padding: 0;
+		}
+
+		.copy-link {
+			margin: 0;
+
+			a {
+				padding: 0.5em 2em;
+				color: white;
+				border-radius: 2em;
+				display: inline-block;
+				text-decoration: none;
+			}
+		}
+	}
+}

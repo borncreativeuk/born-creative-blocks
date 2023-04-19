@@ -1,0 +1,153 @@
+// for styles loaded in editor and in the view
+// This class name is automatically generated for the blocks we make
+// wordpress uses 782 px as their point between mobile and desktop, so will I
+@use "sass:math";
+
+@function rem($size) {
+	@return math.div($size, 16) * 1rem;
+}
+
+@function grid($size) {
+	@return math.div($size, 12) * 100%;
+}
+
+@mixin font-size($number) {
+	font-size: rem($number);
+	line-height: rem($number + 10);
+}
+
+@mixin grid-size($number) {
+	width: grid($number);
+}
+
+@mixin image-block {
+	display: block;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+@mixin whitespace {
+	padding-top: 8rem !important;
+	padding-bottom: 8rem !important;
+}
+
+.whitespace,
+.ws {
+	@include whitespace;
+}
+
+body {
+	.ws-b {
+		padding-bottom: 8rem !important;
+	}
+	.ws-t {
+		padding-top: 8rem !important;
+	}
+	.pl {
+		padding-left: 1rem;
+	}
+	.pr {
+		padding-right: 1rem;
+	}
+	.pb {
+		padding-bottom: 1rem;
+	}
+	.pt-0 {
+		padding-top: 0 !important;
+	}
+	.pb-0 {
+		padding-top: 0 !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+	font-weight: 700 !important;
+}
+
+.zoom {
+	overflow: hidden;
+	img {
+		border-radius: 0;
+		transition: 1s ease-out;
+	}
+	&:hover {
+		img {
+			-webkit-transform: scale3d(1.1, 1.1, 1);
+			transform: scale3d(1.1, 1.1, 1);
+		}
+	}
+}
+
+.wp-block-borncreative-the-solution-block {
+	position: relative;
+	// color: white;
+	// background: #BCC3BD;
+	.headinga {
+		@include font-size(40);
+		margin-bottom: 0.25rem;
+	}
+	.headingb {
+		@include font-size(26);
+	}
+	.copy-bd {
+		@include font-size(18);
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		// color: white;
+	}
+	.media.column1 img,
+	.media.column2 img {
+		height: 33vh;
+		object-fit: cover;
+		width: 100%;
+	}
+	.copy {
+		.col-full {
+			display: flex;
+			flex-direction: column;
+			.column3 {
+				@include grid-size(5);
+			}
+		}
+	}
+	.imagec {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 33%;
+		height: 60%;
+	}
+	@media (max-width: 782px) {
+		.row {
+			display: block;
+			align-items: stretch;
+			.column1 {
+				@include grid-size(12);
+			}
+		}
+		.imagec {
+			display: none;
+		}
+	}
+	@media (min-width: 783px) {
+		.row {
+			display: flex;
+			align-items: stretch;
+			.column1 {
+				@include grid-size(4);
+				padding: 0 1rem 0 0;
+			}
+			.column2 {
+				@include grid-size(5);
+			}
+		}
+	}
+}

@@ -69,7 +69,7 @@ const edit_header_block = (props) => {
 						},
 					]}
 				/>
-			</InspectorControls>,
+			</InspectorControls>
 			<div className={className}>
 				<div className="media">
 					<MediaUpload

@@ -12,7 +12,6 @@ const { getBlockDefaultClassName } = wp.blocks;
 const { Fragment } = wp.element;
 const { InspectorControls, PanelColorSettings, withColors, getColorClassName } = wp.blockEditor;
 
-
 const edit_header_block = (props) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
@@ -30,22 +29,40 @@ const edit_header_block = (props) => {
 
 	// we create a function that will take the changes from RichText
 	// and update the attributes
+
+	function changeHeadingh2(changes) {
+		// using some nice js features instead of typing
+		// { heading: heading }
+		setAttributes({
+			headingh2: changes
+		});
+	}
+	function changeHeadingh3(changes) {
+		// using some nice js features instead of typing
+		// { heading: heading }
+		setAttributes({
+			headingh3: changes
+		});
+	}
 	function changeBodyContent(changes) {
 		setAttributes({
 			bodyContent: changes
 		})
 	}
-
-	function changeHeading(heading) {
-		// using some nice js features instead of typing
-		// { heading: heading }
-		setAttributes({ heading });
+	function changeListContent(changes) {
+		setAttributes({
+			listContent: changes
+		})
+	}
+	function changeLinkContent(changes) {
+		setAttributes({
+			linkContent: changes
+		})
 	}
 
 	function selectImage(value) {
-		console.log(value);
 		setAttributes({
-			image: value.url,
+			image: value.sizes.full.url,
 		})
 	}
 
@@ -70,40 +87,65 @@ const edit_header_block = (props) => {
 						},
 					]}
 				/>
-			</InspectorControls>,
+			</InspectorControls>
 			<div className={className}>
 				<div className="media">
 					<MediaUpload
 						onSelect={selectImage}
 						render={({ open }) => {
 							return (
-								<video onClick={open} autoplay="autoplay" muted>
-									<source src={attributes.image} type="video/mp4" />
-								</video>
+								<img
+									onClick={open}
+									src={attributes.image}
+								/>
 							);
 						}}
 					/>
 				</div>
-				<div className="copy">
-					<div class="col-full">
+				<div className="column1">
+					<div class="copy">
 						<RichText
-							className={"copy-hd " + custom_color_class}
+							className={"copy-h2 " + custom_color_class}
 							style={custom_color_style}
 							tagName="h2"
 							placeholder="Enter your heading"
-							value={attributes.heading}
-							onChange={changeHeading}
+							value={attributes.headingh2}
+							onChange={changeHeadingh2}
 						/>
-						{/* Content is replaced by this guy.
-				We determin the class name and the html tag that
-				we want it to show as. */}
 						<RichText
-							className={"copy-bd " + custom_color_class}
+							className={"copy-h3 " + custom_color_class}
 							style={custom_color_style}
 							tagName="h3"
+							placeholder="Enter your heading"
+							value={attributes.headingh3}
+							onChange={changeHeadingh3}
+						/>
+
+
+						<RichText
+							className={"copy-body " + custom_color_class}
+							style={custom_color_style}
+							tagName="p"
 							placeholder="Enter your text here"
 							value={attributes.bodyContent}
 							onChange={changeBodyContent}
+						/>
+						<RichText
+							className={"copy-list " + custom_color_class}
+							style={custom_color_style}
+							tagName="p"
+							placeholder="Enter your text here"
+							value={attributes.listContent}
+							onChange={changeListContent}
+						/>
+
+						<RichText
+							className={"copy-link " + custom_color_class}
+							style={custom_color_style}
+							tagName="p"
+							placeholder="Enter your text here"
+							value={attributes.linkContent}
+							onChange={changeLinkContent}
 						/>
 					</div>
 				</div>
@@ -112,7 +154,7 @@ const edit_header_block = (props) => {
 	];
 }
 const save_header_block = (props) => {
-	const className = getBlockDefaultClassName('borncreative/header-block');
+	const className = getBlockDefaultClassName('borncreative/alt-header-block');
 	const { attributes } = props;
 	const { textColor, customTextColor } = props.attributes;
 
@@ -128,23 +170,40 @@ const save_header_block = (props) => {
 		<div className={className}>
 			<div
 				className="media">
-				<video loop="true" autoplay="autoplay" muted>
-					<source src={attributes.image} type="video/mp4" />
-				</video>
+				<img src={attributes.image} />
 			</div>
-			<div className="copy">
-				<div class="col-full">
+			<div className="column1">
+				<div class="copy">
+
 					<RichText.Content
-						className={"copy-hd " + custom_color_class} 
+						className={"copy-h2 " + custom_color_class}
 						style={custom_color_style}
 						tagName="h2"
-						value={attributes.heading}
+						value={attributes.headingh2}
 					/>
 					<RichText.Content
-						className={"copy-bd " + custom_color_class} 
+						className={"copy-h3 " + custom_color_class}
 						style={custom_color_style}
 						tagName="h3"
+						value={attributes.headingh3}
+					/>
+					<RichText.Content
+						className={"copy-body " + custom_color_class}
+						style={custom_color_style}
+						tagName="p"
 						value={attributes.bodyContent}
+					/>
+					<RichText.Content
+						className={"copy-list " + custom_color_class}
+						style={custom_color_style}
+						tagName="p"
+						value={attributes.listContent}
+					/>
+					<RichText.Content
+						className={"copy-link " + custom_color_class}
+						style={custom_color_style}
+						tagName="p"
+						value={attributes.linkContent}
 					/>
 				</div>
 			</div>
@@ -152,22 +211,35 @@ const save_header_block = (props) => {
 	);
 }
 
-registerBlockType('borncreative/header-block-video', {
-	title: 'Video Header Block',
-	icon: 'format-video',
+registerBlockType('borncreative/alt-header-block', {
+	title: 'Alternative Header Block',
+	icon: 'cover-image',
 	category: 'born-creative-blocks',
 
 	attributes: {
+		headingh2: {
+			source: 'html',
+			selector: '.copy-h2',
+		},
+		headingh3: {
+			source: 'html',
+			selector: '.copy-h3',
+		},
 		bodyContent: {
 			source: 'html',
-			selector: '.copy-bd'
+			selector: '.copy-body'
 		},
-		heading: {
+		listContent: {
 			source: 'html',
-			selector: 'h2',
+			selector: '.copy-list'
+		},
+		linkContent: {
+			source: 'html',
+			selector: '.copy-link'
 		},
 		image: {
 			type: 'string',
+			default: 'https://via.placeholder.com/500'
 		},
 		textColor: {
 			type: 'string'
@@ -181,5 +253,3 @@ registerBlockType('borncreative/header-block-video', {
 	save: save_header_block
 
 });
-
-
