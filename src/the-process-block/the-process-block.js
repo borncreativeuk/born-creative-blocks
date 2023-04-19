@@ -16,6 +16,7 @@ const edit_header_block = (props) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
 	const { textColor, setTextColor } = props;
+	const { backgroundColor, setBackgroundColor } = props;
 
 	let custom_color_class;
 	let custom_color_style = {};
@@ -24,6 +25,16 @@ const edit_header_block = (props) => {
 			custom_color_class = textColor.class;
 		} else {
 			custom_color_style.color = textColor.color;
+		}
+	}
+
+	let custom_backgroundcolor_class;
+	let custom_backgroundcolor_style = {};
+	if (backgroundColor != undefined) {
+		if (backgroundColor.class != undefined) {
+			custom_backgroundcolor_class = backgroundColor.class;
+		} else {
+			custom_backgroundcolor_style.backgroundColor = backgroundColor.color;
 		}
 	}
 	// we create a function that will take the changes from RichText
@@ -85,11 +96,16 @@ const edit_header_block = (props) => {
 							onChange: setTextColor,
 							label: 'Text color'
 						},
+						{
+							value: backgroundColor.color,
+							onChange: setBackgroundColor,
+							label: 'Background color'
+						},
 					]}
 				/>
 			</InspectorControls>
-			<div className={className}>
-				<div className="col-full">
+			<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style}>
+				<div className="col-full ws-t">
 					<RichText
 						className={"headinga " + custom_color_class}
 						style={custom_color_style}
@@ -195,6 +211,7 @@ const save_header_block = (props) => {
 	const className = getBlockDefaultClassName('borncreative/the-process-block');
 	const { attributes } = props;
 	const { textColor, customTextColor } = props.attributes;
+	const { backgroundColor, customBackgroundColor } = props.attributes;
 
 	let custom_color_class;
 	let custom_color_style = {};
@@ -205,9 +222,17 @@ const save_header_block = (props) => {
 		custom_color_style.color = customTextColor;
 	}
 
+	let custom_backgroundcolor_class;
+	let custom_backgroundcolor_style = {};
+	if (backgroundColor != undefined) {
+		custom_backgroundcolor_class = getColorClassName('background-color', backgroundColor);
+	}
+	if (customBackgroundColor != undefined) {
+		custom_backgroundcolor_style.backgroundColor = customBackgroundColor;
+	}
 	return (
-		<div className={className} data-aos="fade-up" data-aos-duration="2000">
-			<div className="col-full">
+		<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style} data-aos="fade-up" data-aos-duration="2000">
+			<div className="col-full ws-t">
 				<RichText.Content
 					className={"headinga " + custom_color_class}
 					style={custom_color_style}
@@ -320,6 +345,12 @@ registerBlockType('borncreative/the-process-block', {
 		customTextColor: {
 			type: 'string'
 		},
+		backgroundColor: {
+			type: 'string'
+		},
+		customBackgroundColor: {
+			type: 'string'
+		},
 	},
 	supports: {
 		// Declare support for block's alignment.
@@ -327,7 +358,7 @@ registerBlockType('borncreative/the-process-block', {
 		// left, center, right, wide, and full.
 		align: true
 	},
-	edit: withColors({ textColor: 'color' })(edit_header_block),
+	edit: withColors({ textColor: 'color', backgroundColor: 'background-color' })(edit_header_block),
 	save: save_header_block
 
 });
