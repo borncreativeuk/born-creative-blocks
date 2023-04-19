@@ -88,49 +88,6 @@ h4 {
 }
 
 
-.wp-block-borncreative-double-title-text-block {
-	// background: #BCC3BD;
-	// color: white;
-	h1,
-	h2,
-	h3,
-	h4 {
-		// color: white;
-	}
-	.col-full {
-		@include whitespace;
-		.col-8 {
-			padding-left: 16.667%;
-			display: block;
-		}
-	}
-	.headinga,
-	.headingb {
-		@include font-size(40);
-		margin-bottom: 0.25rem;
-	}
-	.contenta,
-	.contentb {
-		@include font-size(18);
-	}
-	@media (max-width: 782px) {
-		.col-full {
-			.contenta,
-			.contentb {
-				@include grid-size(12);
-			}
-		}
-	}
-	@media (min-width: 783px) {
-		.col-full {
-			.contenta,
-			.contentb {
-				@include grid-size(8);
-			}
-		}
-	}
-}
-
 @media (max-width: 1064px) {
 
 	.wp-block-borncreative-outro-text-block {

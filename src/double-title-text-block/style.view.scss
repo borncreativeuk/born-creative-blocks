@@ -32,56 +32,46 @@
 	padding-bottom: 8rem !important;
 }
 
-.wp-block-borncreative-intro-text-block {
-	.copy {
+
+.wp-block-borncreative-double-title-text-block {
+	// background: #BCC3BD;
+	// color: white;
+	h1,
+	h2,
+	h3,
+	h4 {
+		// color: white;
+	}
+	.col-full {
 		@include whitespace;
-		&.col-full{
-			max-width:1200px;
-			margin:0 auto; 
+		.col-8 {
+			padding-left: 16.667%;
+			display: block;
 		}
 	}
+	.headinga,
+	.headingb {
+		@include font-size(40);
+		margin-bottom: 0.25rem;
+	}
+	.contenta,
+	.contentb {
+		@include font-size(18);
+	}
 	@media (max-width: 782px) {
-		.row {
-			display: flex;
-			flex-direction: column;
-			.column1 {
+		.col-full {
+			.contenta,
+			.contentb {
 				@include grid-size(12);
-				padding: 0;
-				order: 2;
-			}
-			.column2 {
-				@include grid-size(12);
-				padding: 0 0 1rem 0;
-				order: 1;
 			}
 		}
 	}
 	@media (min-width: 783px) {
-		.row {
-			display: flex;
-			.column1 {
-				@include grid-size(7);
-				padding: 0 1rem 0 0;
-			}
-			.column2 {
-				@include grid-size(5);
-				padding: 0 0 0 1rem;
+		.col-full {
+			.contenta,
+			.contentb {
+				@include grid-size(8);
 			}
 		}
-	}
-	.copy-bd {
-		@include font-size(26);
-	}
-	.headinga,
-	.headingb,
-	.headingc {
-		@include font-size(14);
-		margin: 0;
-	}
-	.linea,
-	.lineb,
-	.linec {
-		@include font-size(14);
-		margin: 0;
 	}
 }
