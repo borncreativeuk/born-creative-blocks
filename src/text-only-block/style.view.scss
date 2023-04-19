@@ -31,3 +31,10 @@
 	padding-top: 8rem !important;
 	padding-bottom: 8rem !important;
 }
+.wp-block-borncreative-text-only-block {
+	.col-full {
+		@include whitespace;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+}

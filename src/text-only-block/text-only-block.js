@@ -12,7 +12,7 @@ const { Fragment } = wp.element;
 const { InspectorControls, PanelColorSettings, withColors, getColorClassName } = wp.blockEditor;
 
 
-edit_header_block = (props) => {
+const edit_header_block = (props) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
 	const { textColor, setTextColor } = props;
@@ -84,77 +84,77 @@ edit_header_block = (props) => {
 			</div>
 		</Fragment>
 	];
-},
+}
 
-	save_header_block = (props) => {
-		const className = getBlockDefaultClassName('borncreative/text-only-block');
-		const { attributes } = props;
-		const { textColor, customTextColor } = props.attributes;
-		const { backgroundColor, customBackgroundColor } = props.attributes;
+const save_header_block = (props) => {
+	const className = getBlockDefaultClassName('borncreative/text-only-block');
+	const { attributes } = props;
+	const { textColor, customTextColor } = props.attributes;
+	const { backgroundColor, customBackgroundColor } = props.attributes;
 
-		let custom_color_class;
-		let custom_color_style = {};
-		if (textColor != undefined) {
-			custom_color_class = getColorClassName('color', textColor);
-		}
-		if (customTextColor != undefined) {
-			custom_color_style.color = customTextColor;
-		}
+	let custom_color_class;
+	let custom_color_style = {};
+	if (textColor != undefined) {
+		custom_color_class = getColorClassName('color', textColor);
+	}
+	if (customTextColor != undefined) {
+		custom_color_style.color = customTextColor;
+	}
 
-		let custom_backgroundcolor_class;
-		let custom_backgroundcolor_style = {};
-		if (backgroundColor != undefined) {
-			custom_backgroundcolor_class = getColorClassName('background-color', backgroundColor);
-		}
-		if (customBackgroundColor != undefined) {
-			custom_backgroundcolor_style.backgroundColor = customBackgroundColor;
-		}
-		return (
-			<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style} data-aos="fade-up" data-aos-duration="2000">
-				<div class="col-full">
-					<RichText.Content
-						className={"copy-bd " + custom_color_class}
-						style={custom_color_style}
-						tagName="div"
-						value={attributes.heading}
-					/>
-				</div>
+	let custom_backgroundcolor_class;
+	let custom_backgroundcolor_style = {};
+	if (backgroundColor != undefined) {
+		custom_backgroundcolor_class = getColorClassName('background-color', backgroundColor);
+	}
+	if (customBackgroundColor != undefined) {
+		custom_backgroundcolor_style.backgroundColor = customBackgroundColor;
+	}
+	return (
+		<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style} data-aos="fade-up" data-aos-duration="2000">
+			<div class="col-full">
+				<RichText.Content
+					className={"copy-bd " + custom_color_class}
+					style={custom_color_style}
+					tagName="div"
+					value={attributes.heading}
+				/>
 			</div>
-		);
+		</div>
+	);
+}
+
+registerBlockType('borncreative/text-only-block', {
+	title: 'Text Only Block',
+	icon: 'heading',
+	category: 'born-creative-blocks',
+
+	attributes: {
+		heading: {
+			source: 'html',
+			selector: '.copy-bd',
+		},
+		textColor: {
+			type: 'string'
+		},
+		customTextColor: {
+			type: 'string'
+		},
+		backgroundColor: {
+			type: 'string'
+		},
+		customBackgroundColor: {
+			type: 'string'
+		},
+	},
+	supports: {
+		// Declare support for block's alignment.
+		// This adds support for all the options:
+		// left, center, right, wide, and full.
+		align: true
 	},
 
-	registerBlockType('borncreative/text-only-block', {
-		title: 'Text Only Block',
-		icon: 'heading',
-		category: 'born-creative-blocks',
+	edit: withColors({ textColor: 'color', backgroundColor: 'background-color' })(edit_header_block),
+	save: save_header_block
 
-		attributes: {
-			heading: {
-				source: 'html',
-				selector: '.copy-bd',
-			},
-			textColor: {
-				type: 'string'
-			},
-			customTextColor: {
-				type: 'string'
-			},
-			backgroundColor: {
-				type: 'string'
-			},
-			customBackgroundColor: {
-				type: 'string'
-			},
-		},
-		supports: {
-			// Declare support for block's alignment.
-			// This adds support for all the options:
-			// left, center, right, wide, and full.
-			align: true
-		},
-
-		edit: withColors({ textColor: 'color', backgroundColor: 'background-color' })(edit_header_block),
-		save: save_header_block
-
-	});
+});
 
