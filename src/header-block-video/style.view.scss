@@ -1,0 +1,119 @@
+// for styles loaded in editor and in the view
+// This class name is automatically generated for the blocks we make
+// wordpress uses 782 px as their point between mobile and desktop, so will I
+@use "sass:math";
+
+@function rem($size) {
+	@return math.div($size, 16) * 1rem;
+}
+
+@function grid($size) {
+	@return math.div($size, 12) * 100%;
+}
+
+@mixin font-size($number) {
+	font-size: rem($number);
+	line-height: rem($number + 10);
+}
+
+@mixin grid-size($number) {
+	width: grid($number);
+}
+
+@mixin image-block {
+	display: block;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+@mixin whitespace {
+	padding-top: 8rem !important;
+	padding-bottom: 8rem !important;
+}
+
+.whitespace,
+.ws {
+	@include whitespace;
+}
+
+body {
+	.ws-b {
+		padding-bottom: 8rem !important;
+	}
+	.ws-t {
+		padding-top: 8rem !important;
+	}
+	.pl {
+		padding-left: 1rem;
+	}
+	.pr {
+		padding-right: 1rem;
+	}
+	.pb {
+		padding-bottom: 1rem;
+	}
+	.pt-0 {
+		padding-top: 0 !important;
+	}
+	.pb-0 {
+		padding-top: 0 !important;
+	}
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-transform: uppercase;
+	font-weight: 700 !important;
+}
+
+.zoom {
+	overflow: hidden;
+	img {
+		border-radius: 0;
+		transition: 1s ease-out;
+	}
+	&:hover {
+		img {
+			-webkit-transform: scale3d(1.1, 1.1, 1);
+			transform: scale3d(1.1, 1.1, 1);
+		}
+	}
+}
+
+.wp-block-borncreative-header-block-video {
+	position: relative;
+	display: block;
+	.media {
+		width: 100%;
+		margin: 0;
+		height: 100vh;
+		& video {
+			@include image-block;
+		}
+	}
+	.copy {
+		position: absolute;
+		bottom: 1rem;
+		left: 0;
+		right: 0;
+		// color: white;
+		.copy-hd {
+			@include font-size(40);
+			margin: 0;
+			// color: white;
+			&:before {
+				display: none;
+			}
+		}
+		.copy-bd {
+			@include font-size(34);
+			font-weight: normal !important;
+			text-transform: none;
+			margin: 0;
+			// color: white;
+		}
+	}
+}

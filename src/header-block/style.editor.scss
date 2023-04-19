@@ -1,0 +1,41 @@
+/*
+* For styles only loaded in the editor
+* These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.
+*/
+
+.wp-admin {
+    @media (min-width: 768px) {
+        .col-full {
+            max-width: 66.4989378333em;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 2.617924em;
+            box-sizing: content-box
+        }
+        .col-full:after,
+        .col-full:before {
+            content: "";
+            display: table
+        }
+        .col-full:after {
+            content: " ";
+            display: block;
+            clear: both
+        }
+    }
+    @media (max-width: 66.4989378333em) {
+        .col-full {
+            margin-left: 2.617924em;
+            margin-right: 2.617924em;
+            padding: 0;
+        }
+    }
+    .editor-styles-wrapper .storefront-has-sidebar .wp-block {
+        max-width: 100%;
+        overflow: hidden;
+    }
+    .wp-block img:hover,
+    .wp-block img:focus {
+        cursor: copy;
+    }
+}
