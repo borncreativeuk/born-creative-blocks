@@ -321,7 +321,12 @@ registerBlockType('borncreative/the-process-block', {
 			type: 'string'
 		},
 	},
-
+	supports: {
+		// Declare support for block's alignment.
+		// This adds support for all the options:
+		// left, center, right, wide, and full.
+		align: true
+	},
 	edit: withColors({ textColor: 'color' })(edit_header_block),
 	save: save_header_block
 

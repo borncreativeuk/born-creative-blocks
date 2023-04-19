@@ -38,7 +38,13 @@ registerBlockType('borncreative/the-5-image-gallery-block', {
             default: 'http://placehold.it/500'
         },
 
-    },
+    },	
+	supports: {
+		// Declare support for block's alignment.
+		// This adds support for all the options:
+		// left, center, right, wide, and full.
+		align: true
+	},
 
     edit(props) {
         const { className, setAttributes } = props;
