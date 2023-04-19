@@ -3,7 +3,7 @@
 * These styles are actually inlined using webpack style-loader.  They are not loaded using WordPress enqueuing.
 */
 
-.wp-admin {
+.wp-admin .wp-block-borncreative-the-solution-block {
     @media (min-width: 768px) {
         .col-full {
             max-width: 66.4989378333em;
@@ -32,12 +32,9 @@
 			position: relative;
         }
     }
-    .editor-styles-wrapper .storefront-has-sidebar .wp-block {
-        max-width: 100%;
-        overflow: hidden;
-    }
-    .wp-block img:hover,
-    .wp-block img:focus {
+
+    img:hover,
+    img:focus {
         cursor: copy;
     }
 	.imagec img{
