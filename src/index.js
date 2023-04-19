@@ -16,6 +16,7 @@ import './header-block-video/header-block-video'
 import './header-block-alt/header-block-alt'
 import './the-process-block/the-process-block'
 import './the-solution-block/the-solution-block'
+import './five-image-block/five-image-block'
 
 
 registerBlockType('borncreative/client-text-block', {

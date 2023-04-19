@@ -87,76 +87,6 @@ h4 {
 	display: none;
 }
 
-.wp-block-borncreative-header-block {
-	position: relative;
-	display: block;
-	.media {
-		width: 100%;
-		margin: 0;
-		height: 100vh;
-		& img {
-			@include image-block;
-		}
-	}
-	.copy {
-		position: absolute;
-		bottom: 1rem;
-		left: 0;
-		right: 0;
-		// color: white;
-		.copy-hd {
-			@include font-size(40);
-			margin: 0;
-			// color: white;
-			&:before {
-				display: none;
-			}
-		}
-		.copy-bd {
-			@include font-size(34);
-			font-weight: normal !important;
-			text-transform: none;
-			margin: 0;
-			// color: white;
-		}
-	}
-}
-
-.wp-block-borncreative-header-block-video {
-	position: relative;
-	display: block;
-	.media {
-		width: 100%;
-		margin: 0;
-		height: 100vh;
-		& video {
-			@include image-block;
-		}
-	}
-	.copy {
-		position: absolute;
-		bottom: 1rem;
-		left: 0;
-		right: 0;
-		// color: white;
-		.copy-hd {
-			@include font-size(40);
-			margin: 0;
-			// color: white;
-			&:before {
-				display: none;
-			}
-		}
-		.copy-bd {
-			@include font-size(34);
-			font-weight: normal !important;
-			text-transform: none;
-			margin: 0;
-			// color: white;
-		}
-	}
-}
-
 .wp-block-borncreative-intro-text-block {
 	.copy {
 		@include whitespace;
@@ -214,36 +144,6 @@ h4 {
 	.copy-hd {
 		@include font-size(40);
 		margin-bottom: 0.25rem;
-	}
-}
-
-.wp-block-borncreative-the-5-image-gallery-block {
-	padding-bottom: 1rem;
-	display: flex;
-	flex-direction: row;
-	.column1 {
-		display: flex;
-		flex-direction: column;
-		width: 50%;
-		.media {
-			flex: 1;
-			.zoom {
-				width: 100%;
-				height: 100%;
-			}
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-		.extra-row {
-			display: flex;
-			flex-direction: row;
-			.media {
-				width: 50%;
-			}
-		}
 	}
 }
 
