@@ -34,7 +34,7 @@ const edit_header_block = (props) => {
 		if (backgroundColor.class != undefined) {
 			custom_backgroundcolor_class = backgroundColor.class;
 		} else {
-			custom_backgroundcolor_style.color = backgroundColor.color;
+			custom_backgroundcolor_style.backgroundColor = backgroundColor.color;
 		}
 	}
 	function changeHeadinga(headinga) {
@@ -212,7 +212,7 @@ registerBlockType('borncreative/double-title-text-block', {
 		// Declare support for block's alignment.
 		// This adds support for all the options:
 		// left, center, right, wide, and full.
-		align: true
+		align: true,	
 	},
 
 	edit: withColors({ textColor: 'color', backgroundColor: 'background-color' })(edit_header_block),

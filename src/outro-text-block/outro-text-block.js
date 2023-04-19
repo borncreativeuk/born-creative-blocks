@@ -33,7 +33,7 @@ const edit_header_block = (props) => {
 		if (backgroundColor.class != undefined) {
 			custom_backgroundcolor_class = backgroundColor.class;
 		} else {
-			custom_backgroundcolor_style.color = backgroundColor.color;
+			custom_backgroundcolor_style.backgroundColor = backgroundColor.color;
 		}
 	}
 	// we create a function that will take the changes from RichText
@@ -139,7 +139,7 @@ const save_header_block = (props) => {
 		custom_backgroundcolor_class = getColorClassName('background-color', backgroundColor);
 	}
 	if (customBackgroundColor != undefined) {
-		custom_backgroundcolor_style.backgrundColor = customBackgroundColor;
+		custom_backgroundcolor_style.backgroundColor = customBackgroundColor;
 	}
 	return (
 		<div className={className + " " + custom_backgroundcolor_class} style={custom_backgroundcolor_style}>
