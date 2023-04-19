@@ -42,6 +42,7 @@ wp_register_script(
 
 
 function borncreative_block_editor_assets() {
+	$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
     wp_enqueue_script(
         'borncreative-block',
         plugins_url( 'build/index.js', __FILE__ ),
