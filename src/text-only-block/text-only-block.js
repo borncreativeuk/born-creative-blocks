@@ -11,7 +11,6 @@ const { getBlockDefaultClassName } = wp.blocks;
 const { Fragment } = wp.element;
 const { InspectorControls, PanelColorSettings, withColors, getColorClassName } = wp.blockEditor;
 
-
 const edit_header_block = (props) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;

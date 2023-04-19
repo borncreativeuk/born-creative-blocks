@@ -75,13 +75,13 @@
 	.headinga,
 	.headingb,
 	.headingc {
-		@include font-size(14);
+		@include font-size(16);
 		margin: 0;
 	}
 	.linea,
 	.lineb,
 	.linec {
-		@include font-size(14);
+		@include font-size(16);
 		margin: 0;
 	}
 }
