@@ -1,0 +1,267 @@
+// for styles loaded in editor and in the view
+// This class name is automatically generated for the blocks we make
+// wordpress uses 782 px as their point between mobile and desktop, so will I
+@use "sass:math";
+
+@function rem($size) {
+	@return math.div($size, 16) * 1rem;
+}
+
+@function grid($size) {
+	@return math.div($size, 12) * 100%;
+}
+
+@mixin font-size($number) {
+	font-size: rem($number);
+	line-height: rem($number + 10);
+}
+
+@mixin grid-size($number) {
+	width: grid($number);
+}
+
+@mixin image-block {
+	display: block;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+}
+
+@mixin whitespace {
+	padding-top: 8rem !important;
+	padding-bottom: 8rem !important;
+}
+
+
+
+@media (max-width: 1064px) {
+
+	.wp-block-borncreative-alt-intro-text-block {
+		.headinga,
+		.headingb,
+		.headingc,
+		.headingd {
+			@include font-size(21);
+			font-weight: 700;
+		}
+
+		.linea,
+		.lineb,
+		.linec,
+		.lined {
+			@include font-size(16);
+			font-weight: 400;
+		}
+
+		.icona,
+		.iconb,
+		.iconc,
+		.icond {
+			@include font-size(36);
+			font-weight: 700;
+		}
+
+		.icone {
+			@include font-size(14);
+			font-weight: 400;
+		}
+
+		.headinge {
+			@include font-size(24);
+		}
+
+		.linee {
+			@include font-size(18);
+		}
+		.col-full {
+			max-width: 32em;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (min-width: 1065px) {
+
+	.wp-block-borncreative-alt-intro-text-block {
+		.headinga,
+		.headingb,
+		.headingc,
+		.headingd {
+			@include font-size(24);
+			font-weight: 700;
+		}
+
+		.linea,
+		.lineb,
+		.linec,
+		.lined {
+			@include font-size(18);
+			font-weight: 400;
+		}
+
+		.icona,
+		.iconb,
+		.iconc,
+		.icond {
+			@include font-size(36);
+			font-weight: 700;
+		}
+
+		.icone {
+			@include font-size(14);
+			font-weight: 400;
+		}
+
+		.headinge {
+			@include font-size(36);
+		}
+
+		.linee {
+			@include font-size(18);
+		}
+	}
+}
+
+.wp-block-borncreative-alt-intro-text-block {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		// color: #1257A3;
+	}
+
+	// color:#1257A3;
+
+	.copy {
+		@include whitespace;
+		@media (min-width: 1065px) {
+			&.col-full {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@media (max-width: 1064px) {
+		.row {
+			display: flex;
+			flex-direction: column;
+
+			.column1 {
+				@include grid-size(12);
+				padding: 0;
+			}
+
+			.column2 {
+				@include grid-size(12);
+				padding: 0 0 1rem 0;
+				margin-top: 3em;
+			}
+
+			.icon-group-holder {
+				display: flex;
+				margin-bottom: 1.5em;
+
+				.column3 {
+					@include grid-size(3);
+					padding: 0 0 0 1rem;
+				}
+
+				.column4 {
+					@include grid-size(9);
+					padding: 0 0 0 1rem;
+				}
+			}
+		}
+	}
+
+	@media (min-width: 1065px) {
+		.row {
+			display: flex;
+
+			.column1 {
+				@include grid-size(6);
+				padding: 0 1rem 0 0;
+			}
+
+			.column2 {
+				@include grid-size(6);
+				padding: 0 0 0 1rem;
+			}
+
+			.icon-group-holder {
+				display: flex;
+				margin-bottom: 1em;
+
+				.column3 {
+					@include grid-size(3);
+					padding: 0 0 0 1rem;
+				}
+
+				.column4 {
+					@include grid-size(9);
+					padding: 0 0 0 1rem;
+				}
+			}
+		}
+	}
+
+	.headinga,
+	.headingb,
+	.headingc,
+	.headingd {
+		margin: 0;
+	}
+
+	.linea,
+	.lineb,
+	.linec,
+	.lined {
+		margin: 0;
+	}
+
+	.icona,
+	.iconb,
+	.iconc,
+	.icond {
+		margin: 0;
+		// background: #00D1E2;
+		border-radius: 50%;
+		// color: white;
+		width: 80px;
+		height: 80px;
+		line-height: 80px;
+		text-align: center;
+		display: block;
+	}
+
+	/* fix for ultra small devices */
+	@media (max-width: 430px) {
+		.icona,
+		.iconb,
+		.iconc,
+		.icond {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+	}
+
+	.icone {
+		margin: 0;
+		// color: #1257A350;
+	}
+
+	.headinge {
+		margin: 0;
+		margin-top: 1em;
+	}
+
+	.linee {
+		margin: 0;
+		// color: #444D57;
+		margin-top: 2em;
+	}
+}
