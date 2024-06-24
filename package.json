@@ -29,6 +29,6 @@
     },
     "homepage": "https://github.com/borncreativeuk/born-creative-blocks#readme",
     "devDependencies": {
-        "@wordpress/scripts": "^26.2.0"
+        "@wordpress/scripts": "^28.1.0"
     }
 }
