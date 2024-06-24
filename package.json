@@ -7,30 +7,30 @@
 	"keywords": [],
 	"homepage": "https://github.com/borncreativeuk/born-creative-blocks#readme",
 	"repository": {
-        "type": "git",
-        "url": "git+https://github.com/borncreativeuk/born-creative-blocks.git"
-    },
+		"type": "git",
+		"url": "git+https://github.com/borncreativeuk/born-creative-blocks.git"
+	},
 	"bugs": {
-        "url": "https://github.com/borncreativeuk/born-creative-blocks/issues"
-    },
+		"url": "https://github.com/borncreativeuk/born-creative-blocks/issues"
+	},
 	"main": "build/index.js",
 	"devDependencies": {
-        "@wordpress/scripts": "^28.1.0"
-    },
+		"@wordpress/scripts": "^28.1.0",
+		"prettier": "npm:wp-prettier@^3.0.3"
+	},
 	"scripts": {
-        "build": "wp-scripts build",
-        "check-engines": "wp-scripts check-engines",
-        "check-licenses": "wp-scripts check-licenses",
-        "format:js": "wp-scripts format-js",
-        "lint:css": "wp-scripts lint-style",
-        "lint:js": "wp-scripts lint-js",
-        "lint:md:docs": "wp-scripts lint-md-docs",
-        "lint:md:js": "wp-scripts lint-md-js",
-        "lint:pkg-json": "wp-scripts lint-pkg-json",
-        "packages-update": "wp-scripts packages-update",
-        "start": "wp-scripts start",
-        "test:e2e": "wp-scripts test-e2e",
-        "test:unit": "wp-scripts test-unit-js"
-    }
-
+		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
+		"format:js": "wp-scripts lint-js --fix",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"lint:md:docs": "wp-scripts lint-md-docs",
+		"lint:md:js": "wp-scripts lint-md-js",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"start": "wp-scripts start",
+		"test:e2e": "wp-scripts test-e2e",
+		"test:unit": "wp-scripts test-unit-js"
+	}
 }

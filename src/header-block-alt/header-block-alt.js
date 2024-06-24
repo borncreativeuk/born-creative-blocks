@@ -3,24 +3,22 @@ import { registerBlockType } from '@wordpress/blocks';
 import './style.view.scss';
 import './style.editor.scss';
 
-import {
-	RichText,
-	MediaUpload
-} from '@wordpress/block-editor';
+import { RichText, MediaUpload } from '@wordpress/block-editor';
 
 const { getBlockDefaultClassName } = wp.blocks;
 const { Fragment } = wp.element;
-const { InspectorControls, PanelColorSettings, withColors, getColorClassName } = wp.blockEditor;
+const { InspectorControls, PanelColorSettings, withColors, getColorClassName } =
+	wp.blockEditor;
 
-const edit_header_block = (props) => {
+const edit_header_block = ( props ) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
 	const { textColor, setTextColor } = props;
 
 	let custom_color_class;
-	let custom_color_style = {};
-	if (textColor != undefined) {
-		if (textColor.class != undefined) {
+	const custom_color_style = {};
+	if ( textColor != undefined ) {
+		if ( textColor.class != undefined ) {
 			custom_color_class = textColor.class;
 		} else {
 			custom_color_style.color = textColor.color;
@@ -30,188 +28,187 @@ const edit_header_block = (props) => {
 	// we create a function that will take the changes from RichText
 	// and update the attributes
 
-	function changeHeadingh2(changes) {
+	function changeHeadingh2( changes ) {
 		// using some nice js features instead of typing
 		// { heading: heading }
-		setAttributes({
-			headingh2: changes
-		});
+		setAttributes( {
+			headingh2: changes,
+		} );
 	}
-	function changeHeadingh3(changes) {
+	function changeHeadingh3( changes ) {
 		// using some nice js features instead of typing
 		// { heading: heading }
-		setAttributes({
-			headingh3: changes
-		});
+		setAttributes( {
+			headingh3: changes,
+		} );
 	}
-	function changeBodyContent(changes) {
-		setAttributes({
-			bodyContent: changes
-		})
+	function changeBodyContent( changes ) {
+		setAttributes( {
+			bodyContent: changes,
+		} );
 	}
-	function changeListContent(changes) {
-		setAttributes({
-			listContent: changes
-		})
+	function changeListContent( changes ) {
+		setAttributes( {
+			listContent: changes,
+		} );
 	}
-	function changeLinkContent(changes) {
-		setAttributes({
-			linkContent: changes
-		})
+	function changeLinkContent( changes ) {
+		setAttributes( {
+			linkContent: changes,
+		} );
 	}
 
-	function selectImage(value) {
-		setAttributes({
+	function selectImage( value ) {
+		setAttributes( {
 			image: value.sizes.full.url,
-		})
+		} );
 	}
 
 	return [
 		<Fragment>
 			<InspectorControls>
-				{/* Later, when we have customizable options we will add stuff here! */}
+				{ /* Later, when we have customizable options we will add stuff here! */ }
 				<div
-					style={{
+					style={ {
 						padding: '1em 0',
-					}}
+					} }
 				>
 					Options
 				</div>
 				<PanelColorSettings
-					title='Color settings'
-					colorSettings={[
+					title="Color settings"
+					colorSettings={ [
 						{
 							value: textColor.color,
 							onChange: setTextColor,
-							label: 'Text color'
+							label: 'Text color',
 						},
-					]}
+					] }
 				/>
 			</InspectorControls>
-			<div className={className}>
+			<div className={ className }>
 				<div className="media">
 					<MediaUpload
-						onSelect={selectImage}
-						render={({ open }) => {
+						onSelect={ selectImage }
+						render={ ( { open } ) => {
 							return (
 								<img
-									onClick={open}
-									src={attributes.image}
+									onClick={ open }
+									src={ attributes.image }
 								/>
 							);
-						}}
+						} }
 					/>
 				</div>
 				<div className="column1">
-					<div class="copy">
+					<div className="copy">
 						<RichText
-							className={"copy-h2 " + custom_color_class}
-							style={custom_color_style}
+							className={ 'copy-h2 ' + custom_color_class }
+							style={ custom_color_style }
 							tagName="h2"
 							placeholder="Enter your heading"
-							value={attributes.headingh2}
-							onChange={changeHeadingh2}
+							value={ attributes.headingh2 }
+							onChange={ changeHeadingh2 }
 						/>
 						<RichText
-							className={"copy-h3 " + custom_color_class}
-							style={custom_color_style}
+							className={ 'copy-h3 ' + custom_color_class }
+							style={ custom_color_style }
 							tagName="h3"
 							placeholder="Enter your heading"
-							value={attributes.headingh3}
-							onChange={changeHeadingh3}
-						/>
-
-
-						<RichText
-							className={"copy-body " + custom_color_class}
-							style={custom_color_style}
-							tagName="p"
-							placeholder="Enter your text here"
-							value={attributes.bodyContent}
-							onChange={changeBodyContent}
-						/>
-						<RichText
-							className={"copy-list " + custom_color_class}
-							style={custom_color_style}
-							tagName="p"
-							placeholder="Enter your text here"
-							value={attributes.listContent}
-							onChange={changeListContent}
+							value={ attributes.headingh3 }
+							onChange={ changeHeadingh3 }
 						/>
 
 						<RichText
-							className={"copy-link " + custom_color_class}
-							style={custom_color_style}
+							className={ 'copy-body ' + custom_color_class }
+							style={ custom_color_style }
 							tagName="p"
 							placeholder="Enter your text here"
-							value={attributes.linkContent}
-							onChange={changeLinkContent}
+							value={ attributes.bodyContent }
+							onChange={ changeBodyContent }
+						/>
+						<RichText
+							className={ 'copy-list ' + custom_color_class }
+							style={ custom_color_style }
+							tagName="p"
+							placeholder="Enter your text here"
+							value={ attributes.listContent }
+							onChange={ changeListContent }
+						/>
+
+						<RichText
+							className={ 'copy-link ' + custom_color_class }
+							style={ custom_color_style }
+							tagName="p"
+							placeholder="Enter your text here"
+							value={ attributes.linkContent }
+							onChange={ changeLinkContent }
 						/>
 					</div>
 				</div>
 			</div>
-		</Fragment>
+		</Fragment>,
 	];
-}
-const save_header_block = (props) => {
-	const className = getBlockDefaultClassName('borncreative/alt-header-block');
+};
+const saveHeaderBlock = ( props ) => {
+	const className = getBlockDefaultClassName(
+		'borncreative/alt-header-block'
+	);
 	const { attributes } = props;
 	const { textColor, customTextColor } = props.attributes;
 
 	let custom_color_class;
-	let custom_color_style = {};
-	if (textColor != undefined) {
-		custom_color_class = getColorClassName('color', textColor);
+	const custom_color_style = {};
+	if ( textColor != undefined ) {
+		custom_color_class = getColorClassName( 'color', textColor );
 	}
-	if (customTextColor != undefined) {
+	if ( customTextColor != undefined ) {
 		custom_color_style.color = customTextColor;
 	}
 	return (
-		<div className={className}>
-			<div
-				className="media">
-				<img src={attributes.image} />
+		<div className={ className }>
+			<div className="media">
+				<img src={ attributes.image } />
 			</div>
 			<div className="column1">
-				<div class="copy">
-
+				<div className="copy">
 					<RichText.Content
-						className={"copy-h2 " + custom_color_class}
-						style={custom_color_style}
+						className={ 'copy-h2 ' + custom_color_class }
+						style={ custom_color_style }
 						tagName="h2"
-						value={attributes.headingh2}
+						value={ attributes.headingh2 }
 					/>
 					<RichText.Content
-						className={"copy-h3 " + custom_color_class}
-						style={custom_color_style}
+						className={ 'copy-h3 ' + custom_color_class }
+						style={ custom_color_style }
 						tagName="h3"
-						value={attributes.headingh3}
+						value={ attributes.headingh3 }
 					/>
 					<RichText.Content
-						className={"copy-body " + custom_color_class}
-						style={custom_color_style}
+						className={ 'copy-body ' + custom_color_class }
+						style={ custom_color_style }
 						tagName="p"
-						value={attributes.bodyContent}
+						value={ attributes.bodyContent }
 					/>
 					<RichText.Content
-						className={"copy-list " + custom_color_class}
-						style={custom_color_style}
+						className={ 'copy-list ' + custom_color_class }
+						style={ custom_color_style }
 						tagName="p"
-						value={attributes.listContent}
+						value={ attributes.listContent }
 					/>
 					<RichText.Content
-						className={"copy-link " + custom_color_class}
-						style={custom_color_style}
+						className={ 'copy-link ' + custom_color_class }
+						style={ custom_color_style }
 						tagName="p"
-						value={attributes.linkContent}
+						value={ attributes.linkContent }
 					/>
 				</div>
 			</div>
 		</div>
 	);
-}
+};
 
-registerBlockType('borncreative/alt-header-block', {
+registerBlockType( 'borncreative/alt-header-block', {
 	title: 'Alternative Header Block',
 	icon: 'cover-image',
 	category: 'born-creative-blocks',
@@ -227,34 +224,33 @@ registerBlockType('borncreative/alt-header-block', {
 		},
 		bodyContent: {
 			source: 'html',
-			selector: '.copy-body'
+			selector: '.copy-body',
 		},
 		listContent: {
 			source: 'html',
-			selector: '.copy-list'
+			selector: '.copy-list',
 		},
 		linkContent: {
 			source: 'html',
-			selector: '.copy-link'
+			selector: '.copy-link',
 		},
 		image: {
 			type: 'string',
-			default: 'https://via.placeholder.com/500'
+			default: 'https://via.placeholder.com/500',
 		},
 		textColor: {
-			type: 'string'
+			type: 'string',
 		},
 		customTextColor: {
-			type: 'string'
+			type: 'string',
 		},
 	},
 	supports: {
 		// Declare support for block's alignment.
 		// This adds support for all the options:
 		// left, center, right, wide, and full.
-		align: true
+		align: true,
 	},
-	edit: withColors({ textColor: 'color' })(edit_header_block),
-	save: save_header_block
-
-});
+	edit: withColors( { textColor: 'color' } )( edit_header_block ),
+	save: saveHeaderBlock,
+} );
