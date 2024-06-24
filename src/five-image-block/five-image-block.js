@@ -6,6 +6,7 @@ import './style.editor.scss';
 import { MediaUpload, InspectorControls } from '@wordpress/block-editor';
 
 const { getBlockDefaultClassName } = wp.blocks;
+const { Fragment } = wp.element;
 
 registerBlockType( 'borncreative/the-5-image-gallery-block', {
 	title: '5 image gallery',
@@ -74,89 +75,97 @@ registerBlockType( 'borncreative/the-5-image-gallery-block', {
 		}
 
 		return [
-			<InspectorControls>
-				{ /* Later, when we have customizable options we will add stuff here! */ }
-				<div
-					style={ {
-						padding: '1em 0',
-					} }
-				>
-					Options
-				</div>
-			</InspectorControls>,
-			<div className={ className }>
-				<div className="column1">
-					<div className="media pr">
-						<MediaUpload
-							onSelect={ selectImagea }
-							render={ ( { open } ) => {
-								return (
-									<img
-										onClick={ open }
-										src={ attributes.imagea }
-									/>
-								);
-							} }
-						/>
+			<Fragment key={ props?.id ?? Math.random( 6 ) }>
+				<InspectorControls>
+					{ /* Later, when we have customizable options we will add stuff here! */ }
+					<div
+						style={ {
+							padding: '1em 0',
+						} }
+					>
+						Options
 					</div>
-				</div>
-				<div className="column1">
-					<div className="media pb">
-						<MediaUpload
-							onSelect={ selectImageb }
-							render={ ( { open } ) => {
-								return (
-									<img
-										onClick={ open }
-										src={ attributes.imageb }
-									/>
-								);
-							} }
-						/>
-					</div>
-					<div className="media pb">
-						<MediaUpload
-							onSelect={ selectImagec }
-							render={ ( { open } ) => {
-								return (
-									<img
-										onClick={ open }
-										src={ attributes.imagec }
-									/>
-								);
-							} }
-						/>
-					</div>
-					<div className="extra-row">
+				</InspectorControls>
+				,
+				<div className={ className }>
+					<div className="column1">
 						<div className="media pr">
 							<MediaUpload
-								onSelect={ selectImaged }
+								onSelect={ selectImagea }
 								render={ ( { open } ) => {
 									return (
 										<img
+											alt=""
 											onClick={ open }
-											src={ attributes.imaged }
-										/>
-									);
-								} }
-							/>
-						</div>
-						<div className="media">
-							<MediaUpload
-								onSelect={ selectImagee }
-								render={ ( { open } ) => {
-									return (
-										<img
-											onClick={ open }
-											src={ attributes.imagee }
+											src={ attributes.imagea }
 										/>
 									);
 								} }
 							/>
 						</div>
 					</div>
+					<div className="column1">
+						<div className="media pb">
+							<MediaUpload
+								onSelect={ selectImageb }
+								render={ ( { open } ) => {
+									return (
+										<img
+											onClick={ open }
+											src={ attributes.imageb }
+											alt=""
+										/>
+									);
+								} }
+							/>
+						</div>
+						<div className="media pb">
+							<MediaUpload
+								onSelect={ selectImagec }
+								render={ ( { open } ) => {
+									return (
+										<img
+											onClick={ open }
+											src={ attributes.imagec }
+											alt=""
+										/>
+									);
+								} }
+							/>
+						</div>
+						<div className="extra-row">
+							<div className="media pr">
+								<MediaUpload
+									onSelect={ selectImaged }
+									render={ ( { open } ) => {
+										return (
+											<img
+												onClick={ open }
+												src={ attributes.imaged }
+												alt=""
+											/>
+										);
+									} }
+								/>
+							</div>
+							<div className="media">
+								<MediaUpload
+									onSelect={ selectImagee }
+									render={ ( { open } ) => {
+										return (
+											<img
+												onClick={ open }
+												src={ attributes.imagee }
+												alt=""
+											/>
+										);
+									} }
+								/>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>,
+			</Fragment>,
 		];
 	},
 
@@ -175,30 +184,30 @@ registerBlockType( 'borncreative/the-5-image-gallery-block', {
 				<div className="column1">
 					<div className="media pr">
 						<div className="zoom">
-							<img src={ attributes.imagea } />
+							<img alt="" src={ attributes.imagea } />
 						</div>
 					</div>
 				</div>
 				<div className="column1">
 					<div className="media pb">
 						<div className="zoom">
-							<img src={ attributes.imageb } />
+							<img alt="" src={ attributes.imageb } />
 						</div>
 					</div>
 					<div className="media pb">
 						<div className="zoom">
-							<img src={ attributes.imagec } />
+							<img alt="" src={ attributes.imagec } />
 						</div>
 					</div>
 					<div className="extra-row">
 						<div className="media pr">
 							<div className="zoom">
-								<img src={ attributes.imaged } />
+								<img alt="" src={ attributes.imaged } />
 							</div>
 						</div>
 						<div className="media">
 							<div className="zoom">
-								<img src={ attributes.imagee } />
+								<img alt="" src={ attributes.imagee } />
 							</div>
 						</div>
 					</div>

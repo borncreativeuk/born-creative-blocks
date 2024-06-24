@@ -10,18 +10,18 @@ const { Fragment } = wp.element;
 const { InspectorControls, PanelColorSettings, withColors, getColorClassName } =
 	wp.blockEditor;
 
-const edit_header_block = ( props ) => {
+const editHeaderBlock = ( props ) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
 	const { textColor, setTextColor } = props;
 
-	let custom_color_class;
-	const custom_color_style = {};
-	if ( textColor != undefined ) {
-		if ( textColor.class != undefined ) {
-			custom_color_class = textColor.class;
+	let customColorClass;
+	const customColorStyle = {};
+	if ( textColor !== undefined ) {
+		if ( textColor.class !== undefined ) {
+			customColorClass = textColor.class;
 		} else {
-			custom_color_style.color = textColor.color;
+			customColorStyle.color = textColor.color;
 		}
 	}
 
@@ -46,7 +46,7 @@ const edit_header_block = ( props ) => {
 	}
 
 	return [
-		<Fragment>
+		<Fragment key={ props?.id ?? Math.random( 6 ) }>
 			<InspectorControls>
 				{ /* Later, when we have customizable options we will add stuff here! */ }
 				<div
@@ -76,6 +76,7 @@ const edit_header_block = ( props ) => {
 								<img
 									onClick={ open }
 									src={ attributes.image }
+									alt=""
 								/>
 							);
 						} }
@@ -84,8 +85,8 @@ const edit_header_block = ( props ) => {
 				<div className="copy">
 					<div className="col-full">
 						<RichText
-							className={ 'copy-hd ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'copy-hd ' + customColorClass }
+							style={ customColorStyle }
 							tagName="h2"
 							placeholder="Enter your heading"
 							value={ attributes.heading }
@@ -95,8 +96,8 @@ const edit_header_block = ( props ) => {
 				We determin the class name and the html tag that
 				we want it to show as. */ }
 						<RichText
-							className={ 'copy-bd ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'copy-bd ' + customColorClass }
+							style={ customColorStyle }
 							tagName="h3"
 							placeholder="Enter your text here"
 							value={ attributes.bodyContent }
@@ -114,31 +115,31 @@ const saveHeaderBlock = ( props ) => {
 	const { attributes } = props;
 	const { textColor, customTextColor } = props.attributes;
 
-	let custom_color_class;
-	const custom_color_style = {};
-	if ( textColor != undefined ) {
-		custom_color_class = getColorClassName( 'color', textColor );
+	let customColorClass;
+	const customColorStyle = {};
+	if ( textColor !== undefined ) {
+		customColorClass = getColorClassName( 'color', textColor );
 	}
-	if ( customTextColor != undefined ) {
-		custom_color_style.color = customTextColor;
+	if ( customTextColor !== undefined ) {
+		customColorStyle.color = customTextColor;
 	}
 
 	return (
 		<div className={ className }>
 			<div className="media">
-				<img src={ attributes.image } />
+				<img alt="" src={ attributes.image } />
 			</div>
 			<div className="copy">
 				<div className="col-full">
 					<RichText.Content
-						className={ 'copy-hd ' + custom_color_class }
-						style={ custom_color_style }
+						className={ 'copy-hd ' + customColorClass }
+						style={ customColorStyle }
 						tagName="h2"
 						value={ attributes.heading }
 					/>
 					<RichText.Content
-						className={ 'copy-bd ' + custom_color_class }
-						style={ custom_color_style }
+						className={ 'copy-bd ' + customColorClass }
+						style={ customColorStyle }
 						tagName="h3"
 						value={ attributes.bodyContent }
 					/>
@@ -180,6 +181,6 @@ registerBlockType( 'borncreative/header-block', {
 		align: true,
 	},
 
-	edit: withColors( { textColor: 'color' } )( edit_header_block ),
+	edit: withColors( { textColor: 'color' } )( editHeaderBlock ),
 	save: saveHeaderBlock,
 } );

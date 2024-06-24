@@ -3,37 +3,36 @@ import { registerBlockType } from '@wordpress/blocks';
 import './style.view.scss';
 import './style.editor.scss';
 
-import { RichText, MediaUpload } from '@wordpress/block-editor';
+import { RichText } from '@wordpress/block-editor';
 
 const { getBlockDefaultClassName } = wp.blocks;
 const { Fragment } = wp.element;
 const { InspectorControls, PanelColorSettings, withColors, getColorClassName } =
 	wp.blockEditor;
 
-const edit_header_block = ( props ) => {
+const editHeaderBlock = ( props ) => {
 	const { className, setAttributes } = props;
 	const { attributes } = props;
 	const { textColor, setTextColor } = props;
 	const { backgroundColor, setBackgroundColor } = props;
 
-	let custom_color_class;
-	const custom_color_style = {};
-	if ( textColor != undefined ) {
-		if ( textColor.class != undefined ) {
-			custom_color_class = textColor.class;
+	let customColorClass;
+	const customColorStyle = {};
+	if ( textColor !== undefined ) {
+		if ( textColor.class !== undefined ) {
+			customColorClass = textColor.class;
 		} else {
-			custom_color_style.color = textColor.color;
+			customColorStyle.color = textColor.color;
 		}
 	}
 
-	let custom_backgroundcolor_class;
-	const custom_backgroundcolor_style = {};
-	if ( backgroundColor != undefined ) {
-		if ( backgroundColor.class != undefined ) {
-			custom_backgroundcolor_class = backgroundColor.class;
+	let customBackgroundColorClass;
+	const customBackgroundColorStyle = {};
+	if ( backgroundColor !== undefined ) {
+		if ( backgroundColor.class !== undefined ) {
+			customBackgroundColorClass = backgroundColor.class;
 		} else {
-			custom_backgroundcolor_style.backgroundColor =
-				backgroundColor.color;
+			customBackgroundColorStyle.backgroundColor = backgroundColor.color;
 		}
 	}
 
@@ -65,7 +64,7 @@ const edit_header_block = ( props ) => {
 	}
 
 	return [
-		<Fragment>
+		<Fragment key={ props?.id ?? Math.random( 6 ) }>
 			<InspectorControls>
 				{ /* Later, when we have customizable options we will add stuff here! */ }
 				<div
@@ -92,15 +91,15 @@ const edit_header_block = ( props ) => {
 				/>
 			</InspectorControls>
 			<div
-				className={ className + ' ' + custom_backgroundcolor_class }
-				style={ custom_backgroundcolor_style }
+				className={ className + ' ' + customBackgroundColorClass }
+				style={ customBackgroundColorStyle }
 			>
 				<div className="copy col-full">
 					<div className="row">
 						<div className="column1">
 							<RichText
-								className={ 'copy-bd ' + custom_color_class }
-								style={ custom_color_style }
+								className={ 'copy-bd ' + customColorClass }
+								style={ customColorStyle }
 								tagName="p"
 								placeholder="Enter your text here"
 								value={ attributes.bodyContent }
@@ -109,48 +108,48 @@ const edit_header_block = ( props ) => {
 						</div>
 						<div className="column2">
 							<RichText
-								className={ 'headinga ' + custom_color_class }
-								style={ custom_color_style }
+								className={ 'headinga ' + customColorClass }
+								style={ customColorStyle }
 								tagName="h4"
 								placeholder="Client"
 								value={ attributes.headinga }
 								onChange={ changeHeadinga }
 							/>
 							<RichText
-								className={ 'linea ' + custom_color_class }
-								style={ custom_color_style }
+								className={ 'linea ' + customColorClass }
+								style={ customColorStyle }
 								tagName="p"
 								placeholder="Client Name"
 								value={ attributes.linea }
 								onChange={ changeLinea }
 							/>
 							<RichText
-								className={ 'headingb ' + custom_color_class }
-								style={ custom_color_style }
+								className={ 'headingb ' + customColorClass }
+								style={ customColorStyle }
 								tagName="h4"
 								placeholder="Project Type"
 								value={ attributes.headingb }
 								onChange={ changeHeadingb }
 							/>
 							<RichText
-								className={ 'lineb ' + custom_color_class }
-								style={ custom_color_style }
+								className={ 'lineb ' + customColorClass }
+								style={ customColorStyle }
 								tagName="p"
 								placeholder="Client Name"
 								value={ attributes.lineb }
 								onChange={ changeLineb }
 							/>
 							<RichText
-								className={ 'headingc ' + custom_color_class }
-								style={ custom_color_style }
+								className={ 'headingc ' + customColorClass }
+								style={ customColorStyle }
 								tagName="h4"
 								placeholder="Services"
 								value={ attributes.headingc }
 								onChange={ changeHeadingc }
 							/>
 							<RichText
-								className={ 'linec ' + custom_color_class }
-								style={ custom_color_style }
+								className={ 'linec ' + customColorClass }
+								style={ customColorStyle }
 								tagName="p"
 								placeholder="Client Name"
 								value={ attributes.linec }
@@ -171,30 +170,30 @@ const saveHeaderBlock = ( props ) => {
 	const { textColor, customTextColor } = props.attributes;
 	const { backgroundColor, customBackgroundColor } = props.attributes;
 
-	let custom_color_class;
-	const custom_color_style = {};
-	if ( textColor != undefined ) {
-		custom_color_class = getColorClassName( 'color', textColor );
+	let customColorClass;
+	const customColorStyle = {};
+	if ( textColor !== undefined ) {
+		customColorClass = getColorClassName( 'color', textColor );
 	}
-	if ( customTextColor != undefined ) {
-		custom_color_style.color = customTextColor;
+	if ( customTextColor !== undefined ) {
+		customColorStyle.color = customTextColor;
 	}
 
-	let custom_backgroundcolor_class;
-	const custom_backgroundcolor_style = {};
-	if ( backgroundColor != undefined ) {
-		custom_backgroundcolor_class = getColorClassName(
+	let customBackgroundColorClass;
+	const customBackgroundColorStyle = {};
+	if ( backgroundColor !== undefined ) {
+		customBackgroundColorClass = getColorClassName(
 			'background-color',
 			backgroundColor
 		);
 	}
-	if ( customBackgroundColor != undefined ) {
-		custom_backgroundcolor_style.backgroundColor = customBackgroundColor;
+	if ( customBackgroundColor !== undefined ) {
+		customBackgroundColorStyle.backgroundColor = customBackgroundColor;
 	}
 	return (
 		<div
-			className={ className + ' ' + custom_backgroundcolor_class }
-			style={ custom_backgroundcolor_style }
+			className={ className + ' ' + customBackgroundColorClass }
+			style={ customBackgroundColorStyle }
 			data-aos="fade-up"
 			data-aos-duration="2000"
 		>
@@ -202,48 +201,48 @@ const saveHeaderBlock = ( props ) => {
 				<div className="row">
 					<div className="column1">
 						<RichText.Content
-							className={ 'copy-bd ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'copy-bd ' + customColorClass }
+							style={ customColorStyle }
 							tagName="p"
 							value={ attributes.bodyContent }
 						/>
 					</div>
 					<div className="column2">
 						<RichText.Content
-							className={ 'headinga ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'headinga ' + customColorClass }
+							style={ customColorStyle }
 							tagName="h4"
 							value={ attributes.headinga }
 						/>
 						<RichText.Content
-							className={ 'linea ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'linea ' + customColorClass }
+							style={ customColorStyle }
 							tagName="p"
 							value={ attributes.linea }
 						/>
 
 						<RichText.Content
-							className={ 'headingb ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'headingb ' + customColorClass }
+							style={ customColorStyle }
 							tagName="h4"
 							value={ attributes.headingb }
 						/>
 						<RichText.Content
-							className={ 'lineb ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'lineb ' + customColorClass }
+							style={ customColorStyle }
 							tagName="p"
 							value={ attributes.lineb }
 						/>
 
 						<RichText.Content
-							className={ 'headingc ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'headingc ' + customColorClass }
+							style={ customColorStyle }
 							tagName="h4"
 							value={ attributes.headingc }
 						/>
 						<RichText.Content
-							className={ 'linec ' + custom_color_class }
-							style={ custom_color_style }
+							className={ 'linec ' + customColorClass }
+							style={ customColorStyle }
 							tagName="p"
 							value={ attributes.linec }
 						/>
@@ -311,6 +310,6 @@ registerBlockType( 'borncreative/intro-text-block', {
 	edit: withColors( {
 		textColor: 'color',
 		backgroundColor: 'background-color',
-	} )( edit_header_block ),
+	} )( editHeaderBlock ),
 	save: saveHeaderBlock,
 } );
